@@ -9,7 +9,6 @@ Fitur yang dihadirkan saat ini :
 * Encryption Text
 * Hash Generator
 * UUID Generator
-* Markdown Preview (coming soon)
 
 # Untuk pengembangan
 
