@@ -10,3 +10,14 @@ Fitur yang dihadirkan saat ini :
 * Hash Generator
 * UUID Generator
 * Markdown Preview (coming soon)
+
+# Untuk pengembangan
+
+1. Jalankan script berikut untuk instalasi modul node
+```
+npm i
+```
+2. Untuk jalankan program ketikkan perintah
+```
+npm start
+```
