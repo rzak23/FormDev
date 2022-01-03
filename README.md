@@ -7,6 +7,7 @@ Alat gratis untuk developer
 Fitur yang dihadirkan saat ini :
 
 * Encryption Text
+* Decryptor Text
 * Hash Generator
 * UUID Generator
 
