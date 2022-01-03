@@ -12,6 +12,8 @@ Fitur yang dihadirkan saat ini :
 * Decryptor Text
 * Hash Generator
 * UUID Generator
+* Name Generator (Coming soon)
+* Password Generator (Coming soon)
 
 # Untuk pengembangan
 
