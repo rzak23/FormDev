@@ -35,7 +35,12 @@
                 <div class="mt-3">
                     <div class="form-group">
                         <label for="result">Result</label>
-                        <input type="text" name="result" class="form-control" id="result" disabled>
+                        <div class="input-group">
+                            <input type="text" name="result" class="form-control" id="result" readonly>
+                            <button type="button" class="btn btn-success" data-clipboard-target="#result">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,5 +55,9 @@
         </div>
     </div>
     <script src="../mod/uuid.js"></script>
+    <script src="../node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script>
+        new ClipboardJS('.btn');
+    </script>
 </body>
 </html>
