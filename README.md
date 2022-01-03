@@ -1,6 +1,6 @@
 # FormDev
 
-![favicon](icon-prog.png)
+![favicon](build/icon.png)
 
 Alat gratis untuk developer
 
