@@ -1,16 +1,37 @@
 {
-  "name": "FormDev",
+  "name": "formdev",
   "version": "1.0.0",
-  "description": "",
+  "description": "Free Developer tools to create hash, uuid, password and random name",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-win": "electron-builder --win --x64"
+  },
+  "build":{
+    "appId": "my.id.restudio.formdev",
+    "productName": "FormDev",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/favicon.ico"
+    },
+    "nsis":{
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rzak23/FormDev.git"
   },
-  "keywords": [],
+  "keywords": [
+    "free tools",
+    "generator",
+    "password generator",
+    "hash generator",
+    "uuid generator"
+  ],
   "author": "rzak23",
   "license": "ISC",
   "bugs": {
@@ -18,7 +39,8 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^16.0.5"
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
