@@ -111,6 +111,39 @@
                 </div>
             </div>
         </div>
-    </div>    
+        <div class="row mt-3 mb-3">
+            <div class="col-lg-6 col-md-6 col-12 mx-auto text-center">
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#about">
+                    <i class="fas fa-exclamation"></i>
+                    <span>Tentang</span>
+                </button>
+            </div>
+        </div>
+        <!-- about -->
+        <div class="modal fade" role="dialog" id="about">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Tentang App
+                        <small id="version"></small>
+                    </div>
+                    <div class="modal-body">
+                        FormDev, aplikasi pendukung untuk developer, terdapat fitur pembuat hash, UUID, password dan Nama. Selain itu bisa digunakan untuk enkripsi atau dekripsi text. FormDev dapat digunakan secara gratis
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-bs-dismiss="modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about -->
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+       var pjson = require('./package.json');
+       document.getElementById('version').innerHTML = "Version : "+pjson.version;
+    </script>
 </body>
 </html>
