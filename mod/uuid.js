@@ -25,6 +25,15 @@ function generate(){
     document.getElementById('result').value = result;
 }
 
+function cek(){
+    const {version: uuidVersion} = require('uuid');
+
+    var uid = document.getElementById('cuuid').value;
+    var result = uuidVersion(uid);
+
+    document.getElementById('cver').value = "Version "+result;
+}
+
 function reset(){
     document.getElementById('result').value = "";
     document.getElementById('version').value = 1;
