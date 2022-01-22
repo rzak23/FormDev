@@ -26,8 +26,8 @@ Fitur yang dihadirkan saat ini :
 - [x] UUID Generator
 - [x] Name Generator
 - [x] Password Generator
-- [ ] Encode & Decode
-- [ ] QR Code Generator
+- [x] Encode & Decode
+- [x] QR Code Generator
 
 # Instalasi (Pengguna Biasa)
 
