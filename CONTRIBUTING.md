@@ -3,9 +3,10 @@
 Apa saja yang bisa dilakukan :
 
 * Melaporkan adanya bug atau kesalahan pada sistem
-* Mengajukan fitur baru
+* Membuat fitur baru
+* Merubah Tampilan (UI)
 
-# Cara untuk Membuat dan Menjalan Program Bagi Pengembang
+# Cara Berkontribusi dan Menjalan Program Bagi Pengembang
 
 ## Peralatan yang dibutuhkan :
 
@@ -13,7 +14,7 @@ Apa saja yang bisa dilakukan :
 * Sudah terinstall Node JS dan juga NPM
 * Memahami dasar HTML, CSS dan juga Javascript
 
-## Mulai Bekerja
+## Mulai Kontribusi
 * Lakukan Fork pada repo ini
 * Clone repo pada perangkat
 * Buka Terminal, arahkan lokasi pada folder repo di clone
@@ -25,3 +26,8 @@ npm i
 ```
 npm start
 ```
+
+## Hal yang Tidak Boleh Dilakukan
+
+* Dilarang merubah/memodifikasi file `pull_request_template.md`
+* Tidak menggunakan kata-kata kasar atau yang berhubungan dengan SARA dalam membuat nama atau identitas variabel
