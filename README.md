@@ -1,19 +1,33 @@
-# FormDev
-
-![favicon](build/icon.png)
-
-Alat gratis untuk developer
+<p align="center">
+  <img width="128" align="center" src="/build/icon.png">
+</p>
+<h1 align="center">
+  FormDev
+</h1>
+<p align="center">
+  <a style="text-decoration:none" href="https://github.com/rzak23/FormDev/releases" target="_blank">
+    <img src="https://img.shields.io/badge/version-1.4.4-green" alt="Latest version" />
+  </a>
+  <a style="text-decoration:none" href="https://rzak23.github.io" target="_blank">
+    <img src="https://img.shields.io/badge/website-rzak23.github.io-yellow" alt="Website" />
+  </a>
+  <a style="text-decoration:none" href="https://electronjs.org" target="_blank">
+    <img src="https://img.shields.io/badge/build-electron-blue?style=build&logo=electron" alt="Website" />
+  </a>
+</p>
 
 # Fitur
 
 Fitur yang dihadirkan saat ini :
 
-* Encryption Text
-* Decryptor Text
-* Hash Generator
-* UUID Generator
-* Name Generator
-* Password Generator
+- [x] Encryption Text
+- [x] Decryptor Text
+- [x] Hash Generator
+- [x] UUID Generator
+- [x] Name Generator
+- [x] Password Generator
+- [ ] Encode & Decode
+- [ ] QR Code Generator
 
 # Untuk pengembangan
 
