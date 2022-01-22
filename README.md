@@ -29,6 +29,14 @@ Fitur yang dihadirkan saat ini :
 - [ ] Encode & Decode
 - [ ] QR Code Generator
 
+# Instalasi (Pengguna Biasa)
+
+Berikut cara instalasi menggunakan versi rilis :
+
+1. Download file installer pada rilis terbaru [Rilis](https://github.com/rzak23/FormDev/releases)
+2. Klik kanan pada file yang suda di download dan pilih Run As Administrator
+3. Ikuti instalasi wizard yang tersedia dan tunggu sampai proses instalasi selesai
+
 # Untuk pengembangan
 
 1. Jalankan script berikut untuk instalasi modul node
