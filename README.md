@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/website-rzak23.github.io-yellow" alt="Website" />
   </a>
   <a style="text-decoration:none" href="https://electronjs.org" target="_blank">
-    <img src="https://img.shields.io/badge/build-electron-blue?style=build&logo=electron" alt="Website" />
+    <img src="https://img.shields.io/badge/build-electron-blue?logo=electron" alt="Website" />
   </a>
 </p>
 
