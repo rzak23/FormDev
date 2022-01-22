@@ -47,3 +47,7 @@ npm i
 ```
 npm start
 ```
+
+# Kontribusi
+
+Untuk berkontribusi, detail bisa dibaca melalui panduan [Kontribusi](CONTRIBUTING.md)
