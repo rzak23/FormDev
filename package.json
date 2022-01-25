@@ -49,6 +49,7 @@
     "crypto-js": "^4.1.1",
     "qr-code-styling": "^1.6.0-rc.1",
     "unique-names-generator": "^4.6.0",
+    "update-electron-app": "^2.0.1",
     "uuid": "^8.3.2"
   }
 }
