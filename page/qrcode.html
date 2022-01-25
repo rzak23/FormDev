@@ -23,6 +23,14 @@
         <div class="row mt-3">
             <div class="col-lg-8 col-md-8 col-12 mx-auto">
                 <form class="text-center">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-2">
+                            <div class="form-group">
+                                <label for="warna">Warna</label>
+                                <input type="color" class="form-control" value="#000000" id="warna" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="text">Text</label>
                         <input type="text" class="form-control" id="text" autocomplete="off">
@@ -34,9 +42,11 @@
                     </div>
                 </form>
                 <div class="mt-4 text-center" id="canvas"></div>
-                <button type="button" class="btn btn-primary" id="bt-download" onclick="downloadQR()">
-                    <i class="fas fa-download"></i>
-                </button>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" id="bt-download" onclick="downloadQR()">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
             </div>
             <div class="mt-4">
                 <a href="../index.html" class="btn btn-success">
@@ -54,6 +64,7 @@
         document.getElementById('bt-download').hidden = true;
         function myQR(){
             var text = document.getElementById('text').value;
+            var color = document.getElementById('warna').value;
             const qrCode = new QRCodeStyling({
                 width: 300,
                 height: 300,
@@ -61,7 +72,7 @@
                 data: text,
                 image: "../build/icon.png",
                 dotsOptions: {
-                    color: "#4267b2",
+                    color: color,
                     type: "rounded"
                 },
                 backgroundOptions: {
@@ -73,12 +84,14 @@
                 }
             });
 
+            document.getElementById('canvas').innerHTML = "";
             qrCode.append(document.getElementById("canvas"));
-            document.getElementById('bt-download').hidden = false
+            document.getElementById('bt-download').hidden = false;
         }
 
         function downloadQR(){
             var text = document.getElementById('text').value;
+            var color = document.getElementById('warna').value;
             const qrCode = new QRCodeStyling({
                 width: 300,
                 height: 300,
@@ -86,7 +99,7 @@
                 data: text,
                 image: "../build/icon.png",
                 dotsOptions: {
-                    color: "#4267b2",
+                    color: color,
                     type: "rounded"
                 },
                 backgroundOptions: {
