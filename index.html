@@ -150,6 +150,20 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-3 col-12 mb-2 mx-auto">
+                <div class="card text-center h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-search fa-5x"></i>
+                        <br>
+                        <span>Checksum</span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="page/checksum.html" class="btn btn-primary">
+                            <span>Open</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row mt-3 mb-3">
             <div class="col-lg-6 col-md-6 col-12 mx-auto text-center">
@@ -168,11 +182,21 @@
                         <small id="version"></small>
                     </div>
                     <div class="modal-body">
-                        <div class="card card-body">
+                        <div class="card-body">
                             FormDev, aplikasi pendukung untuk developer, terdapat fitur pembuat hash, UUID, password dan Nama. Selain itu bisa digunakan untuk enkripsi atau dekripsi text. FormDev dapat digunakan secara gratis
                         </div>
-                        <div class="card card-body">
+                        <div class="card-body">
                             Aplikasi ini terinspirasi dari proyek <button type="button" onclick="openDev()" class="btn btn-info">DevToys</a>
+                        </div>
+                        <div class="card-body">
+                            <strong>Apa yang baru <label id="versiona" class="text-black"></label>:</strong>
+                            <p>
+                                <ul>
+                                    <li>Penambahan modul QR Code Generator</li>
+                                    <li>Penambahan modul Encode &amp; Decode</li>
+                                    <li>Penambahan modul cek versi UUID</li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -190,6 +214,7 @@
     <script>
        var pjson = require('./package.json');
        document.getElementById('version').innerHTML = "Version : "+pjson.version;
+       document.getElementById('versiona').innerHTML = "Version "+pjson.version;
     </script>
 </body>
 </html>
