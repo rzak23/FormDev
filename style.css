@@ -1,5 +1,5 @@
 .bg{
-    background: #9AD0EC;
+    background: #1F1D36;
     font-family: 'Ubuntu Mono', monospace;
 }
 label{
@@ -10,6 +10,6 @@ label{
     font-size: 50px;
 }
 .card{
-    background: #1572A1!important;
+    background: #3F3351!important;
     color: #ffffff;
 }
