@@ -15,11 +15,11 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1000,
     height: 800,
+    show: false,
     icon: __dirname+'/build/icon.png',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      enableRemoteModule: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
@@ -27,6 +27,23 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
   mainWindow.removeMenu();
+
+  var splash = new BrowserWindow({
+    width: 500,
+    height: 300,
+    icon: __dirname+'/page/icon.png',
+    transparent: true,
+    frame: false,
+    alwaysOnTop: true
+  });
+
+  splash.loadFile('splash.html');
+  splash.center();
+  setTimeout(function(){
+    splash.close();
+    mainWindow.center();
+    mainWindow.show();
+  },5000);
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
