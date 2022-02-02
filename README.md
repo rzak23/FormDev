@@ -54,3 +54,5 @@ npm start
 # Kontribusi
 
 Untuk berkontribusi, detail bisa dibaca melalui panduan [Kontribusi](CONTRIBUTING.md)
+
+![Alt](https://repobeats.axiom.co/api/embed/e8596283d620ecf46f9b2352d45823901610e81a.svg "Repobeats analytics image")
