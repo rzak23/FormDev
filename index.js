@@ -4,10 +4,13 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
-require('update-electron-app')({
-  updateInterval: '5 minutes',
-  // logger: require('electron-log')
-  notifyUser: true
+
+app.on('ready',() => {
+  require('update-electron-app')({
+    updateInterval: '5 minutes',
+    // logger: require('electron-log')
+    notifyUser: true
+  })
 })
 
 function createWindow () {
