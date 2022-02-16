@@ -27,11 +27,28 @@ function generate(){
 
 function cek(){
     const {version: uuidVersion} = require('uuid');
+    const Swal = require('sweetalert2');
 
     var uid = document.getElementById('cuuid').value;
-    var result = uuidVersion(uid);
+    if(uid == null || uid == ""){
+        Swal.fire(
+            'Error',
+            'Lengkapi UUID untuk bisa di validasi',
+            'error'
+        );
+    }else{
+        var result = uuidVersion(uid);
+        document.getElementById('cver').value = "Version "+result;
+    }
+}
 
-    document.getElementById('cver').value = "Version "+result;
+function notifC(){
+    const Swal = require('sweetalert2');
+    Swal.fire(
+        'Copied',
+        'Text berhasil disalin',
+        'success'
+    );
 }
 
 function reset(){

@@ -32,6 +32,16 @@ function randomString(char,long) {
     return result;
 }
 
+function notif(){
+    const Swal = require('sweetalert2');
+
+    Swal.fire(
+        'Copied',
+        'Text berhasil disalin',
+        'success'
+    );
+}
+
 function reset(){
     document.getElementById('pass').value = "";
     document.getElementById('option').value = "alpha";

@@ -2,25 +2,34 @@
 var CryptoJS = require('crypto-js');
 function readHash(){
     var reader = new FileReader();
+    var option = document.getElementById('type').value;
 
     reader.addEventListener('load',function () {
-        var sha256 = CryptoJS.SHA256(CryptoJS.enc.Latin1.parse(this.result));
-        var md5 = CryptoJS.MD5(CryptoJS.enc.Latin1.parse(this.result));
-        var sha1 = CryptoJS.SHA1(CryptoJS.enc.Latin1.parse(this.result));
-        var sha3 = CryptoJS.SHA3(CryptoJS.enc.Latin1.parse(this.result));
-                
-        document.getElementById('md5').value = md5;
-        document.getElementById('sha2').value = sha256;
-        document.getElementById('sha1').value = sha1;
-        document.getElementById('sha3').value = sha3;
+        if(option == "md5"){
+            var output = CryptoJS.MD5(CryptoJS.enc.Latin1.parse(this.result));
+        }else if(option == "sha256"){
+            var output = CryptoJS.SHA256(CryptoJS.enc.Latin1.parse(this.result));
+        }else if(option == "sha3"){
+            var output = CryptoJS.SHA3(CryptoJS.enc.Latin1.parse(this.result));
+        }
+        // var sha1 = CryptoJS.SHA1(CryptoJS.enc.Latin1.parse(this.result));
+        
+        document.getElementById('hasil').value = output;
     });
     reader.readAsBinaryString(document.getElementById('file').files[0]);
 }
 
+function notif(){
+    const Swall = require('sweetalert2');
+
+    Swall.fire(
+        'Copied',
+        'Text berhasil disalin',
+        'success'
+    );
+}
+
 function reset(){
     document.getElementById('file').value = "";
-    document.getElementById('md5').value = "";
-    document.getElementById('sha1').value = "";
-    document.getElementById('sha2').value = "";
-    document.getElementById('sha3').value = "";
+    document.getElementById('hasil').value = "";
 }
