@@ -22,22 +22,26 @@
         </h4>
         <div class="row mt-3">
             <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                <form class="text-center">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="name" autocomplete="off" readonly>
-                            <button type="button" class="btn btn-success" data-clipboard-target="#name">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
+                <div class="card">
+                    <div class="card-body">
+                        <form class="text-center">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="name" autocomplete="off" readonly>
+                                    <button type="button" class="btn btn-success" data-clipboard-target="#name" onclick="notif()">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group mt-2">
+                                <button type="button" class="btn btn-info" onclick="myName()">
+                                    <span>Generate</span>
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group mt-2">
-                        <button type="button" class="btn btn-info" onclick="myName()">
-                            <span>Generate</span>
-                        </button>
-                    </div>
-                </form>
+                </div>
             </div>
             <div class="mt-4">
                 <a href="../index.html" class="btn btn-success">
