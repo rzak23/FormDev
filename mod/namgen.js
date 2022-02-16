@@ -9,6 +9,16 @@ function myName(){
     document.getElementById('name').value = randomName;
 }
 
+function notif(){
+    const Swall = require('sweetalert2');
+
+    Swall.fire(
+        'Copied',
+        'Text berhasil disalin',
+        'success'
+    );
+}
+
 function reset(){
     document.getElementById('name').value = "";
 }
