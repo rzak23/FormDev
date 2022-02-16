@@ -24,6 +24,9 @@
                         <button type="button" class="btn btn-info" onclick="myLorem()">
                             <span>Generate</span>
                         </button>
+                        <button type="button" class="btn btn-success" data-clipboard-target="#hasil" onclick="notif()">
+                            <span>Salin</span>
+                        </button>
                     </div>
                 </form>
                 <div class="mt-3">
@@ -44,5 +47,9 @@
         </div>
     </div>
     <script src="../mod/lorem.js"></script>
+    <script src="../node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script>
+        new ClipboardJS('.btn');
+    </script>
 </body>
 </html>

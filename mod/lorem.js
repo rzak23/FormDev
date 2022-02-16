@@ -15,6 +15,16 @@ function myLorem(){
     document.getElementById('hasil').value = lorem.generateParagraphs(3);
 }
 
+function notif(){
+    const Swall = require('sweetalert2');
+
+    Swall.fire(
+        'Copied',
+        'Text berhasil disalin',
+        'success'
+    );
+}
+
 function reset(){
     document.getElementById('hasil').value = "";
 }
