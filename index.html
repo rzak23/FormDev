@@ -204,20 +204,20 @@
         <!-- about -->
         <div class="modal fade" role="dialog" id="about">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content modal-background">
                     <div class="modal-header">
                         Tentang App
-                        <small id="version"></small>
+                        <small id="version" class="version"></small>
                     </div>
                     <div class="modal-body">
                         <div class="card-body">
-                            FormDev, aplikasi pendukung untuk developer, terdapat fitur pembuat hash, UUID, password dan Nama. Selain itu bisa digunakan untuk enkripsi atau dekripsi text. FormDev dapat digunakan secara gratis
+                            FormDev, aplikasi pendukung untuk developer yang dibagikan secara gratis dan dibuat untuk bisa membantu beberapa kebutuhan pengembang. Detail projek bisa dilihat melalui halaman <button type="button" onclick="openRepo()" class="btn btn-info">Github</a>
                         </div>
                         <div class="card-body">
                             Aplikasi ini terinspirasi dari proyek <button type="button" onclick="openDev()" class="btn btn-info">DevToys</a>
                         </div>
                         <div class="card-body">
-                            <strong>Apa yang baru <label id="versiona" class="text-black"></label>:</strong>
+                            <strong>Apa yang baru di <label id="versiona" class="text-white version"></label>:</strong>
                             <p>
                                 <ul>
                                     <li>Perbaikan minor</li>
@@ -239,8 +239,12 @@
     <script src="about.js"></script>
     <script>
        var pjson = require('./package.json');
-       document.getElementById('version').innerHTML = "Version : "+pjson.version;
-       document.getElementById('versiona').innerHTML = "Version "+pjson.version;
+    //    document.getElementById('version').innerHTML = "Version : "+pjson.version;
+    //    document.getElementById('versiona').innerHTML = "Version "+pjson.version;
+        for (let index = 0; index <= 1; index++) {
+            // const element = array[index];
+            document.getElementsByClassName('version')[index].innerHTML = "Version "+pjson.version;   
+        }
     </script>
 </body>
 </html>
