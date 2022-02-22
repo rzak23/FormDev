@@ -1,5 +1,6 @@
 function myLorem(){
     const LoremIpsum = require("lorem-ipsum").LoremIpsum;
+    var paragraf = parseInt(document.getElementById('paragraf').value);
 
     const lorem = new LoremIpsum({
     sentencesPerParagraph: {
@@ -12,7 +13,7 @@ function myLorem(){
     }
     });
 
-    document.getElementById('hasil').value = lorem.generateParagraphs(3);
+    document.getElementById('hasil').value = lorem.generateParagraphs(paragraf);
 }
 
 function notif(){
@@ -23,6 +24,13 @@ function notif(){
         'Text berhasil disalin',
         'success'
     );
+}
+
+function saveTxt(){
+    var fileSave = require('file-saver');
+    var text = document.getElementById('hasil').value;
+    var data = new Blob([text],{type:"text/plain;charset=utf-8"});
+    fileSave.saveAs(data,"lorem.txt");
 }
 
 function reset(){
