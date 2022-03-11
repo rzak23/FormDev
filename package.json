@@ -53,7 +53,7 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^17.1.0",
+    "electron": "^17.1.2",
     "electron-builder": "^22.14.13"
   },
   "dependencies": {
