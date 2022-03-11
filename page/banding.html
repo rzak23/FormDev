@@ -49,7 +49,12 @@
         <div class="row mt-2">
             <div class="col-lg-4 col-md-6 ccol-12 mx-auto text-center">
                 <button class="btn btn-primary" onclick="cekText()">
+                    <i class="fa-solid fa-spell-check"></i>
                     <span>Cek</span>
+                </button>
+                <button class="btn btn-info" data-bs-target="#info" data-bs-toggle="modal">
+                    <i class="fa-solid fa-info"></i>
+                    <span>Keterangan</span>
                 </button>
             </div>
         </div>
@@ -79,7 +84,31 @@
                 </button>
             </div>
         </div>
+        <!-- modal info -->
+        <div class="modal fade" role="dialog" id="info">
+            <div class="modal-dialog">
+                <div class="modal-content modal-background">
+                    <div class="modal-header">
+                        Keterangan Pembanding
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Keterangan Warna <span style="color: red;">Merah</span> : Kata atau teks dihapus/tidak ada</li>
+                            <li>Keterangan Warna <span style="color: green;">Hijau</span> : Kata atau teks ditambahkan/baru</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-bs-dismiss="modal">
+                            <i class="fa-solid fa-times"></i>
+                            <span>Tutup</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal info -->
     </div>
     <script src="../mod/banding.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
