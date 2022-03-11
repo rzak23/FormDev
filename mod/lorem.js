@@ -1,15 +1,19 @@
 function myLorem(){
     const LoremIpsum = require("lorem-ipsum").LoremIpsum;
     var paragraf = parseInt(document.getElementById('paragraf').value);
+    var mink = parseInt(document.getElementById('mink').value);
+    var mank = parseInt(document.getElementById('mank').value);
+    var mint = parseInt(document.getElementById('mint').value);
+    var mant = parseInt(document.getElementById('mant').value);
 
     const lorem = new LoremIpsum({
     sentencesPerParagraph: {
-        max: 7,
-        min: 4
+        max: mank,
+        min: mink
     },
     wordsPerSentence: {
-        max: 8,
-        min: 4
+        max: mant,
+        min: mint
     }
     });
 
