@@ -24,12 +24,15 @@
             <div class="col-lg-8 col-md-8 col-12 mx-auto">
                 <form>
                     <div class="form-group">
-                        <label for="text">Text</label>
-                        <input type="text" class="form-control" id="text" autocomplete="off">
+                        <label for="input">Text</label>
+                        <input type="text" class="form-control" id="input" autocomplete="off">
                     </div>
                     <div class="form-group mt-2">
                         <button type="button" class="btn btn-info" onclick="encodep()">
                             <span>Encode</span>
+                        </button>
+                        <button type="button" class="btn btn-info" onclick="decodep()">
+                            <span>Decode</span>
                         </button>
                     </div>
                 </form>
@@ -52,6 +55,6 @@
             </div>
         </div>
     </div>
-    <script src="../mod/encode.js"></script>
+    <script src="../mod/base64.js"></script>
 </body>
 </html>
