@@ -8,8 +8,8 @@
   <a style="text-decoration:none" href="https://github.com/rzak23/FormDev/releases" target="_blank">
     <img src="https://img.shields.io/badge/version-1.17.24-green" alt="Latest version" />
   </a>
-  <a style="text-decoration:none" href="https://rzak23.github.io" target="_blank">
-    <img src="https://img.shields.io/badge/website-rzak23.github.io-yellow" alt="Website" />
+  <a style="text-decoration:none" href="https://formdev.my.id" target="_blank">
+    <img src="https://img.shields.io/badge/website-formdev.my.id-yellow" alt="Website" />
   </a>
   <a style="text-decoration:none" href="https://electronjs.org" target="_blank">
     <img src="https://img.shields.io/badge/build-electron-blue?logo=electron" alt="Website" />
