@@ -6,7 +6,7 @@
 </h1>
 <p align="center">
   <a style="text-decoration:none" href="https://github.com/rzak23/FormDev/releases" target="_blank">
-    <img src="https://img.shields.io/badge/version-1.17.24-green" alt="Latest version" />
+    <img src="https://img.shields.io/badge/version-1.21.31-green" alt="Latest version" />
   </a>
   <a style="text-decoration:none" href="https://formdev.my.id" target="_blank">
     <img src="https://img.shields.io/badge/website-formdev.my.id-yellow" alt="Website" />
@@ -26,11 +26,15 @@ Fitur yang dihadirkan saat ini :
 - [x] UUID Generator
 - [x] Name Generator
 - [x] Password Generator
-- [x] Encode & Decode
+- [x] Encoder/Decoder Base64
 - [x] QR Code Generator
 - [x] Checksum Generator
 - [x] Lorem Ipsum Generator
 - [x] Decimal to Biner
+- [x] IP Calculator
+- [x] Pemeriksa Teks
+- [x] Encoder/Decoder URL
+- [x] Pembanding Teks
 
 # Instalasi (Pengguna Biasa)
 

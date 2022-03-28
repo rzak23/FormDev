@@ -1,6 +1,6 @@
 {
   "name": "formdev",
-  "version": "1.17.24",
+  "version": "1.21.31",
   "description": "Free Developer tools to create hash, uuid, password and random name",
   "main": "index.js",
   "config": {
