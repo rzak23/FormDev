@@ -3,20 +3,6 @@
   "version": "1.21.31",
   "description": "Free Developer tools to create hash, uuid, password and random name",
   "main": "index.js",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "publishers": [
-        {
-          "name": "@electron-forge/publisher-github",
-          "config": {
-            "owner": "rzak23",
-            "name": "FormDev"
-          }
-        }
-      ]
-    }
-  },
   "scripts": {
     "start": "electron .",
     "build-win": "electron-builder --win --x64"
@@ -26,13 +12,19 @@
     "productName": "FormDev",
     "win": {
       "target": [
-        "nsis"
+        "nsis","appx"
       ],
       "icon": "build/favicon.ico"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
+    },
+    "appx": {
+      "publisher": "CN=B5C0E522-DA44-46AB-AD7A-3861F629EE23",
+      "identityName":"35602Re.Studio.FormDev",
+      "applicationId": "Re.Studio.FormDev",
+      "backgroundColor": "transparent"
     }
   },
   "repository": {
@@ -46,7 +38,7 @@
     "hash generator",
     "uuid generator"
   ],
-  "author": "rzak23",
+  "author": "Re.Studio",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rzak23/FormDev/issues"
