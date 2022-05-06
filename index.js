@@ -19,7 +19,7 @@ function createWindow () {
     width: 1000,
     height: 800,
     show: false,
-    icon: __dirname+'/build/icon.png',
+    icon: __dirname+'/build/FormDev.png',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
