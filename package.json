@@ -1,6 +1,6 @@
 {
   "name": "formdev",
-  "version": "1.21.31",
+  "version": "2.0.0",
   "description": "Free Developer tools to create hash, uuid, password and random name",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
       "publisher": "CN=B5C0E522-DA44-46AB-AD7A-3861F629EE23",
       "identityName": "35602Re.Studio.FormDev",
       "applicationId": "Re.Studio.FormDev",
-      "backgroundColor": "transparent"
+      "backgroundColor": "#0915FF"
     }
   },
   "repository": {
