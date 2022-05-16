@@ -54,7 +54,12 @@
                     <div class="card card-body">
                         <div class="form-group">
                             <label for="hasil">Output</label>
-                            <input type="text" class="form-control" id="hasil" autocomplete="off" readonly>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="hasil" autocomplete="off" readonly>
+                                <button type="button" class="btn btn-primary" data-clipboard-target="#hasil" id="salin">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,5 +77,9 @@
         </div>
     </div>
     <script src="../mod/cryptografi.js"></script>
+    <script src="../node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script>
+        new ClipboardJS('#salin');
+    </script>
 </body>
 </html>
