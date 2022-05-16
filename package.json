@@ -12,7 +12,8 @@
     "productName": "FormDev",
     "win": {
       "target": [
-        "nsis","appx"
+        "nsis",
+        "appx"
       ],
       "icon": "build/favicon.ico"
     },
@@ -22,7 +23,7 @@
     },
     "appx": {
       "publisher": "CN=B5C0E522-DA44-46AB-AD7A-3861F629EE23",
-      "identityName":"35602Re.Studio.FormDev",
+      "identityName": "35602Re.Studio.FormDev",
       "applicationId": "Re.Studio.FormDev",
       "backgroundColor": "transparent"
     }
@@ -45,14 +46,14 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^18.0.1",
-    "electron-builder": "^22.14.13"
+    "electron": "^18.2.3",
+    "electron-builder": "^23.0.3"
   },
   "dependencies": {
     "@electron-forge/publisher-github": "^6.0.0-beta.63",
-    "@fortawesome/fontawesome-free": "^6.0.0",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "bootstrap": "^5.1.3",
-    "clipboard": "^2.0.8",
+    "clipboard": "^2.0.11",
     "crypto-js": "^4.1.1",
     "diff": "^5.0.0",
     "file-saver": "^2.0.5",
@@ -60,8 +61,8 @@
     "lorem-ipsum": "^2.0.4",
     "netmask": "^2.0.2",
     "qr-code-styling": "^1.6.0-rc.1",
-    "sweetalert2": "^11.4.0",
-    "unique-names-generator": "^4.6.0",
+    "sweetalert2": "^11.4.14",
+    "unique-names-generator": "^4.7.1",
     "update-electron-app": "^2.0.1",
     "uuid": "^8.3.2"
   }
