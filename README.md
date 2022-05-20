@@ -6,7 +6,7 @@
 </h1>
 <p align="center">
   <a style="text-decoration:none" href="https://github.com/rzak23/FormDev/releases" target="_blank">
-    <img src="https://img.shields.io/badge/version-1.21.31-green" alt="Latest version" />
+    <img src="https://img.shields.io/badge/version-2.0.0-green" alt="Latest version" />
   </a>
   <a style="text-decoration:none" href="https://formdev.my.id" target="_blank">
     <img src="https://img.shields.io/badge/website-formdev.my.id-yellow" alt="Website" />
