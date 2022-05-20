@@ -8,6 +8,9 @@
     "build-win": "electron-builder --win --x64"
   },
   "build": {
+    "directories": {
+      "buildResources": "build"
+    },
     "appId": "my.id.restudio.formdev",
     "productName": "FormDev",
     "win": {
