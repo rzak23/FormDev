@@ -3,26 +3,63 @@ function generate(){
 
     var version = document.getElementById('version').value;
     var capt = document.getElementById('capital').checked;
+    var jmlCetak = document.getElementById('jmlCetak').value;
 
     if(capt){
-        if(version == "1"){
-            var rand = uuidv1();
-            var result = rand.toUpperCase();
-        }else if(version == "4"){
-            var rand = uuidv4();
-            var result = rand.toUpperCase();
+        switch (version) {
+            case "1":
+                var rand = uuidv1();
+                var result = rand.toUpperCase();
+                break;
+            case "4":
+                var rand = uuidv4();
+                var result = rand.toUpperCase();
+                break;
+            default:
+                Swal.fire(
+                    'Error',
+                    'Pilih versi UUID',
+                    'error'
+                );
         }
     }else{
-        if(version == "1"){
-            var rand = uuidv1();
-            var result = rand
-        }else if(version == "4"){
-            var rand = uuidv4();
-            var result = rand
+        switch (version) {
+            case "1":
+                var rand = genForNum(jmlCetak,version);
+                var result = rand;
+                break;
+            case "4":
+                // var rand = uuidv4();
+                var rand = genForNum(jmlCetak,version);
+                var result = rand;
+                break;
+            default:
+                Swal.fire(
+                    'Error',
+                    'Pilih versi UUID',
+                    'error'
+                );
         }
     }
 
     document.getElementById('result').value = result;
+}
+
+function genForNum(total,versi){
+    const {v4: uuidv4, v1: uuidv1} = require('uuid');
+    var i;
+    var rs = [];
+
+    if(versi == "1"){
+        for(i=0;i<total;i++){
+            rs[i] = uuidv1(); 
+        }
+    }else if(versi == "4"){
+        for(i=0;i<total;i++){
+            rs[i] = uuidv4(); 
+        }
+    }
+    return rs;
 }
 
 function cek(){
