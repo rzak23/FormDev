@@ -49,8 +49,8 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^19.0.1",
-    "electron-builder": "^23.0.3"
+    "electron": "^6.1.12",
+    "electron-builder": "^5.5.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
