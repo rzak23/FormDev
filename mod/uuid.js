@@ -1,45 +1,16 @@
 function generate(){
-    const {v4: uuidv4, v1: uuidv1} = require('uuid');
-
     var version = document.getElementById('version').value;
     var capt = document.getElementById('capital').checked;
     var jmlCetak = document.getElementById('jmlCetak').value;
 
+    var rand = genForNum(jmlCetak,version);
+
     if(capt){
-        switch (version) {
-            case "1":
-                var rand = uuidv1();
-                var result = rand.toUpperCase();
-                break;
-            case "4":
-                var rand = uuidv4();
-                var result = rand.toUpperCase();
-                break;
-            default:
-                Swal.fire(
-                    'Error',
-                    'Pilih versi UUID',
-                    'error'
-                );
-        }
+        var result = rand.map(element => {
+            return element.toUpperCase();
+        });
     }else{
-        switch (version) {
-            case "1":
-                var rand = genForNum(jmlCetak,version);
-                var result = rand;
-                break;
-            case "4":
-                // var rand = uuidv4();
-                var rand = genForNum(jmlCetak,version);
-                var result = rand;
-                break;
-            default:
-                Swal.fire(
-                    'Error',
-                    'Pilih versi UUID',
-                    'error'
-                );
-        }
+        var result = rand;
     }
 
     document.getElementById('result').value = result;
@@ -92,4 +63,5 @@ function reset(){
     document.getElementById('result').value = "";
     document.getElementById('version').value = 1;
     document.getElementById('capital').checked = false;
+    document.getElementById('jmlCetak').value = "";
 }
