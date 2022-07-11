@@ -66,6 +66,7 @@
     "sweetalert2": "^11.4.14",
     "unique-names-generator": "^4.7.1",
     "update-electron-app": "^2.0.1",
+    "user-agents": "^1.0.1074",
     "uuid": "^8.3.2"
   }
 }
