@@ -6,7 +6,7 @@
 </h1>
 <p align="center">
   <a style="text-decoration:none" href="https://github.com/rzak23/FormDev/releases" target="_blank">
-    <img src="https://img.shields.io/badge/version-2.1.1-green" alt="Latest version" />
+    <img src="https://img.shields.io/badge/version-2.1.2-green" alt="Latest version" />
   </a>
   <a style="text-decoration:none" href="https://formdev.my.id" target="_blank">
     <img src="https://img.shields.io/badge/website-formdev.my.id-yellow" alt="Website" />
@@ -35,6 +35,9 @@ Fitur yang dihadirkan saat ini :
 - [x] Pemeriksa Teks
 - [x] Encoder/Decoder URL
 - [x] Pembanding Teks
+- [x] User Agent Generator
+- [x] JWT Decoder
+- [x] Text Checker
 
 # Instalasi (Pengguna Biasa)
 
