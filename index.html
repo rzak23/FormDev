@@ -54,7 +54,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="" class="nav-link active">
+                            <a href="#" onclick="index_page()" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Dashboard</p>
                             </a>
@@ -70,19 +70,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" onclick="base64_page()" class="nav-link">
                                         <i class="fa-solid fa-file-code"></i>
                                         <p>Base 46</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" onclick="url_page()" class="nav-link">
                                         <i class="fa-solid fa-link"></i>
                                         <p>Url Encoder/Decoder</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" onclick="jwt_decoder_page()" class="nav-link">
                                         <i class="fa-solid fa-gears"></i>
                                         <p>JWT Decoder</p>
                                     </a>
@@ -99,13 +99,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" onclick="cryptografi_page()" class="nav-link">
                                         <i class="fa-solid fa-laptop-code"></i>
                                         <p>Encrypt/Decrypt</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" onclick="checksum_page()" class="nav-link">
                                         <i class="fa-solid fa-search"></i>
                                         <p>Checksum</p>
                                     </a>
@@ -122,13 +122,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" onclick="uuid_page()" class="nav-link">
                                         <i class="fa-solid fa-passport"></i>
                                         <p>UUID</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="#" onclick="hash_page()" class="nav-link">
                                         <i class="fa-solid fa-fingerprint"></i>
                                         <p>Hash</p>
                                     </a>
@@ -218,6 +218,7 @@
             <!-- /.sidebar -->
         </aside>
         <!-- load view -->
+        <div id="page"></div>
         <!-- load view -->
         <!-- Main Footer -->
         <footer class="main-footer">
@@ -232,5 +233,7 @@
     <script src="node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- adminlte -->
     <script src="node_modules/admin-lte/dist/js/adminlte.js"></script>
+    <!-- navigation -->
+    <script src="navigasi.js"></script>
 </body>
 </html>

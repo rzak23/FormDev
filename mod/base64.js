@@ -12,7 +12,7 @@ function decodep(){
     document.getElementById('output').value = txt;
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('input').value = "";
     document.getElementById('output').value = "";
 }
