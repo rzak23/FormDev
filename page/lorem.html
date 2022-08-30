@@ -1,112 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormDev</title>
-    <link rel="shortcut icon" href="../buidl/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
-    <!-- fonts -->
-    <link rel="stylesheet" href="../fonts.css">
-</head>
-<body class="bg">
-    <div class="container-fluid">
-        <h4 class="text-center brand mt-5">
-            Lorem Ipsum Generator
-        </h4>
-        <div class="row mt-3">
-            <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                <form>
-                    <div class="form-group">
-                        <button type="button" class="btn btn-info" onclick="myLorem()">
-                            <i class="fa-solid fa-gears"></i>
-                            <span>Generate</span>
-                        </button>
-                        <button type="button" class="btn btn-success" data-clipboard-target="#hasil" onclick="notif()">
-                            <i class="fa-solid fa-copy"></i>
-                            <span>Salin</span>
-                        </button>
-                        <button type="button" class="btn btn-warning" onclick="saveTxt()">
-                            <i class="fa-solid fa-floppy-disk"></i>
-                            <span>Save</span>
-                        </button>
-                    </div>
-                    <div class="form-group mt-2">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label for="paragraf">Jumlah Paragraf</label>
-                                            <select name="paragraf" class="form-control" id="paragraf">
-                                                <option value="1">1 Paragraf</option>
-                                                <option value="2">2 Paragraf</option>
-                                                <option value="3">3 Paragraf</option>
-                                                <option value="4">4 Paragraf</option>
-                                                <option value="5">5 Paragraf</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="kalimat">Jumlah Kalimat</label>
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <label for="mink">Minimal</label>
-                                                    <input type="number" class="form-control" name="mink" id="mink" autocomplete="off">
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <label for="mank">Maksimal</label>
-                                                    <input type="number" class="form-control" name="mank" id="mank" autocomplete="off">
+<div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                             Lorem Ipsum Generator
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-info" onclick="myLorem()">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <span>Generate</span>
+                                    </button>
+                                    <button type="button" class="btn btn-success" data-clipboard-target="#hasil" onclick="notif()">
+                                        <i class="fa-solid fa-copy"></i>
+                                        <span>Salin</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="saveTxt()">
+                                        <i class="fa-solid fa-floppy-disk"></i>
+                                        <span>Save</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="reset()">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <label for="paragraf">Jumlah Paragraf</label>
+                                                        <select name="paragraf" class="form-control" id="paragraf">
+                                                            <option value="1">1 Paragraf</option>
+                                                            <option value="2">2 Paragraf</option>
+                                                            <option value="3">3 Paragraf</option>
+                                                            <option value="4">4 Paragraf</option>
+                                                            <option value="5">5 Paragraf</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="kalimat">Jumlah Kalimat</label>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mink">Minimal</label>
+                                                                <input type="number" class="form-control" name="mink" id="mink" autocomplete="off">
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mank">Maksimal</label>
+                                                                <input type="number" class="form-control" name="mank" id="mank" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="kalimat">Jumlah Kata</label>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mint">Minimal</label>
+                                                                <input type="number" class="form-control" name="mint" id="mint" autocomplete="off">
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mant">Maksimal</label>
+                                                                <input type="number" class="form-control" name="mant" id="mant" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="kalimat">Jumlah Kata</label>
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <label for="mint">Minimal</label>
-                                                    <input type="number" class="form-control" name="mint" id="mint" autocomplete="off">
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <label for="mant">Maksimal</label>
-                                                    <input type="number" class="form-control" name="mant" id="mant" autocomplete="off">
-                                                </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="hasil">Output</label>
+                                                <textarea name="hasil" id="hasil" class="form-control" style="height: 250px;resize: none;" readonly></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="hasil">Output</label>
-                                    <textarea name="hasil" id="hasil" class="form-control" style="height: 250px;resize: none;" readonly></textarea>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="mt-4 mb-3 text-center">
-                <a href="../index.html" class="btn btn-success">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>Kembali</span>
-                </a>
-                <button type="button" class="btn btn-warning" onclick="reset()">
-                    <i class="fa-solid fa-rotate"></i>
-                    <span>Reset</span>
-                </button>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="../mod/lorem.js"></script>
-    <script src="../node_modules/clipboard/dist/clipboard.min.js"></script>
-    <script>
-        new ClipboardJS('.btn');
-    </script>
-</body>
-</html>
+    </section>
+</div>
