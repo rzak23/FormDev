@@ -12,7 +12,7 @@ function decodeurl(){
     document.getElementById('output').value = dcd;
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('url').value = "";
     document.getElementById('output').value = "";
 }

@@ -28,7 +28,7 @@ function notif(){
     );
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('text').value = "";
     document.getElementById('tipe').value = "md5";
     document.getElementById('hasil').value = "";

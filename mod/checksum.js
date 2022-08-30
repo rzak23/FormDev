@@ -29,7 +29,7 @@ function notif(){
     );
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('file').value = "";
     document.getElementById('hasil').value = "";
 }

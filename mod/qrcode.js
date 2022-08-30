@@ -51,7 +51,7 @@ function downloadQR(){
     qrCode.download({ name: text, extension: "png" });
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('text').value = "";
     document.getElementById('canvas').innerHTML = "";
     document.getElementById('bt-download').hidden = true;

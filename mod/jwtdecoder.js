@@ -10,7 +10,7 @@ function jwt_read(){
     document.getElementById('algo').value = "Alg : "+algojwt['alg'];
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('jwt').value = "";
     document.getElementById('payload').value = "";
     document.getElementById('algo').value = "";

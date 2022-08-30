@@ -8,6 +8,6 @@ function generate(){
     console.log(uagent.toString());
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('result').value = "";
 }

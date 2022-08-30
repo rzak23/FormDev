@@ -42,7 +42,7 @@ function notif(){
     );
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('pass').value = "";
     document.getElementById('option').value = "alpha";
     document.getElementById('panjang').value = 6;

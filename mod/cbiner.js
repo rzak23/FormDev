@@ -52,7 +52,7 @@ function ambilData(){
     document.getElementById('hasil').value = ConvertBase.dec2bin(angka);
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('angka').value = "";
     document.getElementById('hasil').value = "";
 }

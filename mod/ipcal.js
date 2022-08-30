@@ -21,7 +21,7 @@ function calIp(){
     document.getElementById('ipall').innerHTML = tblock-2;
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('ip').value = "";
     document.getElementById('sub').value = "";
     document.getElementById('base').innerHTML = "";
