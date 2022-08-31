@@ -34,7 +34,7 @@ function downloadQR(){
         height: 300,
         type: "svg",
         data: text,
-        image: "icon.png",
+        image: "./page/icon.png",
         dotsOptions: {
             color: color,
             type: "rounded"
