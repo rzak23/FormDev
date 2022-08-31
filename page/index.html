@@ -9,8 +9,48 @@
 						<img src="./page/icon.png" alt="" width="200">
 					</div>
 					<label class="text-muted">Version 2.1.2</label>
+					<br>
+					<button type="button" class="btn btn-info" data-toggle="modal" data-target="#about">
+						<span>Informasi App</span>
+						<i class="fa-solid fa-circle-info"></i>
+					</button>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- modal info -->
+	<div class="modal fade" role="dialog" id="about">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					Informasi App
+				</div>
+				<div class="modal-body">
+					<p>
+						FormDev, aplikasi pendukung untuk developer yang dibagikan secara gratis dan dibuat untuk bisa membantu beberapa kebutuhan pengembang. Detail projek bisa dilihat melalui halaman <button type="button" onclick="openRepo()" class="btn btn-info">Github</button>
+					</p>
+					<p>
+						Aplikasi ini terinspirasi dari proyek <button type="button" onclick="openDev()" class="btn btn-info">DevToys</button>
+					</p>
+					<p>
+						<strong>Apa yang baru :</strong>
+						<p>
+							<ul>
+								<li>Bisa cetak UUID lebih dari 1</li>
+								<li>Tambah modul pembuat User Agent</li>
+								<li>Update minor lainnya</li>
+							</ul>
+						</p>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
+						<span>Tutup</span>
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal info -->
 </div>
