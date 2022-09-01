@@ -22,7 +22,7 @@ function cekText(){
     hasil.appendChild(fragment);
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('lama').value = "";
     document.getElementById('baru').value = "";
     document.getElementById('hasil').innerHTML = "";

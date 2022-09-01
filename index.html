@@ -6,328 +6,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FormDev</title>
     <link rel="shortcut icon" href="build/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- adminlte -->
+    <link rel="stylesheet" href="node_modules/admin-lte/dist/css/adminlte.css">
     <!-- fontawesome -->
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="node_modules/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.css">
     <!-- google fonts -->
-    <link rel="stylesheet" href="fonts.css">
-</head>
-<body class="bg">
-    <div class="container">
-        <h4 class="text-center brand mt-5">
-            FormDev
-        </h4>
-        <div class="alert alert-info">
-            Encoder/Decoder
-        </div>
-        <div class="row mt-3">
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-file-code fa-5x"></i>
-                        <br>
-                        <span>Base64</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/base64.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-link fa-5x"></i>
-                        <br>
-                        <span>URL Encoder/Decoder</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/url-ende.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-gears fa-5x"></i>
-                        <br>
-                        <span>JWT Decoder</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/jwt-decode.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert-info">
-            Cryptografi
-        </div>
-        <div class="row mt-3">
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-laptop-code fa-5x"></i>
-                        <br>
-                        <span>Cryptografi</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/cryptografi.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-search fa-5x"></i>
-                        <br>
-                        <span>Checksum</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/checksum.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert-info">
-            Generator
-        </div>
-        <div class="row mt-3">
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-passport fa-5x"></i>
-                        <br>
-                        <span>UUID Generator</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/uuid.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-fingerprint fa-5x"></i>
-                        <br>
-                        <span>Hash Generator</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/hash.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-font fa-5x"></i>
-                        <br>
-                        <span>String Generator</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/string.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-id-card fa-5x"></i>
-                        <br>
-                        <span>Name Generator</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/name.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-qrcode fa-5x"></i>
-                        <br>
-                        <span>QR Code Generator</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/qrcode.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-align-left fa-5x"></i>
-                        <br>
-                        <span>Lorem Ipsum Generator</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/lorem.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-user-gear fa-5x"></i>
-                        <br>
-                        <span>User Agent Generator</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/useragent.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert-info">
-            Konverter
-        </div>
-        <div class="row mt-3">
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-calculator fa-5x"></i>
-                        <br>
-                        <span>Calculator Biner</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/cbiner.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-network-wired fa-5x"></i>
-                        <br>
-                        <span>Calculator IP</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/ipcal.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert-info">
-            Teks Inspeksi
-        </div>
-        <div class="row mt-3">
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-code-compare fa-5x"></i>
-                        <br>
-                        <span>Pembanding Teks</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/banding.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-12 mb-2">
-                <div class="card text-center h-100">
-                    <div class="card-body text-center">
-                        <i class="fa-solid fa-file-lines fa-5x"></i>
-                        <br>
-                        <span>Pemeriksa Teks</span>
-                    </div>
-                    <div class="card-footer">
-                        <a href="page/teks-checker.html" class="btn btn-primary">
-                            <span>Open</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3 mb-3">
-            <div class="col-lg-6 col-md-6 col-12 mx-auto text-center">
-                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#about">
-                    <i class="fa-solid fa-exclamation"></i>
-                    <span>Info App</span>
-                </button>
-            </div>
-        </div>
-        <!-- about -->
-        <div class="modal fade" role="dialog" id="about">
-            <div class="modal-dialog">
-                <div class="modal-content modal-background">
-                    <div class="modal-header">
-                        Tentang App
-                        <small id="version" class="version"></small>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card-body">
-                            FormDev, aplikasi pendukung untuk developer yang dibagikan secara gratis dan dibuat untuk bisa membantu beberapa kebutuhan pengembang. Detail projek bisa dilihat melalui halaman <button type="button" onclick="openRepo()" class="btn btn-info">Github</a>
-                        </div>
-                        <div class="card-body">
-                            Aplikasi ini terinspirasi dari proyek <button type="button" onclick="openDev()" class="btn btn-info">DevToys</a>
-                        </div>
-                        <div class="card-body">
-                            <strong>Apa yang baru di <label id="versiona" class="text-white version"></label>:</strong>
-                            <p>
-                                <ul>
-                                    <li>Bisa cetak UUID lebih dari 1</li>
-                                    <li>Tambah modul pembuat User Agent</li>
-                                    <li>Update minor lainnya</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-danger" data-bs-dismiss="modal">
-                            <i class="fa-solid fa-times"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- about -->
-    </div>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="about.js"></script>
+    <!-- <link rel="stylesheet" href="fonts.css"> -->
     <script>
-       var pjson = require('./package.json');
-    //    document.getElementById('version').innerHTML = "Version : "+pjson.version;
-    //    document.getElementById('versiona').innerHTML = "Version "+pjson.version;
-        for (let index = 0; index <= 1; index++) {
-            // const element = array[index];
-            document.getElementsByClassName('version')[index].innerHTML = "Version "+pjson.version;   
-        }
+        window.jQuery = window.$ = require('jquery');
+    </script>
+    <!-- jquery -->
+    <!-- <script src="node_modules/admin-lte/plugins/jquery/jquery.js"></script> -->
+</head>
+<body class="dark-mode hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+    
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <h2 href="#" class="brand-link">
+                <img src="page/icon.png" alt="Logo" class="brand-image"/>
+                <span class="brand-text font-weight-bold">FormDev</span>
+            </h2>
+    
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#" onclick="index_page()" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-dice-d6"></i>
+                                <p>
+                                    Encoder/Decoder
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" onclick="base64_page()" class="nav-link">
+                                        <i class="fa-solid fa-file-code"></i>
+                                        <p>Base 46</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="url_page()" class="nav-link">
+                                        <i class="fa-solid fa-link"></i>
+                                        <p>Url Encoder/Decoder</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="jwt_decoder_page()" class="nav-link">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <p>JWT Decoder</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <p>
+                                    Cryptografi
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" onclick="cryptografi_page()" class="nav-link">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                        <p>Encrypt/Decrypt</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="checksum_page()" class="nav-link">
+                                        <i class="fa-solid fa-search"></i>
+                                        <p>Checksum</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-user-gear"></i>
+                                <p>
+                                    Generator
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" onclick="uuid_page()" class="nav-link">
+                                        <i class="fa-solid fa-passport"></i>
+                                        <p>UUID</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="hash_page()" class="nav-link">
+                                        <i class="fa-solid fa-fingerprint"></i>
+                                        <p>Hash</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="string_page()" class="nav-link">
+                                        <i class="fa-solid fa-font"></i>
+                                        <p>String</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="name_page()" class="nav-link">
+                                        <i class="fa-solid fa-id-card"></i>
+                                        <p>Name</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="qr_code_page()" class="nav-link">
+                                        <i class="fa-solid fa-qrcode"></i>
+                                        <p>QR Code</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="lorem_page()" class="nav-link">
+                                        <i class="fa-solid fa-align-left"></i>
+                                        <p>Lorem Ipsum</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="user_agent_page()" class="nav-link">
+                                        <i class="fa-solid fa-user-gear"></i>
+                                        <p>User Agent</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon 	fa-solid fa-laptop-medical"></i>
+                                <p>
+                                    Konverter
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" onclick="cal_biner_page()" class="nav-link">
+                                        <i class="fa-solid fa-calculator"></i>
+                                        <p>Calculator Biner</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="ip_cal_page()" class="nav-link">
+                                        <i class="fa-solid fa-network-wired"></i>
+                                        <p>Calculator IP</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon 	fa-solid fa-spell-check"></i>
+                                <p>
+                                    Teks Inspeksi
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" onclick="text_diff_page()" class="nav-link">
+                                        <i class="fa-solid fa-code-compare"></i>
+                                        <p>Pembanding Teks</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="text_check_page()" class="nav-link">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                        <p>Pemeriksa Teks</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- load view -->
+        <div id="page"></div>
+        <!-- load view -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>FormDev@Re.Studio</strong>
+        </footer>
+    </div>
+    
+    <!-- bootsrap -->
+    <script src="node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- adminlte -->
+    <script src="node_modules/admin-lte/dist/js/adminlte.js"></script>
+    <!-- navigation -->
+    <script src="navigasi.js"></script>
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+    <script>
+        new ClipboardJS('.btn');
     </script>
 </body>
 </html>

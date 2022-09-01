@@ -1,101 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormDev</title>
-    <link rel="shortcut icon" href="../buidl/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
-    <!-- fonts -->
-    <link rel="stylesheet" href="../fonts.css">
-</head>
-<body class="bg">
-    <div class="container-fluid">
-        <h4 class="text-center brand mt-5">
-            String Generator
-        </h4>
-        <div class="row mt-3">
-            <div class="col-lg-5 col-md-5 col-12 mx-auto">
-                <div class="card">
-                    <div class="card-header">
-                        Option
+<div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label for="jenis">Jenis</label>
+                        <select name="option" id="option" class="form-control">
+                            <option value="alpha">alpha</option>
+                            <option value="AlPha">AlPha</option>
+                            <option value="alphanumeric">Alpha123</option>
+                            <option value="alphanumchar">Alpha123!@#</option>
+                        </select>
                     </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label for="panjang">Panjang Karakter</label>
+                        <select name="panjang" id="panjang" class="form-control">
+                            <option value="6">6 Karakter</option>
+                            <option value="8">8 Karakter</option>
+                            <option value="12">12 Karakter</option>
+                            <option value="16">16 Karakter</option>
+                            <option value="32">32 Karakter</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            String Generator
+                        </div>
+                        <div class="card-body">
+                            <form class="text-center">
                                 <div class="form-group">
-                                    <label for="jenis">Jenis</label>
-                                    <select name="option" id="option" class="form-control">
-                                        <option value="alpha">alpha</option>
-                                        <option value="AlPha">AlPha</option>
-                                        <option value="alphanumeric">Alpha123</option>
-                                        <option value="alphanumchar">Alpha123!@#</option>
-                                    </select>
+                                    <label for="pass">String</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="pass" autocomplete="off" readonly>
+                                        <button type="button" class="btn btn-success" data-clipboard-target='#pass' onclick="notif()">
+                                            <i class="fa-solid fa-copy"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="form-group">
-                                    <label for="panjang">Panjang Karakter</label>
-                                    <select name="panjang" id="panjang" class="form-control">
-                                        <option value="6">6 Karakter</option>
-                                        <option value="8">8 Karakter</option>
-                                        <option value="12">12 Karakter</option>
-                                        <option value="16">16 Karakter</option>
-                                        <option value="32">32 Karakter</option>
-                                    </select>
+                                <div class="form-group mt-2">
+                                    <button type="button" class="btn btn-info" onclick="myPass()">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <span>Generate</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <span>Reset</span>
+                                    </button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <form class="text-center">
-                            <div class="form-group">
-                                <label for="pass">String</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="pass" autocomplete="off" readonly>
-                                    <button type="button" class="btn btn-success" data-clipboard-target='#pass' onclick="notif()">
-                                        <i class="fa-solid fa-copy"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="form-group mt-2">
-                                <button type="button" class="btn btn-info" onclick="myPass()">
-                                    <i class="fa-solid fa-gears"></i>
-                                    <span>Generate</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-4 text-center">
-                <a href="../index.html" class="btn btn-success">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>Kembali</span>
-                </a>
-                <button type="button" class="btn btn-warning" onclick="reset()">
-                    <i class="fa-solid fa-rotate"></i>
-                    <span>Reset</span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <script src="../mod/stringgen.js"></script>
-    <script src="../node_modules//clipboard/dist/clipboard.min.js"></script>
-    <script>
-        new ClipboardJS('.btn');
-    </script>
-</body>
-</html>
+    </section>
+</div>

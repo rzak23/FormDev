@@ -59,7 +59,7 @@ function notifC(){
     );
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('result').value = "";
     document.getElementById('version').value = 1;
     document.getElementById('capital').checked = false;

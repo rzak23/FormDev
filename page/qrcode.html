@@ -1,142 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormDev</title>
-    <link rel="shortcut icon" href="../buidl/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
-    <!-- fonts -->
-    <link rel="stylesheet" href="../fonts.css">
-</head>
-<body class="bg">
-    <div class="container-fluid">
-        <h4 class="text-center brand mt-5">
-            QR Code Generator
-        </h4>
-        <div class="row mt-5">
-            <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                <form class="text-center">
+<div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
                     <div class="card">
                         <div class="card-header">
-                            Opsi
+                            QR Code Generator
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="warnaq">Warna QR Code</label>
-                                        <input type="color" class="form-control" value="#000000" id="warnaq" autocomplete="off">
+                            <form class="text-center">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Opsi
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="warnaq">Warna QR Code</label>
+                                                    <input type="color" class="form-control" value="#000000" id="warnaq" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="col0-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="warnab">Warna Background</label>
+                                                    <input type="color" class="form-control" value="#000000" id="warnab" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col0-lg-6 col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="warnab">Warna Background</label>
-                                        <input type="color" class="form-control" value="#000000" id="warnab" autocomplete="off">
-                                    </div>
+                                <div class="form-group">
+                                    <label for="text">Text</label>
+                                    <input type="text" class="form-control" id="text" autocomplete="off">
                                 </div>
+                                <div class="form-group mt-2">
+                                    <button type="button" class="btn btn-info" onclick="myQR()">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <span>Generate</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="mt-4 text-center" id="canvas"></div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary" id="bt-download" onclick="downloadQR()">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="text">Text</label>
-                        <input type="text" class="form-control" id="text" autocomplete="off">
-                    </div>
-                    <div class="form-group mt-2">
-                        <button type="button" class="btn btn-info" onclick="myQR()">
-                            <i class="fa-solid fa-gears"></i>
-                            <span>Generate</span>
-                        </button>
-                    </div>
-                </form>
-                <div class="mt-4 text-center" id="canvas"></div>
-                <div class="text-center">
-                    <button type="button" class="btn btn-primary" id="bt-download" onclick="downloadQR()">
-                        <i class="fa-solid fa-download"></i>
-                    </button>
                 </div>
             </div>
-            <div class="mt-4 mb-4 text-center">
-                <a href="../index.html" class="btn btn-success">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>Kembali</span>
-                </a>
-                <button type="button" class="btn btn-warning" onclick="reset()">
-                    <i class="fa-solid fa-rotate"></i>
-                    <span>Reset</span>
-                </button>
-            </div>
         </div>
-    </div>
-    <!-- <script src="../mod/qrcode.js"></script> -->
-    <script src="../node_modules/qr-code-styling/lib/qr-code-styling.js"></script>
-    <script>
-        document.getElementById('bt-download').hidden = true;
-        function myQR(){
-            var text = document.getElementById('text').value;
-            var color = document.getElementById('warnaq').value;
-            var background = document.getElementById('warnab').value;
-            const qrCode = new QRCodeStyling({
-                width: 300,
-                height: 300,
-                type: "svg",
-                data: text,
-                image: "icon.png",
-                dotsOptions: {
-                    color: color,
-                    type: "rounded"
-                },
-                backgroundOptions: {
-                    color: background,
-                },
-                imageOptions: {
-                    crossOrigin: "anonymous",
-                    margin: 20
-                }
-            });
-
-            document.getElementById('canvas').innerHTML = "";
-            qrCode.append(document.getElementById("canvas"));
-            document.getElementById('bt-download').hidden = false;
-        }
-
-        function downloadQR(){
-            var text = document.getElementById('text').value;
-            var color = document.getElementById('warnaq').value;
-            var background = document.getElementById('warnab').value;
-            const qrCode = new QRCodeStyling({
-                width: 300,
-                height: 300,
-                type: "svg",
-                data: text,
-                image: "icon.png",
-                dotsOptions: {
-                    color: color,
-                    type: "rounded"
-                },
-                backgroundOptions: {
-                    color: background,
-                },
-                imageOptions: {
-                    crossOrigin: "anonymous",
-                    margin: 20
-                }
-            });
-
-            qrCode.download({ name: text, extension: "png" });
-        }
-
-        function reset(){
-            document.getElementById('text').value = "";
-            document.getElementById('canvas').innerHTML = "";
-            document.getElementById('bt-download').hidden = true;
-        }
+    </section>
+</div>
+    
+    <script type="text/javascript">
+        
     </script>
 </body>
 </html>

@@ -24,7 +24,7 @@ function calculated(){
     document.getElementById('perchar').innerHTML = pc;
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('teks').value = "";
     document.getElementById('karakter').innerHTML = "";
     document.getElementById('kata').innerHTML = "";

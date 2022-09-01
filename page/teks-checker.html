@@ -1,82 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormDev</title>
-    <link rel="shortcut icon" href="../buidl/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
-    <!-- fonts -->
-    <link rel="stylesheet" href="../fonts.css">
-</head>
-<body class="bg">
-    <div class="container-fluid">
-        <h4 class="text-center brand mt-5">
-            Pemeriksa Teks
-        </h4>
-        <div class="row mt-3">
-            <div class="col-lg-6 col-md-6 col-12 mt-2">
-                <div class="form-group">
-                    <label for="teks">Teks</label>
-                    <textarea name="teks" class="form-control" id="teks" style="height: 350px;resize: none;"></textarea>
-                </div>
-                <div class="form-group mt-2">
-                    <button class="btn btn-info" onclick="calculated()">
-                        <i class="fa-brands fa-searchengin"></i>
-                        <span>Cek</span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12 mt-2">
-                <div class="card">
-                    <div class="card-header">
-                        Hasil
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="karakter">J. Karakter :</label>
-                            <span id="karakter"></span>
+<div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Pemeriksa Teks
                         </div>
-                        <div class="form-group">
-                            <label for="kata">J. Kata :</label>
-                            <span id="kata"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="kalimat">J. Kalimat :</label>
-                            <span id="kalimat"></span>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="teks">Teks</label>
+                                    <textarea name="teks" class="form-control" id="teks" style="height: 350px;resize: none;"></textarea>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <button type="button" class="btn btn-info" onclick="calculated()">
+                                        <i class="fa-brands fa-searchengin"></i>
+                                        <span>Cek</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="card mt-2">
-                    <div class="card-header">
-                        Distribusi per Karakter
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Hasil
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="karakter">J. Karakter :</label>
+                                <span id="karakter"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="kata">J. Kata :</label>
+                                <span id="kata"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="kalimat">J. Kalimat :</label>
+                                <span id="kalimat"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div id="perchar"></div>
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            Distribusi per Karakter
+                        </div>
+                        <div class="card-body">
+                            <div id="perchar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="mt-4 text-center">
-                <a href="../index.html" class="btn btn-success">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>Kembali</span>
-                </a>
-                <button type="button" class="btn btn-warning" onclick="reset()">
-                    <i class="fa-solid fa-rotate"></i>
-                    <span>Reset</span>
-                </button>
-            </div>
-        </div>
-    </div>
-    <script src="../mod/checker.js"></script>
-</body>
-</html>
+    </section>
+</div>

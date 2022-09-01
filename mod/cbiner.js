@@ -49,10 +49,19 @@
 function ambilData(){
     let angka = document.getElementById('angka').value;
 
-    document.getElementById('hasil').value = ConvertBase.dec2bin(angka);
+    if(angka == ""){
+        const Swal = require('sweetalert2');
+        Swal.fire(
+            'Error',
+            'Silahkan isikan nilai desimal terlebih dahulu',
+            'error'
+        );
+    }else{
+        document.getElementById('hasil').value = ConvertBase.dec2bin(angka);
+    }
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('angka').value = "";
     document.getElementById('hasil').value = "";
 }

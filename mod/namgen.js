@@ -19,6 +19,6 @@ function notif(){
     );
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('name').value = "";
 }

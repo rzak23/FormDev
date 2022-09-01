@@ -5,19 +5,11 @@ const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
 
-app.on('ready',() => {
-  require('update-electron-app')({
-    updateInterval: '5 minutes',
-    // logger: require('electron-log')
-    notifyUser: true
-  })
-})
-
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1000,
-    height: 800,
+    width: 1300,
+    height: 950,
     show: false,
     icon: __dirname+'/build/FormDev.png',
     webPreferences: {
@@ -29,7 +21,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-  // mainWindow.removeMenu();
+  mainWindow.removeMenu();
 
   var splash = new BrowserWindow({
     width: 500,

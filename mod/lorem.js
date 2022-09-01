@@ -37,6 +37,11 @@ function saveTxt(){
     fileSave.saveAs(data,"lorem.txt");
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('hasil').value = "";
+    document.getElementById('mink').value = "";
+    document.getElementById('mank').value = "";
+    document.getElementById('mint').value = "";
+    document.getElementById('mant').value = "";
+    document.getElementById('paragraf').value = 1;
 }

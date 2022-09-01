@@ -30,7 +30,7 @@ function bongkar(){
     document.getElementById('hasil').value = rs.toString(CryptoJS.enc.Utf8);
 }
 
-function reset(){
+function reset_form(){
     document.getElementById('input').value = "";
     document.getElementById('key').value = "";
     document.getElementById('hasil').value = "";
