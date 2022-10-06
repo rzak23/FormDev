@@ -280,6 +280,22 @@ function text_check_page(){
 	document.head.appendChild(script);
 }
 
+function json_format_page(){
+	fetch('./page/json-format.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/json_format.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.head.appendChild(script);
+}
+
 const {shell} = require('electron');
 function openDev(){
     var url = "https://github.com/veler/DevToys";
