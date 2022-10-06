@@ -312,6 +312,22 @@ function sql_format_page(){
 	document.head.appendChild(script);
 }
 
+function xml_format_page(){
+	fetch('./page/xml-format.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/xml_format.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.head.appendChild(script);
+}
+
 const {shell} = require('electron');
 function openDev(){
     var url = "https://github.com/veler/DevToys";
