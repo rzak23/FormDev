@@ -65,10 +65,12 @@
     "lorem-ipsum": "^2.0.8",
     "netmask": "^2.0.2",
     "qr-code-styling": "^1.6.0-rc.1",
+    "sql-formatter": "^11.0.2",
     "sweetalert2": "^11.4.24",
     "unique-names-generator": "^4.7.1",
     "update-electron-app": "^2.0.1",
     "user-agents": "^1.0.1159",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "xml-formatter": "^2.6.1"
   }
 }
