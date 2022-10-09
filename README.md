@@ -6,13 +6,16 @@
 </h1>
 <p align="center">
   <a style="text-decoration:none" href="https://github.com/rzak23/FormDev/releases" target="_blank">
-    <img src="https://img.shields.io/badge/version-2.1.2-green" alt="Latest version" />
+    <img src="https://img.shields.io/badge/version-2.1.4-green" alt="Latest version" />
   </a>
   <a style="text-decoration:none" href="https://formdev.my.id" target="_blank">
     <img src="https://img.shields.io/badge/website-formdev.my.id-yellow" alt="Website" />
   </a>
   <a style="text-decoration:none" href="https://electronjs.org" target="_blank">
-    <img src="https://img.shields.io/badge/build-electron-blue?logo=electron" alt="Website" />
+    <img src="https://img.shields.io/badge/build-electron-blue?logo=electron" alt="Electron" />
+  </a>
+  <a style="text-decoration:none" href="https://www.microsoft.com/store/productId/9N5JQFC0NGCC" target="_blank">
+    <img src="https://img.shields.io/badge/microsoft-store-blue?logo=microsoft" alt="Microsoft Store" />
   </a>
 </p>
 
@@ -38,6 +41,7 @@ Fitur yang dihadirkan saat ini :
 - [x] User Agent Generator
 - [x] JWT Decoder
 - [x] Text Checker
+- [x] Formatter Tools
 
 # Instalasi (Pengguna Biasa)
 
