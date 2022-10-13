@@ -9,6 +9,16 @@ function calculated(){
     document.getElementById("kata").innerHTML = s.split(' ').length;
     document.getElementById("kalimat").innerHTML = s.split('.').length;
 
+    //per words
+    var wordMap = {};
+    var words = s.split(' ');
+    for (let i = 0; i < words.length; i++) {
+        let currentWordCount = wordMap[words[i]];
+        let count = currentWordCount ? currentWordCount : 0;
+        wordMap[words[i]] = count + 1;
+    }
+    document.getElementById('perwords').innerHTML = JSON.stringify(wordMap);
+    console.log(wordMap);
     // per char
     var obj = {};
     var pc = "";
