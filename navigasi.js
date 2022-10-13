@@ -21,7 +21,7 @@ function remove_script_modular(){
 }
 
 function base64_page(){
-	fetch('./page/base64.html')
+	fetch('./page/encoder/base64.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -29,7 +29,7 @@ function base64_page(){
 	
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/base64.js';
+	script.src = 'mod/encoder/base64.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -37,7 +37,7 @@ function base64_page(){
 }
 
 function url_page(){
-	fetch('./page/url-ende.html')
+	fetch('./page/encoder/url-ende.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -45,7 +45,7 @@ function url_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/url-ende.js';
+	script.src = 'mod/encoder/url-ende.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -53,7 +53,7 @@ function url_page(){
 }
 
 function jwt_decoder_page(){
-	fetch('./page/jwt-decode.html')
+	fetch('./page/encoder/jwt-decode.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -61,7 +61,7 @@ function jwt_decoder_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/jwtdecoder.js';
+	script.src = 'mod/encoder/jwtdecoder.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -69,7 +69,7 @@ function jwt_decoder_page(){
 }
 
 function cryptografi_page(){
-	fetch('./page/cryptografi.html')
+	fetch('./page/cryptografi/cryptografi.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -77,7 +77,7 @@ function cryptografi_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/cryptografi.js';
+	script.src = 'mod/cryptografi/cryptografi.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -85,7 +85,7 @@ function cryptografi_page(){
 }
 
 function checksum_page(){
-	fetch('./page/checksum.html')
+	fetch('./page/cryptografi/checksum.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -93,7 +93,7 @@ function checksum_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/checksum.js';
+	script.src = 'mod/cryptografi/checksum.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -101,7 +101,7 @@ function checksum_page(){
 }
 
 function uuid_page(){
-	fetch('./page/uuid.html')
+	fetch('./page/generator/uuid.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -109,7 +109,7 @@ function uuid_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/uuid.js';
+	script.src = 'mod/generator/uuid.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -117,7 +117,7 @@ function uuid_page(){
 }
 
 function hash_page(){
-	fetch('./page/hash.html')
+	fetch('./page/generator/hash.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -125,7 +125,7 @@ function hash_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/hash.js';
+	script.src = 'mod/generator/hash.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -133,7 +133,7 @@ function hash_page(){
 }
 
 function string_page(){
-	fetch('./page/string.html')
+	fetch('./page/generator/string.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -141,7 +141,7 @@ function string_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/stringgen.js';
+	script.src = 'mod/generator/stringgen.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -149,7 +149,7 @@ function string_page(){
 }
 
 function name_page(){
-	fetch('./page/name.html')
+	fetch('./page/generator/name.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -157,7 +157,7 @@ function name_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/namgen.js';
+	script.src = 'mod/generator/namgen.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -165,7 +165,7 @@ function name_page(){
 }
 
 function qr_code_page(){
-	fetch('./page/qrcode.html')
+	fetch('./page/generator/qrcode.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -176,7 +176,7 @@ function qr_code_page(){
 	script.src = 'node_modules/qr-code-styling/lib/qr-code-styling.js';
 	script.id = 'sc';
 	const script2 = document.createElement('script');
-	script2.src = 'mod/qrcode.js';
+	script2.src = 'mod/generator/qrcode.js';
 	script2.id = 'sc2';
 
 	// Append to the `head` element
@@ -185,7 +185,7 @@ function qr_code_page(){
 }
 
 function lorem_page(){
-	fetch('./page/lorem.html')
+	fetch('./page/generator/lorem.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -193,7 +193,7 @@ function lorem_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/lorem.js';
+	script.src = 'mod/generator/lorem.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -201,7 +201,7 @@ function lorem_page(){
 }
 
 function user_agent_page(){
-	fetch('./page/useragent.html')
+	fetch('./page/generator/useragent.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -209,7 +209,7 @@ function user_agent_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/userAgent.js';
+	script.src = 'mod/generator/userAgent.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -217,7 +217,7 @@ function user_agent_page(){
 }
 
 function cal_biner_page(){
-	fetch('./page/cbiner.html')
+	fetch('./page/konverter/cbiner.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -225,7 +225,7 @@ function cal_biner_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/cbiner.js';
+	script.src = 'mod/konverter/cbiner.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -233,7 +233,7 @@ function cal_biner_page(){
 }
 
 function ip_cal_page(){
-	fetch('./page/ipcal.html')
+	fetch('./page/konverter/ipcal.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -241,7 +241,7 @@ function ip_cal_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/ipcal.js';
+	script.src = 'mod/konverter/ipcal.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -249,7 +249,7 @@ function ip_cal_page(){
 }
 
 function text_diff_page(){
-	fetch('./page/banding.html')
+	fetch('./page/teks/banding.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -257,7 +257,7 @@ function text_diff_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/banding.js';
+	script.src = 'mod/teks/banding.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -265,7 +265,7 @@ function text_diff_page(){
 }
 
 function text_check_page(){
-	fetch('./page/teks-checker.html')
+	fetch('./page/teks/teks-checker.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
 
@@ -273,7 +273,7 @@ function text_check_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/checker.js';
+	script.src = 'mod/teks/checker.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -281,7 +281,7 @@ function text_check_page(){
 }
 
 function json_format_page(){
-	fetch('./page/json-format.html')
+	fetch('./page/formatter/json-format.html')
 	.then(response => response.text())
 	.then(text => document.getElementById('page').innerHTML = text);
 
@@ -289,7 +289,7 @@ function json_format_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/json_format.js';
+	script.src = 'mod/formatter/json_format.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -297,7 +297,7 @@ function json_format_page(){
 }
 
 function sql_format_page(){
-	fetch('./page/sql-format.html')
+	fetch('./page/formatter/sql-format.html')
 	.then(response => response.text())
 	.then(text => document.getElementById('page').innerHTML = text);
 
@@ -305,7 +305,7 @@ function sql_format_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/sql_format.js';
+	script.src = 'mod/formatter/sql_format.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
@@ -313,7 +313,7 @@ function sql_format_page(){
 }
 
 function xml_format_page(){
-	fetch('./page/xml-format.html')
+	fetch('./page/formatter/xml-format.html')
 	.then(response => response.text())
 	.then(text => document.getElementById('page').innerHTML = text);
 
@@ -321,7 +321,7 @@ function xml_format_page(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/xml_format.js';
+	script.src = 'mod/formatter/xml_format.js';
 	script.id = 'sc';
 
 	// Append to the `head` element

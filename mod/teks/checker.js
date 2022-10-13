@@ -19,7 +19,7 @@ function calculated(){
     }
 
     for(var key in obj){
-        pc += key+" : "+obj[key]+"<br>";
+        pc += key+" : "+obj[key]+", ";
     }
     document.getElementById('perchar').innerHTML = pc;
 }
