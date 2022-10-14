@@ -40,4 +40,5 @@ function reset_form(){
     document.getElementById('kata').innerHTML = "";
     document.getElementById('kalimat').innerHTML = "";
     document.getElementById('perchar').innerHTML = "";
+    document.getElementById('perwords').innerHTML = "";
 }
