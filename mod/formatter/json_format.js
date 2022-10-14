@@ -1,13 +1,14 @@
 function convertToJson(){
     const jsonFormat = require('json-string-formatter');
+    const hl = require('highlight.js');
 
     var input = document.getElementById('jinput').value;
     var myjson = jsonFormat.format(input);
 
-    document.getElementById('joutput').value = myjson
+    document.getElementById('joutput').innerHTML = hl.highlightAuto(myjson).value;
 }
 
 function resetForm(){
     document.getElementById('jinput').value = "";
-    document.getElementById('joutput').value = "";
+    document.getElementById('joutput').innerHTML = "";
 }
