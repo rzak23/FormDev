@@ -27,9 +27,11 @@
                                     <label for="hasil">Output</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="hasil" readonly>
-                                        <button type="button" class="btn btn-success" data-clipboard-target="#hasil" onclick="notif()">
-                                            <i class="fa-solid fa-copy"></i>
-                                        </button>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-success" data-clipboard-target="#hasil" onclick="notif()">
+                                                <i class="fa-solid fa-copy"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 <button type="button" class="btn btn-warning" onclick="reset_form()">
