@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build-win": "electron-builder --win --x64"
+    "build-win": "electron-builder --win --x64",
+    "build-linx": "electron-builder --linux --x64"
   },
   "build": {
     "directories": {
@@ -19,6 +20,14 @@
         "appx"
       ],
       "icon": "build/favicon.ico"
+    },
+    "linux": {
+      "target": [
+        "snap",
+        "appimage"
+      ],
+      "icon": "build/256x256.png",
+      "category": "Utility"
     },
     "nsis": {
       "oneClick": false,
@@ -50,7 +59,7 @@
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
     "electron": "^21.1.0",
-    "electron-builder": "^23.3.3"
+    "electron-builder": "^23.6.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.2",
