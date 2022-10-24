@@ -68,6 +68,22 @@ function jwt_decoder_page(){
 	document.head.appendChild(script);
 }
 
+function jwt_encoder_page(){
+	fetch('./page/encoder/jwt-encoder.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/encoder/jwtencoder.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.head.appendChild(script);
+}
+
 function cryptografi_page(){
 	fetch('./page/cryptografi/cryptografi.html')
 	.then(response=> response.text())
