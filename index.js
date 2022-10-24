@@ -12,6 +12,11 @@ function createWindow () {
     height: 950,
     show: false,
     icon: __dirname+'/build/FormDev.png',
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#454d55',
+      symbolColor: '#74b1be'
+    },
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
