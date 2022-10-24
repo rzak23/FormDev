@@ -17,6 +17,12 @@
   <a style="text-decoration:none" href="https://www.microsoft.com/store/productId/9N5JQFC0NGCC" target="_blank">
     <img src="https://img.shields.io/badge/microsoft-store-blue?logo=microsoft" alt="Microsoft Store" />
   </a>
+  <a style="text-decoration:none" href="https://play.google.com/store/apps/details?id=my.id.restudio.formdev_mobile" target="_blank">
+    <img src="https://img.shields.io/badge/play-store-blue?logo=android" alt="Microsoft Store" />
+  </a>
+  <a style="text-decoration:none" href="https://snapcraft.io/formdev" target="_blank">
+    <img src="https://img.shields.io/badge/snap-store-blue?logo=linux" alt="Microsoft Store" />
+  </a>
 </p>
 
 # Fitur
