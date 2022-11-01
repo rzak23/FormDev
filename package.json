@@ -1,6 +1,6 @@
 {
   "name": "formdev",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
@@ -58,7 +58,7 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^21.1.0",
+    "electron": "^21.2.1",
     "electron-builder": "^23.6.0"
   },
   "dependencies": {
