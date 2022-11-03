@@ -1,7 +1,15 @@
+$(function(){
+    $("input[data-bootstrap-switch]").each(function(){
+        $(this).bootstrapSwitch('state');
+    })
+})
+
+
 function generate(){
     var version = document.getElementById('version').value;
     var capt = document.getElementById('capital').checked;
     var jmlCetak = document.getElementById('jmlCetak').value;
+    console.log(capt);
 
     var rand = genForNum(jmlCetak,version);
 
