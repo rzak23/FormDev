@@ -365,6 +365,22 @@ function html_format_page(){
 	document.head.appendChild(script);
 }
 
+function color_palette_page(){
+	fetch('./page/color_palette.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/color_palette.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 const {shell} = require('electron');
 function openDev(){
     var url = "https://github.com/veler/DevToys";
