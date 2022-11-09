@@ -28,7 +28,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="output">Hasil</label>
-                                    <input type="text" class="form-control" id="output" readonly>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="output" readonly>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-primary" data-clipboard-target="#output" id="salin">
+                                                <i class="fa-solid fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
