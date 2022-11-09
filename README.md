@@ -16,6 +16,8 @@
   <a style="text-decoration:none" href="https://formdev.my.id" target="_blank">
     <img src="https://img.shields.io/badge/website-formdev.my.id-yellow" alt="Website" />
   </a>
+</p>
+<p align="center">
   <a style="text-decoration:none" href="https://electronjs.org" target="_blank">
     <img src="https://img.shields.io/badge/build-electron-blue?logo=electron" alt="Electron" />
   </a>
