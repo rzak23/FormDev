@@ -1,6 +1,17 @@
+const { default: Swal } = require('sweetalert2');
+
 function jwt_read(){
     const jwt_decoder = require('jwt-decode');
     var token = document.getElementById('jwt').value;
+
+    if(token == ""){
+        Swal.fire(
+            'Error',
+            'Silahkan inputkan token terlebih dahulu',
+            'error'
+        );
+        return;
+    }
 
     var payload = jwt_decoder(token);
     var algojwt = jwt_decoder(token,{header: true});

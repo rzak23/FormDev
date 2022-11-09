@@ -1,3 +1,5 @@
+const { default: Swal } = require('sweetalert2');
+
 function generateToken(){
     var njwt = require('njwt');
     var secureRandom = require('secure-random');
@@ -5,6 +7,15 @@ function generateToken(){
     var iss = document.getElementById('iss').value;
     var sub = document.getElementById('sub').value;
     var scope = document.getElementById('scope').value;
+
+    if(iss == "" || sub == "" || scope == ""){
+        Swal.fire(
+            'Error',
+            'Silahkan isikan nilai terlebih dahulu',
+            'error'
+        );
+        return;
+    }
 
     var signingKey = secureRandom(256, {type: 'Buffer'});
     var claims = {
