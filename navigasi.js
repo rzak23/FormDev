@@ -1,3 +1,5 @@
+const { default: Swal } = require("sweetalert2");
+
 index_page();
 
 function index_page(){
