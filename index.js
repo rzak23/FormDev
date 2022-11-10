@@ -4,6 +4,7 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
+app.disableHardwareAcceleration();
 
 function createWindow () {
   // Create the browser window.
