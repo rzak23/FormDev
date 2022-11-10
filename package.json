@@ -80,9 +80,9 @@
     "qr-code-styling": "^1.6.0-rc.1",
     "secure-random": "^1.1.2",
     "sql-formatter": "^11.0.2",
-    "sweetalert2": "^11.4.24",
+    "sweetalert2": "^11.6.7",
     "unique-names-generator": "^4.7.1",
-    "user-agents": "^1.0.1159",
+    "user-agents": "^1.0.1195",
     "uuid": "^9.0.0",
     "xml-formatter": "^2.6.1"
   }
