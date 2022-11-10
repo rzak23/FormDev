@@ -35,7 +35,7 @@ function base64_page(){
 	script.id = 'sc';
 
 	// Append to the `head` element
-	document.head.appendChild(script);
+	document.body.appendChild(script);
 }
 
 function url_page(){
@@ -129,14 +129,9 @@ function uuid_page(){
 	const script = document.createElement('script');
 	script.src = 'mod/generator/uuid.js';
 	script.id = 'sc';
-	// 
-	const script2 = document.createElement('script');
-	script2.src = 'node_modules/admin-lte/plugins/bootstrap-switch/js/bootstrap-switch.min.js'
-	script2.id = 'sc2';
 
 	// Append to the `head` element
 	document.head.appendChild(script);
-	document.body.appendChild(script2);
 }
 
 function hash_page(){

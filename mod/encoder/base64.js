@@ -1,5 +1,33 @@
+initialize();
+
+function initialize(){
+    $(function(){
+        $("input[data-bootstrap-switch]").each(function(){
+            $(this).bootstrapSwitch('state');
+        })
+        document.getElementById('decode-box').style.display = "none";
+    })
+    
+}
+
+function changeBox(){
+    var page = $('#page:checked').val();
+
+    if(page){
+        // $('#encode-box').show(500);
+        // $('#decode-box').hide(500);
+        document.getElementById('encode-box').style.display = "block";
+        document.getElementById('decode-box').style.display = "none";
+    }else{
+        // $('#encode-box').hide(500);
+        // $('#decode-box').show(500);
+        document.getElementById('encode-box').style.display = "none";
+        document.getElementById('decode-box').style.display = "block";
+    }
+}
+
 function encodep(){
-    var text = document.getElementById('input').value;
+    var text = document.getElementById('plain').value;
     if(text == ""){
         Swal.fire(
             'Error',
@@ -10,11 +38,11 @@ function encodep(){
     }
     var enc = btoa(text);
 
-    document.getElementById('output').value = enc;
+    document.getElementById('outputchiper').value = enc;
 }
 
 function decodep(){
-    var enc = document.getElementById('input').value;
+    var enc = document.getElementById('chiper').value;
     if(enc == ""){
         Swal.fire(
             'Error',
@@ -25,10 +53,12 @@ function decodep(){
     }
     var txt = atob(enc);
 
-    document.getElementById('output').value = txt;
+    document.getElementById('outputplain').value = txt;
 }
 
 function reset_form(){
-    document.getElementById('input').value = "";
-    document.getElementById('output').value = "";
+    document.getElementById('plain').value = "";
+    document.getElementById('chiper').value = "";
+    document.getElementById('outputchiper').value = "";
+    document.getElementById('outputplain').value = "";
 }
