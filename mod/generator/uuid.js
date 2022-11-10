@@ -9,7 +9,15 @@ function generate(){
     var version = document.getElementById('version').value;
     var capt = document.getElementById('capital').checked;
     var jmlCetak = document.getElementById('jmlCetak').value;
-    console.log(capt);
+
+    if(jmlCetak == ""){
+        Swal.fire(
+            'Error',
+            'Isikan jumlah yang ingin dibuat',
+            'error'
+        );
+        return;
+    }
 
     var rand = genForNum(jmlCetak,version);
 

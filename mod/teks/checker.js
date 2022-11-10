@@ -1,6 +1,15 @@
 function calculated(){
     var text = document.getElementById('teks').value;
-	// console.log(text);
+
+    if(text == ""){
+        Swal.fire(
+            'Error',
+            'Inputkan teks terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
 	var h = text.length;
     var s = text.replace(/(^\s*)|(\s*$)/gi,"");
     s = text.replace(/[ ]{2,}/gi," ");

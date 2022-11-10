@@ -4,6 +4,24 @@ function encryption(){
     var inp = document.getElementById('input').value;
     var kye = document.getElementById('key').value;
     var tipe = document.getElementById('tipe').value;
+
+    if(kye == ""){
+        Swal.fire(
+            'Error',
+            'Isikan kunci enkripsi terlebih dahulu',
+            'errror'
+        );
+        return;
+    }
+    if(inp == ""){
+        Swal.fire(
+            'Error',
+            'Isikan nilai terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
     if(tipe == 'aes'){
         var chiper = CryptoJS.AES.encrypt(inp,kye);
     }else if(tipe == 'des'){
@@ -19,6 +37,24 @@ function bongkar(){
     var chp = document.getElementById('input').value;
     var kyd = document.getElementById('key').value;
     var tipe = document.getElementById('tipe').value;
+
+    if(kyd == ""){
+        Swal.fire(
+            'Error',
+            'Isikan kunci enkripsi terlebih dahulu',
+            'errror'
+        );
+        return;
+    }
+    if(chp == ""){
+        Swal.fire(
+            'Error',
+            'Isikan nilai terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
     if(tipe == "aes"){
         var rs = CryptoJS.AES.decrypt(chp,kyd);
     }else if(tipe == "des"){

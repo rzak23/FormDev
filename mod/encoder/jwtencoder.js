@@ -1,5 +1,3 @@
-const { default: Swal } = require('sweetalert2');
-
 function generateToken(){
     var njwt = require('njwt');
     var secureRandom = require('secure-random');

@@ -1,5 +1,3 @@
-const { default: Swal } = require('sweetalert2');
-
 function jwt_read(){
     const jwt_decoder = require('jwt-decode');
     var token = document.getElementById('jwt').value;

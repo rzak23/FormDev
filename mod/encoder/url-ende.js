@@ -1,5 +1,3 @@
-const { default: Swal } = require("sweetalert2");
-
 function encodeurl(){
     var url = document.getElementById('url').value;
     if(url == ""){

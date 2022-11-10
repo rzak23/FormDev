@@ -3,6 +3,16 @@ function convertToSQL(){
     const hl = require('highlight.js');
 
     var sqlInput = document.getElementById('sqlInput').value;
+
+    if(sqlInput == ""){
+        Swal.fire(
+            'Error',
+            'Silahkan inputkan code SQL terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
     var mySql = SqlFormat.format(sqlInput);
 
     document.getElementById('sqlOutput').innerHTML = hl.highlightAuto(mySql).value;

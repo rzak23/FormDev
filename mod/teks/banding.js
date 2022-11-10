@@ -9,6 +9,24 @@ function cekText(){
 
     hasil.innerHTML = "";
 
+    if(old == ""){
+        Swal.fire(
+            'Error',
+            'Isikan teks lama terlebih dahulu',
+            'error',
+        );
+        return;
+    }
+
+    if(baru == ""){
+        Swal.fire(
+            'Error',
+            'Silahkan isikan teks baru terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
     const diff = Diff.diffChars(old,baru);
     diff.forEach((part) => {
         // green for additions, red for deletions

@@ -6,6 +6,17 @@ function myLorem(){
     var mint = parseInt(document.getElementById('mint').value);
     var mant = parseInt(document.getElementById('mant').value);
 
+    if(mink.toString() == "NaN" || mank.toString() == "NaN" || mint.toString() == "NaN" || mant.toString() == "NaN"){
+        Swal.fire(
+            'Error',
+            'Silahkan isikan nilai terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
+
+
     const lorem = new LoremIpsum({
     sentencesPerParagraph: {
         max: mank,
@@ -21,9 +32,7 @@ function myLorem(){
 }
 
 function notif(){
-    const Swall = require('sweetalert2');
-
-    Swall.fire(
+    Swal.fire(
         'Copied',
         'Text berhasil disalin',
         'success'

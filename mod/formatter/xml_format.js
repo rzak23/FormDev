@@ -3,6 +3,16 @@ function convertToXML(){
     const hl = require('highlight.js');
 
     var input = document.getElementById('xmlInput').value;
+
+    if(input == "") {
+        Swal.fire(
+            'Error',
+            'Silahkan inputkan code XML terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
     var myXml = xmlFormat(input);
 
     document.getElementById('xmlOutput').innerHTML = hl.highlightAuto(myXml).value;

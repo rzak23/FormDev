@@ -3,6 +3,24 @@ function calIp(){
     var ip = document.getElementById('ip').value;
     var sub = document.getElementById('sub').value;
 
+    if(ip == ""){
+        Swal.fire(
+            'Error',
+            'Isikan IP terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
+    if(sub == ""){
+        Swal.fire(
+            'Error',
+            'Isikan nilai Subnet terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
     var comb = ip+sub;
     var block = new NetMask(comb);
 

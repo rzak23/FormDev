@@ -1,5 +1,3 @@
-const { default: Swal } = require("sweetalert2");
-
 function encodep(){
     var text = document.getElementById('input').value;
     if(text == ""){

@@ -3,6 +3,16 @@ function convertToJson(){
     const hl = require('highlight.js');
 
     var input = document.getElementById('jinput').value;
+
+    if(input == ""){
+        Swal.fire(
+            'Error',
+            'Silahkan inputkan nilai JSON terlebih dahulu',
+            'error'
+        );
+        return;
+    }
+
     var myjson = jsonFormat.format(input);
 
     document.getElementById('joutput').innerHTML = hl.highlightAuto(myjson).value;
