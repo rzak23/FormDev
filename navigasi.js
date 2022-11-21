@@ -266,6 +266,22 @@ function ip_cal_page(){
 	document.head.appendChild(script);
 }
 
+function bytes_reader_page(){
+	fetch('./page/konverter/bytes_reader.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/konverter/bytes_reader.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 function text_diff_page(){
 	fetch('./page/teks/banding.html')
 	.then(response=> response.text())
