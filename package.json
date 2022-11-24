@@ -58,11 +58,11 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^21.2.1",
+    "electron": "^21.3.1",
     "electron-builder": "^23.6.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.1.2",
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "admin-lte": "^3.2.0",
     "bcrypt": "^5.1.0",
     "clipboard": "^2.0.11",
@@ -71,7 +71,7 @@
     "diff": "^5.1.0",
     "file-saver": "^2.0.5",
     "filesize": "^10.0.5",
-    "highlight.js": "^11.6.0",
+    "highlight.js": "^11.7.0",
     "html-prettify": "^1.0.7",
     "jquery": "^3.6.1",
     "json-string-formatter": "^1.0.1",
@@ -81,11 +81,11 @@
     "njwt": "^1.2.0",
     "qr-code-styling": "^1.6.0-rc.1",
     "secure-random": "^1.1.2",
-    "sql-formatter": "^11.0.2",
-    "sweetalert2": "^11.6.7",
+    "sql-formatter": "^12.0.3",
+    "sweetalert2": "^11.6.13",
     "to-case": "^2.0.0",
     "unique-names-generator": "^4.7.1",
-    "user-agents": "^1.0.1195",
+    "user-agents": "^1.0.1208",
     "uuid": "^9.0.0",
     "xml-formatter": "^2.6.1"
   }
