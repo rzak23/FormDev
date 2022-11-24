@@ -8,4 +8,5 @@ function findCodeColor(){
     document.getElementById('rgbnumber').value = theBreak.rgbNumber();
     document.getElementById('hex').value = theBreak.hex();
     document.getElementById('cmyk').value = theBreak.cmyk().round().array();
+    document.getElementById('hsl').value = theBreak.hsl().string();
 }
