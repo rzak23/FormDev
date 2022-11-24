@@ -118,6 +118,22 @@ function checksum_page(){
 	document.head.appendChild(script);
 }
 
+function bcrypt_page(){
+	fetch('./page/generator/bcrypt.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/bcrypt.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 function uuid_page(){
 	fetch('./page/generator/uuid.html')
 	.then(response=> response.text())
