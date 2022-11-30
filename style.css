@@ -1,4 +1,10 @@
-.bg{
+.main-header {
+    -webkit-app-region: drag;
+}
+a {
+    -webkit-app-region: no-drag;
+}
+/* .bg{
     background: #1F1D36;
     font-family: 'Ubuntu Mono', monospace;
 }
@@ -21,4 +27,4 @@ label{
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #ffffff;
-}
+} */
