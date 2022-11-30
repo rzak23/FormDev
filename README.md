@@ -55,13 +55,17 @@ Fitur yang dihadirkan saat ini :
 - [x] JWT Decoder
 - [x] JWT Encoder
 - [x] Text Checker
-- [x] Formatter Tools
+- [x] Formatter Tools (SQL, JSON, XML, HTML)
+- [x] Color Pallate
+- [x] Markdown Preview
+- [x] String Manipulation
+- [x] Bytes Reader
 
 # Instalasi (Pengguna Biasa)
 
 Berikut cara instalasi menggunakan versi rilis :
 
-1. Download file installer pada rilis terbaru [Rilis](https://github.com/rzak23/FormDev/releases)
+1. Download file installer pada rilis terbaru [Rilis](https://github.com/rzak23/FormDev/releases) atau bisa download untuk [Windows](https://www.microsoft.com/store/productId/9N5JQFC0NGCC) / [Linux](https://snapcraft.io/formdev)
 2. Klik kanan pada file yang suda di download dan pilih Run As Administrator
 3. Ikuti instalasi wizard yang tersedia dan tunggu sampai proses instalasi selesai
 
