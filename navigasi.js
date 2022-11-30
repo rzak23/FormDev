@@ -426,6 +426,22 @@ function color_palette_page(){
 	document.body.appendChild(script);
 }
 
+function markdown_page(){
+	fetch('./page/markdown.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/markdown.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 const {shell} = require('electron');
 function openDev(){
     var url = "https://github.com/veler/DevToys";
