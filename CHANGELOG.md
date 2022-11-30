@@ -1,3 +1,15 @@
+## [2.1.6] - 1 Desember 2022
+
+* Fix Option UUID
+* Tambah Modul HTML Formatter
+* Tambah Modul Color Pallate
+* Update lebih banyak validasi
+* Perbaikan Layout
+* Tambah Modul Bytes Reader
+* Tambah Modul String Manipulation
+* Tambah Modul Bcrypt Generator
+* Tambah Modul Markdown Preview
+* Update Minor
 ## [2.1.5] - 2 November 2022
 
 * Tambah highlight code json, xml dan sql
