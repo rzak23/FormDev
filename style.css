@@ -4,6 +4,15 @@
 a {
     -webkit-app-region: no-drag;
 }
+
+@font-face {
+    font-family: 'Zen Dots';
+    src: url(Play-Regular.ttf);
+}
+
+body{
+    font-family: 'Zen Dots', cursive!important;
+}
 /* .bg{
     background: #1F1D36;
     font-family: 'Ubuntu Mono', monospace;
