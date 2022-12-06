@@ -6,18 +6,18 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            Pemeriksa Teks
+                            Text Checker
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="teks">Teks</label>
+                                    <label for="teks">Text</label>
                                     <textarea name="teks" class="form-control" id="teks" style="height: 350px;resize: none;"></textarea>
                                 </div>
                                 <div class="form-group mt-2">
                                     <button type="button" class="btn btn-info" onclick="calculated()">
                                         <i class="fa-brands fa-searchengin"></i>
-                                        <span>Cek</span>
+                                        <span>Check</span>
                                     </button>
                                     <button type="button" class="btn btn-warning" onclick="reset_form()">
                                         <i class="fa-solid fa-rotate"></i>
@@ -31,26 +31,26 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            output
+                            Output
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="karakter">J. Karakter :</label>
+                                <label for="karakter">Number of Characters :</label>
                                 <span id="karakter"></span>
                             </div>
                             <div class="form-group">
-                                <label for="kata">J. Kata :</label>
+                                <label for="kata">Word Count :</label>
                                 <span id="kata"></span>
                             </div>
                             <div class="form-group">
-                                <label for="kalimat">J. Kalimat :</label>
+                                <label for="kalimat">Number of Sentences :</label>
                                 <span id="kalimat"></span>
                             </div>
                         </div>
                     </div>
                     <div class="card mt-2">
                         <div class="card-header">
-                            Distribusi per Kata
+                            Word Distribution
                         </div>
                         <div class="card-body">
                             <div id="perwords"></div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="card mt-2">
                         <div class="card-header">
-                            Distribusi per Karakter
+                            Character Distribution
                         </div>
                         <div class="card-body">
                             <div id="perchar"></div>
