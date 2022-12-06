@@ -3,6 +3,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+const isDev = require('electron-is-dev')
 
 app.disableHardwareAcceleration();
 
@@ -27,7 +28,9 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-  mainWindow.removeMenu();
+  if(!isDev){
+    mainWindow.removeMenu();
+  }
 
   var splash = new BrowserWindow({
     width: 500,
