@@ -37,7 +37,7 @@ function notif(){
 
     Swal.fire(
         'Copied',
-        'Text berhasil disalin',
+        'Text copied',
         'success'
     );
 }

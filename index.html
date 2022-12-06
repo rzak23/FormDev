@@ -189,7 +189,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fa-solid fa-laptop-medical"></i>
                                 <p>
-                                    Konverter
+                                    Converter
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -218,7 +218,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fa-solid fa-spell-check"></i>
                                 <p>
-                                    Teks Inspeksi
+                                    Tekt Inspection
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -247,7 +247,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fa-solid fa-indent"></i>
                                 <p>
-                                    Pemformatan
+                                    Formatting
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -313,7 +313,7 @@
         <!-- load view -->
         <!-- Main Footer -->
         <footer class="main-footer">
-            <strong>FormDev@Re.Studio</strong>
+            <strong>Version <span id="version"></span></strong>
         </footer>
     </div>
     
@@ -327,6 +327,9 @@
     <script src="node_modules/admin-lte/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
     <script>
         new ClipboardJS('.btn');
+        $.getJSON("package.json", function(json) {
+            document.getElementById('version').innerHTML = json.version
+        });
     </script>
 </body>
 </html>

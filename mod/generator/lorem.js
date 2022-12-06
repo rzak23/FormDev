@@ -28,26 +28,26 @@ function myLorem(){
     }
     });
 
-    document.getElementById('hasil').value = lorem.generateParagraphs(paragraf);
+    document.getElementById('output').value = lorem.generateParagraphs(paragraf);
 }
 
 function notif(){
     Swal.fire(
         'Copied',
-        'Text berhasil disalin',
+        'Text copied',
         'success'
     );
 }
 
 function saveTxt(){
     var fileSave = require('file-saver');
-    var text = document.getElementById('hasil').value;
+    var text = document.getElementById('output').value;
     var data = new Blob([text],{type:"text/plain;charset=utf-8"});
     fileSave.saveAs(data,"lorem.txt");
 }
 
 function reset_form(){
-    document.getElementById('hasil').value = "";
+    document.getElementById('output').value = "";
     document.getElementById('mink').value = "";
     document.getElementById('mank').value = "";
     document.getElementById('mint').value = "";

@@ -11,7 +11,7 @@
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="type">Tipe Algoritma</label>
+                                    <label for="type">Algorithm Type</label>
                                     <select name="type" id="type" class="form-control" onchange="readHash()">
                                         <option value="md5">MD5</option>
                                         <option value="sha256">SHA256</option>
@@ -24,9 +24,9 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="hasil" readonly>
+                                        <input type="text" class="form-control" id="output" readonly>
                                         <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-success" data-clipboard-target="#hasil" onclick="notif()">
+                                            <button type="button" class="btn btn-success" data-clipboard-target="#output" onclick="notif()">
                                                 <i class="fa-solid fa-copy"></i>
                                             </button>
                                         </div>

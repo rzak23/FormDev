@@ -14,7 +14,7 @@ function notif(){
 
     Swall.fire(
         'Copied',
-        'Text berhasil disalin',
+        'Text copied',
         'success'
     );
 }

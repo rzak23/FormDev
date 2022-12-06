@@ -70,7 +70,7 @@ function notifC(){
     const Swal = require('sweetalert2');
     Swal.fire(
         'Copied',
-        'Text berhasil disalin',
+        'Text copied',
         'success'
     );
 }

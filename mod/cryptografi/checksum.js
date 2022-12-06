@@ -14,7 +14,7 @@ function readHash(){
         }
         // var sha1 = CryptoJS.SHA1(CryptoJS.enc.Latin1.parse(this.result));
         
-        document.getElementById('hasil').value = output;
+        document.getElementById('output').value = output;
     });
     reader.readAsBinaryString(document.getElementById('file').files[0]);
 }
@@ -24,12 +24,12 @@ function notif(){
 
     Swall.fire(
         'Copied',
-        'Text berhasil disalin',
+        'Text copied',
         'success'
     );
 }
 
 function reset_form(){
     document.getElementById('file').value = "";
-    document.getElementById('hasil').value = "";
+    document.getElementById('output').value = "";
 }

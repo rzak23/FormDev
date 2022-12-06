@@ -57,11 +57,11 @@ function ambilData(){
             'error'
         );
     }else{
-        document.getElementById('hasil').value = ConvertBase.dec2bin(angka);
+        document.getElementById('output').value = ConvertBase.dec2bin(angka);
     }
 }
 
 function reset_form(){
     document.getElementById('angka').value = "";
-    document.getElementById('hasil').value = "";
+    document.getElementById('output').value = "";
 }

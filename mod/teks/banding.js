@@ -4,10 +4,10 @@ function cekText(){
 
     const old = document.getElementById('lama').value;
     const baru = document.getElementById('baru').value;
-    var hasil = document.getElementById('hasil');
+    var output = document.getElementById('output');
     const fragment = document.createDocumentFragment();
 
-    hasil.innerHTML = "";
+    output.innerHTML = "";
 
     if(old == ""){
         Swal.fire(
@@ -37,11 +37,11 @@ function cekText(){
         span.appendChild(document.createTextNode(part.value));
         fragment.appendChild(span);
     });
-    hasil.appendChild(fragment);
+    output.appendChild(fragment);
 }
 
 function reset_form(){
     document.getElementById('lama').value = "";
     document.getElementById('baru').value = "";
-    document.getElementById('hasil').innerHTML = "";
+    document.getElementById('output').innerHTML = "";
 }

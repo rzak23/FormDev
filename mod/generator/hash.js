@@ -15,7 +15,7 @@ function hashing(){
         hash = CryptoJS.SHA3(plain);
     }
 
-    document.getElementById('hasil').value = hash;
+    document.getElementById('output').value = hash;
 }
 
 function notif(){
@@ -23,7 +23,7 @@ function notif(){
 
     Swal.fire(
         'Copied',
-        'Text berhasil disalin',
+        'Text copied',
         'success'
     );
 }
@@ -31,5 +31,5 @@ function notif(){
 function reset_form(){
     document.getElementById('text').value = "";
     document.getElementById('tipe').value = "md5";
-    document.getElementById('hasil').value = "";
+    document.getElementById('output').value = "";
 }

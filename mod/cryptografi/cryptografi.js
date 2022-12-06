@@ -1,7 +1,38 @@
 var CryptoJS = require('crypto-js');
 
+initialize();
+
+function initialize(){
+    $(function(){
+        $("input[data-bootstrap-switch]").each(function(){
+            $(this).bootstrapSwitch('state');
+        })
+        document.getElementById('decrypt-box').style.display = "none";
+        document.getElementById('labelBox').innerHTML = "Encrypt";
+    })
+    
+}
+
+function changeBox(){
+    var page = $('#page:checked').val();
+
+    if(page){
+        // $('#encode-box').show(500);
+        // $('#decode-box').hide(500);
+        document.getElementById('encrypt-box').style.display = "block";
+        document.getElementById('decrypt-box').style.display = "none";
+        document.getElementById('labelBox').innerHTML = "Encrypt";
+    }else{
+        // $('#encode-box').hide(500);
+        // $('#decode-box').show(500);
+        document.getElementById('encrypt-box').style.display = "none";
+        document.getElementById('decrypt-box').style.display = "block";
+        document.getElementById('labelBox').innerHTML = "Decrypt";
+    }
+}
+
 function encryption(){
-    var inp = document.getElementById('input').value;
+    var inp = document.getElementById('plainText').value;
     var kye = document.getElementById('key').value;
     var tipe = document.getElementById('tipe').value;
 
@@ -34,7 +65,7 @@ function encryption(){
 }
 
 function bongkar(){
-    var chp = document.getElementById('input').value;
+    var chp = document.getElementById('chiperText').value;
     var kyd = document.getElementById('key').value;
     var tipe = document.getElementById('tipe').value;
 
@@ -67,7 +98,5 @@ function bongkar(){
 }
 
 function reset_form(){
-    document.getElementById('input').value = "";
-    document.getElementById('key').value = "";
-    document.getElementById('hasil').value = "";
+    document.getElementById('formCrypt').reset();
 }
