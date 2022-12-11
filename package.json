@@ -78,7 +78,7 @@
     "json-string-formatter": "^1.0.1",
     "jwt-decode": "^3.1.2",
     "lorem-ipsum": "^2.0.8",
-    "marked": "^4.2.3",
+    "marked": "^4.2.4",
     "netmask": "^2.0.2",
     "njwt": "^1.2.0",
     "qr-code-styling": "^1.6.0-rc.1",
