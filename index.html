@@ -1,335 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormDev</title>
-    <link rel="shortcut icon" href="build/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <!-- adminlte -->
-    <link rel="stylesheet" href="node_modules/admin-lte/dist/css/adminlte.css">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
-    <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="node_modules/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.css">
-    <script>
-        window.jQuery = window.$ = require('jquery');
-    </script>
-    <!-- jquery -->
-    <!-- <script src="node_modules/admin-lte/plugins/jquery/jquery.js"></script> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="node_modules/admin-lte/dist/css/adminlte.min.css">
+  <script>
+    window.jQuery = window.$ = require('jquery');
+  </script>
 </head>
-<body class="dark-mode hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.navbar -->
-    
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <h2 href="#" class="brand-link">
-                <img src="page/icon.png" alt="Logo" class="brand-image"/>
-                <span class="brand-text font-weight-bold">FormDev</span>
-            </h2>
-    
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- <div class="form-inline">
-                    <div class="input-group" data-widget="sidebar-search">
-                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-                        <div class="input-group-append">
-                            <button class="btn btn-sidebar">
-                                <i class="fas fa-search fa-fw"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                         with font-awesome or any other icon font library -->
-                        <li class="nav-item">
-                            <a href="#" onclick="index_page()" class="nav-link active">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa-solid fa-dice-d6"></i>
-                                <p>
-                                    Encoder/Decoder
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" onclick="base64_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-file-code"></i>
-                                        <p>Base 46</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="url_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-link"></i>
-                                        <p>Url Encoder/Decoder</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="jwt_decoder_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-gears"></i>
-                                        <p>JWT Decoder</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="jwt_encoder_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-gears"></i>
-                                        <p>JWT Encoder</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa-solid fa-shield-halved"></i>
-                                <p>
-                                    Cryptografi
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" onclick="cryptografi_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-laptop-code"></i>
-                                        <p>Encrypt/Decrypt</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="checksum_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-search"></i>
-                                        <p>Checksum</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa-solid fa-user-gear"></i>
-                                <p>
-                                    Generator
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" onclick="uuid_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-passport"></i>
-                                        <p>UUID</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="bcrypt_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-shield-halved"></i>
-                                        <p>Bcrypt Generator</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="hash_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-fingerprint"></i>
-                                        <p>Hash</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="string_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-font"></i>
-                                        <p>String</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="name_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-id-card"></i>
-                                        <p>Name</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="qr_code_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-qrcode"></i>
-                                        <p>QR Code</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="lorem_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-align-left"></i>
-                                        <p>Lorem Ipsum</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="user_agent_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-user-gear"></i>
-                                        <p>User Agent</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa-solid fa-laptop-medical"></i>
-                                <p>
-                                    Converter
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" onclick="cal_biner_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-calculator"></i>
-                                        <p>Calculator Biner</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="ip_cal_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-network-wired"></i>
-                                        <p>Calculator IP</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="bytes_reader_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-barcode"></i>
-                                        <p>Bytes Reader</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa-solid fa-spell-check"></i>
-                                <p>
-                                    Tekt Inspection
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" onclick="text_diff_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-code-compare"></i>
-                                        <p>Diff Text</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="text_check_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-file-lines"></i>
-                                        <p>Text Checker</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="string_manipulation_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-i-cursor"></i>
-                                        <p>String Manipulation</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa-solid fa-indent"></i>
-                                <p>
-                                    Formatting
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" onclick="json_format_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-file-contract"></i>
-                                        <p>
-                                            JSON Format
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="sql_format_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-file-contract"></i>
-                                        <p>
-                                            SQL Format
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="xml_format_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-file-contract"></i>
-                                        <p>
-                                            XML Format
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" onclick="html_format_page()" class="nav-link">
-                                        <i class="nav-icon fa-solid fa-file-contract"></i>
-                                        <p>
-                                            HTML Format
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" onclick="color_palette_page()" class="nav-link">
-                                <i class="nav-icon fa-solid fa-palette"></i>
-                                <p>
-                                    Color Palette
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" onclick="markdown_page()" class="nav-link">
-                                <i class="nav-icon fa-brands fa-markdown"></i>
-                                <p>
-                                    Markdown Preview
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
-            </div>
-            <!-- /.sidebar -->
-        </aside>
-        <!-- load view -->
-        <div id="page"></div>
-        <!-- load view -->
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <strong>Version <span id="version"></span></strong>
-        </footer>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="page/icon.png" alt="FormDev Logo" class="brand-image" style="opacity: .8">
+      <span class="brand-text font-weight-light">FormDev</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+            <li class="nav-item">
+                <a href="#" onclick="index_page()" class="nav-link active">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fa-solid fa-dice-d6"></i>
+                    <p>
+                        Encoder/Decoder
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="javascript:base64_page();" onclick="base64_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-file-code"></i>
+                            <p>Base 64</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:url_page()" onclick="url_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-link"></i>
+                            <p>Url Encoder/Decoder</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:jwt_decoder_page()" onclick="jwt_decoder_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-gears"></i>
+                            <p>JWT Decoder</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:jwt_encoder_page()" onclick="jwt_encoder_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-gears"></i>
+                            <p>JWT Encoder</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fa-solid fa-shield-halved"></i>
+                    <p>
+                        Cryptografi
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="javascript:cryptografi_page()" onclick="cryptografi_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-laptop-code"></i>
+                            <p>Encrypt/Decrypt</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:checksum_page()" onclick="checksum_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-search"></i>
+                            <p>Checksum</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fa-solid fa-user-gear"></i>
+                    <p>
+                        Generator
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="javascript:uuid_page()" onclick="uuid_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-passport"></i>
+                            <p>UUID</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:bcrypt_page()" onclick="bcrypt_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-shield-halved"></i>
+                            <p>Bcrypt Generator</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:hash_page()" onclick="hash_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-fingerprint"></i>
+                            <p>Hash</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:string_page()" onclick="string_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-font"></i>
+                            <p>String</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:name_page()" onclick="name_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-id-card"></i>
+                            <p>Name</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:qr_code_page()" onclick="qr_code_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-qrcode"></i>
+                            <p>QR Code</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:lorem_page()" onclick="lorem_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-align-left"></i>
+                            <p>Lorem Ipsum</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:user_agent_page()" onclick="user_agent_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-user-gear"></i>
+                            <p>User Agent</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fa-solid fa-laptop-medical"></i>
+                    <p>
+                        Converter
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="javascript:cal_biner_page()" onclick="cal_biner_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-calculator"></i>
+                            <p>Calculator Biner</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:ip_cal_page()" onclick="ip_cal_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-network-wired"></i>
+                            <p>Calculator IP</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:bytes_reader_page()" onclick="bytes_reader_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-barcode"></i>
+                            <p>Bytes Reader</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fa-solid fa-spell-check"></i>
+                    <p>
+                        Tekt Inspection
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="javascript:text_diff_page()" onclick="text_diff_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-code-compare"></i>
+                            <p>Diff Text</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:text_check_page()" onclick="text_check_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-file-lines"></i>
+                            <p>Text Checker</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:string_manipulation_page()" onclick="string_manipulation_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-i-cursor"></i>
+                            <p>String Manipulation</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fa-solid fa-indent"></i>
+                    <p>
+                        Formatting
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="javascript:json_format_page()" onclick="json_format_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                JSON Format
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:sql_format_page()" onclick="sql_format_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                SQL Format
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:xml_format_page()" onclick="xml_format_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                XML Format
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:html_format_page()" onclick="html_format_page()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                HTML Format
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:color_palette_page()" onclick="color_palette_page()" class="nav-link">
+                    <i class="nav-icon fa-solid fa-palette"></i>
+                    <p>
+                        Color Palette
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:markdown_page()" onclick="markdown_page()" class="nav-link">
+                    <i class="nav-icon fa-brands fa-markdown"></i>
+                    <p>
+                        Markdown Preview
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+      <!-- /.sidebar-menu -->
     </div>
-    
-    <!-- bootsrap -->
-    <script src="node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- adminlte -->
-    <script src="node_modules/admin-lte/dist/js/adminlte.js"></script>
-    <!-- navigation -->
-    <script src="navigasi.js"></script>
-    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
-    <script src="node_modules/admin-lte/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-    <script>
-        new ClipboardJS('.btn');
-        $.getJSON("package.json", function(json) {
-            document.getElementById('version').innerHTML = json.version
-        });
-    </script>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- load view -->
+  <div id="page"></div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong>Version <span id="version"></span></strong>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- Bootstrap -->
+<script src="node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="node_modules/admin-lte/dist/js/adminlte.js"></script>
+<!-- navigation -->
+<script src="navigasi.js"></script>
+<script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+<script src="node_modules/admin-lte/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script>
+    new ClipboardJS('.btn');
+    $.getJSON("package.json", function(json) {
+        document.getElementById('version').innerHTML = json.version
+    });
+</script>
 </body>
 </html>
