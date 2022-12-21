@@ -29,7 +29,9 @@ function generate(){
         var result = rand;
     }
 
-    document.getElementById('result').value = result;
+    var newArr = result.join(',').replace(/,/g, '').split()
+
+    document.getElementById('result').value = newArr;
 }
 
 function genForNum(total,versi){
@@ -39,11 +41,11 @@ function genForNum(total,versi){
 
     if(versi == "1"){
         for(i=0;i<total;i++){
-            rs[i] = uuidv1(); 
+            rs[i] = uuidv1()+"\n"; 
         }
     }else if(versi == "4"){
         for(i=0;i<total;i++){
-            rs[i] = uuidv4(); 
+            rs[i] = uuidv4()+"\n"; 
         }
     }
     return rs;
@@ -64,6 +66,13 @@ function cek(){
         var result = uuidVersion(uid);
         document.getElementById('cver').value = "Version "+result;
     }
+}
+
+function downloadUuid(){
+    var fileSave = require('file-saver');
+    var text = document.getElementById('result').value;
+    var data = new Blob([text],{type:"text/plain;charset=utf-8"});
+    fileSave.saveAs(data,"uuid.txt");
 }
 
 function notifC(){
