@@ -452,3 +452,8 @@ function openRepo(){
     var url = "https://github.com/rzak23/FormDev";
     shell.openExternal(url)
 }
+
+function openFeedback(){
+	var url = "https://github.com/rzak23/FormDev/issues";
+	shell.openExternal(url);
+}
