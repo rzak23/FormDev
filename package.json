@@ -85,6 +85,7 @@
     "secure-random": "^1.1.2",
     "sql-formatter": "^12.0.4",
     "sweetalert2": "^11.6.15",
+    "timestamp-conv": "^3.0.0",
     "to-case": "^2.0.0",
     "unique-names-generator": "^4.7.1",
     "user-agents": "^1.0.1208",
