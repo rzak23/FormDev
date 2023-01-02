@@ -166,7 +166,7 @@ function string_page(){
 	document.head.appendChild(script);
 }
 
-function name_page(){
+function username_page(){
 	fetch('./page/generator/name.html')
 	.then(response=> response.text())
 	.then(text=> document.getElementById('page').innerHTML = text);
