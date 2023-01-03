@@ -1,3 +1,15 @@
+## [2.1.7] - 3 Januari 2023
+
+* Change theme modal
+* Fix language
+* Fix layout
+* Add search menu
+* Add button feedback
+* Add function download UUID
+* Add new module Timestamp Converter
+* Merge Modul JWT Encoder and Decoder
+* Fix Username Generator
+
 ## [2.1.6] - 1 Desember 2022
 
 * Fix Option UUID
