@@ -49,16 +49,30 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-12 mx-auto mt-2">
-                    <div class="card bg-gray">
+                <div class="col-lg-12 col-md-12 col-12 mx-auto mt-2">
+                    <div class="card">
                         <div class="card-header">
                             Output
                         </div>
                         <div class="card-body">
-                            <form class="text-center">
+                            <form>
                                 <div class="form-group">
-                                    <!-- <label for="output">output</label> -->
-                                    <pre id="output"></pre>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">Old Text</th>
+                                                    <th class="text-center">New Text</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td id="outBefore"></td>
+                                                    <td id="outAfter"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </form>
                         </div>
