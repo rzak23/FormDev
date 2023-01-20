@@ -40,4 +40,10 @@ label{
 
 del{
     background-color: #F48484;
+    color: #000000;
+}
+
+ins{
+    background-color: #9DF1DF;
+    color: #000000;
 }
