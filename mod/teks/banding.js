@@ -55,5 +55,6 @@ function cekText(){
 function reset_form(){
     document.getElementById('lama').value = "";
     document.getElementById('baru').value = "";
-    document.getElementById('output').innerHTML = "";
+    document.getElementById('outBefore').innerHTML = "";
+    document.getElementById('outAfter').innerHTML = "";
 }
