@@ -10,3 +10,8 @@ function findCodeColor(){
     document.getElementById('cmyk').value = theBreak.cmyk().round().array();
     document.getElementById('hsl').value = theBreak.hsl().string();
 }
+
+var loadFile = function(event) {
+	var image = document.getElementById('imgPreview');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
