@@ -37,3 +37,7 @@ label{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #ffffff;
 }
+
+del{
+    background-color: #F48484;
+}
