@@ -1,6 +1,10 @@
 function generate(){
     const UserAgent = require('user-agents');
-    var uagent = new UserAgent();
+
+    var device = document.getElementById('device').value;
+    var uagent = new UserAgent({
+        deviceCategory: device
+    });
 
     document.getElementById('result').value = uagent.toString();
 }
