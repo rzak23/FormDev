@@ -13,7 +13,9 @@ function convertToXML(){
         return;
     }
 
-    var myXml = xmlFormat(input);
+    var myXml = xmlFormat(input,{
+        filter: (node) => node.type !== 'Comment', 
+    });
 
     document.getElementById('xmlOutput').innerHTML = hl.highlightAuto(myXml).value;
 }
