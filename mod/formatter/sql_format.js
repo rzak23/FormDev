@@ -13,7 +13,10 @@ function convertToSQL(){
         return;
     }
 
-    var mySql = SqlFormat.format(sqlInput);
+    var mySql = SqlFormat.format(sqlInput,{
+        keywordCase: 'upper',
+        linesBetweenQueries: 2
+    });
 
     document.getElementById('sqlOutput').innerHTML = hl.highlightAuto(mySql).value;
 }
