@@ -1,3 +1,14 @@
+## [2.1.8] - 2 Februari 2023
+
+* Fix font style in splashscreen
+* Fix some layout
+* Find color using image (Color Pallate Modul)
+* Fix diff text
+* Add options device (User Agent Modul)
+* Uppercase SQL words
+* Fix XML Generator
+* New Modul (JSON Path)
+
 ## [2.1.7] - 3 Januari 2023
 
 * Change theme modal
