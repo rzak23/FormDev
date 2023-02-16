@@ -82,6 +82,7 @@
     "netmask": "^2.0.2",
     "njwt": "^1.2.0",
     "qr-code-styling": "^1.6.0-rc.1",
+    "quadconv": "^1.0.2",
     "secure-random": "^1.1.2",
     "simple-text-diff": "^1.7.0",
     "sql-formatter": "^12.1.0",
