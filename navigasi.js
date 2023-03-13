@@ -134,6 +134,23 @@ function uuid_page(){
 	document.head.appendChild(script);
 }
 
+function nanoid_page(){
+	fetch('./page/generator/nanoid.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.type = 'module';
+	script.src = 'mod/generator/nanoid.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.head.appendChild(script);
+}
+
 function hash_page(){
 	fetch('./page/generator/hash.html')
 	.then(response=> response.text())
