@@ -47,7 +47,7 @@ function createWindow () {
     splash.close();
     mainWindow.center();
     mainWindow.show();
-  },5000);
+  },3000);
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
