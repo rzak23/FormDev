@@ -7,23 +7,17 @@
                     <div class="form-group">
                         <label for="jenis">Variation</label>
                         <select name="option" id="option" class="form-control">
-                            <option value="alpha">alpha</option>
-                            <option value="AlPha">AlPha</option>
-                            <option value="alphanumeric">Alpha123</option>
-                            <option value="alphanumchar">Alpha123!@#</option>
+                            <option value="alphabetic">Alphabetic</option>
+                            <option value="alphanumeric">AlphaNumeric</option>
+                            <option value="numeric">Numeric</option>
+                            <option value="hex">Hex</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="form-group">
                         <label for="panjang">Character Length</label>
-                        <select name="panjang" id="panjang" class="form-control">
-                            <option value="6">6 Character</option>
-                            <option value="8">8 Character</option>
-                            <option value="12">12 Character</option>
-                            <option value="16">16 Character</option>
-                            <option value="32">32 Character</option>
-                        </select>
+                        <input type="number" name="panjang" class="form-control" id="panjang" autocomplete="off">
                     </div>
                 </div>
             </div>
@@ -36,18 +30,18 @@
                         <div class="card-body">
                             <form class="text-center">
                                 <div class="form-group">
-                                    <label for="pass">String</label>
+                                    <label for="string">String</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="pass" autocomplete="off" readonly>
+                                        <input type="text" class="form-control" id="string" autocomplete="off" readonly>
                                         <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-success" data-clipboard-target='#pass' onclick="notif()">
+                                            <button type="button" class="btn btn-success" data-clipboard-target='#string' onclick="notif()">
                                                 <i class="fa-solid fa-copy"></i>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group mt-2">
-                                    <button type="button" class="btn btn-info" onclick="myPass()">
+                                    <button type="button" class="btn btn-info" onclick="myRandomString()">
                                         <i class="fa-solid fa-gears"></i>
                                         <span>Generate</span>
                                     </button>

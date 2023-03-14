@@ -1,35 +1,18 @@
-function myPass(){
-    var alphas = "abcdefghijklmnopqrstu";
-    var alphab = "ABCDEFGHIJKLMNOPQRSTU";
-    var numeric = "1234567890";
-    var char = "!@#$%^&*()-_=+{}[];:,.<>/?`~";
-    
+function myRandomString(){
+    var randomstring = require('randomstring');
     var option = document.getElementById('option').value;
-    var long = document.getElementById('panjang').value;
+    var length = document.getElementById('panjang').value;
 
-    if(option == "alpha"){
-        var mix =  alphas;
-    }else if(option == "AlPha"){
-        var mix = alphas+alphab;
-    }else if(option == "alphanumeric"){
-        var mix = alphas+alphab+numeric;
-    }else if(option == "alphanumchar"){
-        var mix = alphas+alphab+numeric+char;
+    if(length == "" || length == 0){
+        length = 32;
     }
 
-    var rs = randomString(mix,long);
-    
-    document.getElementById('pass').value = rs;
-}
+    var randString = randomstring.generate({
+        length: length,
+        charset: option,
+    });
 
-function randomString(char,long) {
-    var result = '';
-    var length = long;
-    var clenght = char.length;
-    for ( var i = 0; i < length; i++ ) {
-        result += char.charAt(Math.floor(Math.random() * clenght));
-    }
-    return result;
+    document.getElementById('string').value = randString;
 }
 
 function notif(){
@@ -43,7 +26,7 @@ function notif(){
 }
 
 function reset_form(){
-    document.getElementById('pass').value = "";
-    document.getElementById('option').value = "alpha";
-    document.getElementById('panjang').value = 6;
+    document.getElementById('string').value = "";
+    document.getElementById('option').value = "alphabetic";
+    document.getElementById('panjang').value = "";
 }
