@@ -1,50 +1,52 @@
-(function(){
+// (function(){
 
-    var ConvertBase = function (num) {
-        return {
-            from : function (baseFrom) {
-                return {
-                    to : function (baseTo) {
-                        return parseInt(num, baseFrom).toString(baseTo);
-                    }
-                };
-            }
-        };
-    };
+//     var ConvertBase = function (num) {
+//         return {
+//             from : function (baseFrom) {
+//                 return {
+//                     to : function (baseTo) {
+//                         return parseInt(num, baseFrom).toString(baseTo);
+//                     }
+//                 };
+//             }
+//         };
+//     };
         
-    // binary to decimal
-    ConvertBase.bin2dec = function (num) {
-        return ConvertBase(num).from(2).to(10);
-    };
+//     // binary to decimal
+//     ConvertBase.bin2dec = function (num) {
+//         return ConvertBase(num).from(2).to(10);
+//     };
     
-    // binary to hexadecimal
-    ConvertBase.bin2hex = function (num) {
-        return ConvertBase(num).from(2).to(16);
-    };
+//     // binary to hexadecimal
+//     ConvertBase.bin2hex = function (num) {
+//         return ConvertBase(num).from(2).to(16);
+//     };
     
-    // decimal to binary
-    ConvertBase.dec2bin = function (num) {
-        return ConvertBase(num).from(10).to(2);
-    };
+//     // decimal to binary
+//     ConvertBase.dec2bin = function (num) {
+//         return ConvertBase(num).from(10).to(2);
+//     };
     
-    // decimal to hexadecimal
-    ConvertBase.dec2hex = function (num) {
-        return ConvertBase(num).from(10).to(16);
-    };
+//     // decimal to hexadecimal
+//     ConvertBase.dec2hex = function (num) {
+//         return ConvertBase(num).from(10).to(16);
+//     };
     
-    // hexadecimal to binary
-    ConvertBase.hex2bin = function (num) {
-        return ConvertBase(num).from(16).to(2);
-    };
+//     // hexadecimal to binary
+//     ConvertBase.hex2bin = function (num) {
+//         return ConvertBase(num).from(16).to(2);
+//     };
     
-    // hexadecimal to decimal
-    ConvertBase.hex2dec = function (num) {
-        return ConvertBase(num).from(16).to(10);
-    };
+//     // hexadecimal to decimal
+//     ConvertBase.hex2dec = function (num) {
+//         return ConvertBase(num).from(16).to(10);
+//     };
     
-    this.ConvertBase = ConvertBase;
+//     this.ConvertBase = ConvertBase;
     
-})(this);
+// })(this);
+
+var quadConv = require('quadconv');
 
 function ambilData(){
     let angka = document.getElementById('angka').value;
@@ -57,7 +59,8 @@ function ambilData(){
             'error'
         );
     }else{
-        document.getElementById('output').value = ConvertBase.dec2bin(angka);
+        var decToBin = quadConv.convert('dec-bin', angka);
+        document.getElementById('output').value = decToBin;
     }
 }
 
