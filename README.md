@@ -60,6 +60,9 @@ Fitur yang dihadirkan saat ini :
 - [x] Markdown Preview
 - [x] String Manipulation
 - [x] Bytes Reader
+- [x] JSON Path
+- [x] Nano ID Generator
+- [x] ASCII to Binary
 
 # Instalasi (Pengguna Biasa)
 
