@@ -1,3 +1,9 @@
+## [2.1.9] - 1 April 2023
+* Add new modul convert ASCII to Biner
+* Add new modul generator Nano ID
+* Fix Random String
+* Update Minor
+
 ## [2.1.8] - 2 Februari 2023
 
 * Fix font style in splashscreen
