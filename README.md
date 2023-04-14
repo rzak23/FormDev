@@ -31,6 +31,9 @@
     <img src="https://img.shields.io/badge/snap-store-blue?logo=linux" alt="Microsoft Store" />
   </a>
 </p>
+<p align="center">
+  <a href="https://trakteer.id/restudio/tip" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-6.png" height="50" style="border: 0px; height: 50px;" alt="Trakteer Saya"></a>
+</p>
 
 # Fitur
 
