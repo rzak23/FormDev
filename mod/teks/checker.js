@@ -27,7 +27,7 @@ function calculated(){
         wordMap[words[i]] = count + 1;
     }
     document.getElementById('perwords').innerHTML = JSON.stringify(wordMap);
-    console.log(wordMap);
+    
     // per char
     var obj = {};
     var pc = "";

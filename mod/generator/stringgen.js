@@ -1,14 +1,14 @@
 function myRandomString(){
     var randomstring = require('randomstring');
     var option = document.getElementById('option').value;
-    var length = document.getElementById('panjang').value;
+    var panjang = document.getElementById('panjang').value;
 
-    if(length == "" || length == 0){
-        length = 32;
+    if(panjang == "" || panjang == 0){
+        panjang = 32;
     }
 
     var randString = randomstring.generate({
-        length: length,
+        length: parseInt(panjang),
         charset: option,
     });
 
