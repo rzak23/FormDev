@@ -1,3 +1,7 @@
+## [2.1.10] = 7 Juni 2023
+* Fix bug char length modul String Generator
+* Update some package to last version
+
 ## [2.1.9] - 1 April 2023
 * Add new modul convert ASCII to Biner
 * Add new modul generator Nano ID
