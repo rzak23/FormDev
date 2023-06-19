@@ -379,6 +379,22 @@ function crontab_reader(){
 	document.body.appendChild(script);
 }
 
+function chmod_calculator(){
+	fetch('./page/konverter/chmod.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/konverter/chmod.js';
+	script.id = 'sc';
+
+	// Append to the `body` element
+	document.body.appendChild(script);
+}
+
 function text_diff_page(){
 	fetch('./page/teks/banding.html')
 	.then(response=> response.text())

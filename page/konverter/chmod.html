@@ -1,0 +1,34 @@
+<div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        Chmod Calculator
+                    </div>
+                    <div class="card-body">
+                        <form id="chmodForm">
+                            <div class="form-group">
+                                <label for="num">Code Access</label>
+                                <input type="text" name="num" class="form-control" id="num" autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res">Result</label>
+                                <input type="text" name="res" class="form-control" id="res" autocomplete="off" readonly>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success" onclick="onChmodCalculated()">
+                                    <span>Generate</span>
+                                </button>
+                                <button type="button" class="btn btn-warning" onclick="onResetForm()">
+                                    <span>Reset</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
