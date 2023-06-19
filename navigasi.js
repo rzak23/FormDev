@@ -292,7 +292,7 @@ function faker_email(){
 
 	// Create new script element
 	const script = document.createElement('script');
-	script.src = 'mod/generator/faker/email.js';
+	script.src = 'mod/generator/faker.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
