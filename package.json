@@ -62,6 +62,7 @@
     "electron-builder": "^24.4.0"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "admin-lte": "^3.2.0",
     "bcrypt": "^5.1.0",

@@ -283,6 +283,22 @@ function jwt_generator(){
 	document.body.appendChild(script);
 }
 
+function faker_email(){
+	fetch('./page/generator/faker/email.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/faker/email.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 function cal_biner_page(){
 	fetch('./page/konverter/cbiner.html')
 	.then(response=> response.text())
