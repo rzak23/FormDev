@@ -54,6 +54,22 @@ function url_page(){
 	document.head.appendChild(script);
 }
 
+function jwt_decoder(){
+	fetch('./page/encoder/jwt.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/encoder/jwt.js';
+	script.id = 'sc';
+
+	// Append to the `body` element
+	document.body.appendChild(script);
+}
+
 function jwt_page(){
 	fetch('./page/encoder/jwt.html')
 	.then(response=> response.text())
@@ -249,6 +265,22 @@ function user_agent_page(){
 
 	// Append to the `head` element
 	document.head.appendChild(script);
+}
+
+function jwt_generator(){
+	fetch('./page/generator/jwt.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/jwt.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
 }
 
 function cal_biner_page(){
