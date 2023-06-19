@@ -299,6 +299,22 @@ function faker_email(){
 	document.body.appendChild(script);
 }
 
+function faker_fullname(){
+	fetch('./page/generator/faker/full_name.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/faker.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 function cal_biner_page(){
 	fetch('./page/konverter/cbiner.html')
 	.then(response=> response.text())
