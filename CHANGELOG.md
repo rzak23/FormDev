@@ -1,4 +1,10 @@
-## [2.1.10] = 7 Juni 2023
+## [2.1.11] - 2 Juli 2023
+* Fix JWT Generate and Decode
+* Add new modul Cron Reader
+* Add new modul Chmod Calculator
+* Add new modul Faker (Email &amp; Full Name)
+
+## [2.1.10] - 7 Juni 2023
 * Fix bug char length modul String Generator
 * Update some package to last version
 
