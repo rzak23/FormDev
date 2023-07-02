@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/regular.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
@@ -98,9 +99,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:jwt_page()" onclick="jwt_page()" class="nav-link">
-                            <i class="nav-icon fa-solid fa-gears"></i>
-                            <p>JWT Token</p>
+                        <a href="javascript:jwt_decoder()" onclick="jwt_decoder()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-unlock-keyhole"></i>
+                            <p>JWT Decoder</p>
                         </a>
                     </li>
                 </ul>
@@ -191,6 +192,35 @@
                             <p>User Agent</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="javascript:jwt_generator()" onclick="jwt_generator()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-cogs"></i>
+                            <p>JWT</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa-solid fa-shuffle"></i>
+                            <p>
+                                Faker
+                                <i class="right fa-solid fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="javascript:faker_email()" onclick="faker_email()" class="nav-link">
+                                    <i class="nav-icon fa-regular fa-circle"></i>
+                                    <p>Email</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:faker_fullname()" onclick="faker_fullname()" class="nav-link">
+                                    <i class="nav-icon fa-regular fa-circle"></i>
+                                    <p>Full Name</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -230,6 +260,18 @@
                         <a href="javascript:ascii_page()" onclick="ascii_page()" class="nav-link">
                             <i class="nav-icon fa-solid fa-circle-nodes"></i>
                             <p>ASCII to Binary</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:crontab_reader()" onclick="crontab_reader()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-calendar-day"></i>
+                            <p>Crontab Reader</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:chmod_calculator()" onclick="chmod_calculator()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-universal-access"></i>
+                            <p>Chmod Calculator</p>
                         </a>
                     </li>
                 </ul>

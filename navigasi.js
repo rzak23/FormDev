@@ -54,6 +54,22 @@ function url_page(){
 	document.head.appendChild(script);
 }
 
+function jwt_decoder(){
+	fetch('./page/encoder/jwt.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/encoder/jwt.js';
+	script.id = 'sc';
+
+	// Append to the `body` element
+	document.body.appendChild(script);
+}
+
 function jwt_page(){
 	fetch('./page/encoder/jwt.html')
 	.then(response=> response.text())
@@ -251,6 +267,54 @@ function user_agent_page(){
 	document.head.appendChild(script);
 }
 
+function jwt_generator(){
+	fetch('./page/generator/jwt.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/jwt.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
+function faker_email(){
+	fetch('./page/generator/faker/email.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/faker.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
+function faker_fullname(){
+	fetch('./page/generator/faker/full_name.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/faker.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 function cal_biner_page(){
 	fetch('./page/konverter/cbiner.html')
 	.then(response=> response.text())
@@ -325,6 +389,38 @@ function ascii_page(){
 	// Create new script element
 	const script = document.createElement('script');
 	script.src = 'mod/konverter/ascii.js';
+	script.id = 'sc';
+
+	// Append to the `body` element
+	document.body.appendChild(script);
+}
+
+function crontab_reader(){
+	fetch('./page/konverter/crontab.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/konverter/crontab.js';
+	script.id = 'sc';
+
+	// Append to the `body` element
+	document.body.appendChild(script);
+}
+
+function chmod_calculator(){
+	fetch('./page/konverter/chmod.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/konverter/chmod.js';
 	script.id = 'sc';
 
 	// Append to the `body` element
