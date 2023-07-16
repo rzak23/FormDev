@@ -80,6 +80,7 @@
     "jquery": "^3.7.0",
     "json-string-formatter": "^1.0.1",
     "jsonpath-plus": "^7.2.0",
+    "keypair": "^1.0.4",
     "lorem-ipsum": "^2.0.8",
     "marked": "^5.1.0",
     "nanoid": "^4.0.2",
