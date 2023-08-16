@@ -58,8 +58,8 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^25.2.0",
-    "electron-builder": "^24.4.0"
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.3"
   },
   "dependencies": {
     "@faker-js/faker": "^8.0.2",
