@@ -315,6 +315,22 @@ function faker_fullname(){
 	document.body.appendChild(script);
 }
 
+function rsa_pem_generator(){
+	fetch('./page/generator/rsa_pem.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/rsa_pem.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 function cal_biner_page(){
 	fetch('./page/konverter/cbiner.html')
 	.then(response=> response.text())
@@ -581,6 +597,22 @@ function jsonpath_page(){
 	// Create new script element
 	const script = document.createElement('script');
 	script.src = 'mod/jsonpath.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
+function portdetect_page(){
+	fetch('./page/port.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/port.js';
 	script.id = 'sc';
 
 	// Append to the `head` element
