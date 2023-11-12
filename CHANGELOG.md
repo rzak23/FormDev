@@ -1,3 +1,7 @@
+## [2.1.13] - 12 November 2023
+* Add modul CRC Generator
+* Update minor
+
 ## [2.1.12] - 17 Oktober 2023
 * Add modul Port Checker
 * Add modul RSA Key Generator
