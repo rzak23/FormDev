@@ -82,7 +82,7 @@
     "jsonpath-plus": "^7.2.0",
     "keypair": "^1.0.4",
     "lorem-ipsum": "^2.0.8",
-    "marked": "^5.1.2",
+    "marked": "^10.0.0",
     "nanoid": "^4.0.2",
     "netmask": "^2.0.2",
     "qr-code-styling": "^1.6.0-rc.1",
