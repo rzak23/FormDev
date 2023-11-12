@@ -90,7 +90,7 @@
     "randomstring": "^1.3.0",
     "secure-random": "^1.1.2",
     "simple-text-diff": "^1.7.0",
-    "sql-formatter": "^13.0.2",
+    "sql-formatter": "^13.1.0",
     "sweetalert2": "^11.7.11",
     "timestamp-conv": "^3.0.0",
     "to-case": "^2.0.0",
