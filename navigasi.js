@@ -331,6 +331,18 @@ function rsa_pem_generator(){
 	document.body.appendChild(script);
 }
 
+function crc_generator(){
+	fetch('./page/generator/crc.html')
+	.then(response => response.text())
+	.then(text => document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+	const script = document.createElement('script');
+	script.src = 'mod/generator/crc.js';
+	script.id = 'sc';
+	document.body.appendChild(script);
+}
+
 function cal_biner_page(){
 	fetch('./page/konverter/cbiner.html')
 	.then(response=> response.text())

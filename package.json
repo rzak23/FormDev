@@ -68,6 +68,7 @@
     "bcrypt": "^5.1.0",
     "clipboard": "^2.0.11",
     "color": "^4.2.3",
+    "crc": "^4.3.2",
     "cronstrue": "^2.27.0",
     "crypto-js": "^4.2.0",
     "detect-port": "^1.5.1",
