@@ -96,7 +96,7 @@
     "timestamp-conv": "^3.0.0",
     "to-case": "^2.0.0",
     "unique-username-generator": "^1.2.0",
-    "user-agents": "^1.0.1402",
+    "user-agents": "^1.1.50",
     "uuid": "^9.0.0",
     "xml-formatter": "^3.4.1"
   }
