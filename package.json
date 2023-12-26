@@ -1,6 +1,6 @@
 {
   "name": "formdev",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
@@ -92,7 +92,7 @@
     "secure-random": "^1.1.2",
     "simple-text-diff": "^1.7.0",
     "sql-formatter": "^13.1.0",
-    "sweetalert2": "^11.7.11",
+    "sweetalert2": "^11.10.1",
     "timestamp-conv": "^3.0.0",
     "to-case": "^2.0.0",
     "unique-username-generator": "^1.2.0",

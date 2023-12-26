@@ -1,3 +1,8 @@
+## [2.1.14] - 26 November 2023
+* Add print option number of user agents
+* Update some dependecies
+* Last update in 2023
+
 ## [2.1.13] - 12 November 2023
 * Add modul CRC Generator
 * Update minor
