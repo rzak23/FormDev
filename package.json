@@ -1,6 +1,6 @@
 {
   "name": "formdev",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
@@ -58,12 +58,12 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^27.0.4",
-    "electron-builder": "^24.6.4"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.0.2",
-    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@faker-js/faker": "^8.3.1",
+    "@fortawesome/fontawesome-free": "^6.5.1",
     "admin-lte": "^3.2.0",
     "bcrypt": "^5.1.0",
     "clipboard": "^2.0.11",
@@ -78,7 +78,7 @@
     "highlight.js": "^11.8.0",
     "html-prettify": "^1.0.7",
     "jose": "^4.14.4",
-    "jquery": "^3.7.0",
+    "jquery": "^3.7.1",
     "json-string-formatter": "^1.0.1",
     "jsonpath-plus": "^7.2.0",
     "keypair": "^1.0.4",
@@ -92,11 +92,11 @@
     "secure-random": "^1.1.2",
     "simple-text-diff": "^1.7.0",
     "sql-formatter": "^13.1.0",
-    "sweetalert2": "^11.7.11",
+    "sweetalert2": "^11.10.1",
     "timestamp-conv": "^3.0.0",
     "to-case": "^2.0.0",
     "unique-username-generator": "^1.2.0",
-    "user-agents": "^1.0.1402",
+    "user-agents": "^1.1.50",
     "uuid": "^9.0.0",
     "xml-formatter": "^3.4.1"
   }
