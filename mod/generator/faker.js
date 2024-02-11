@@ -12,6 +12,13 @@ function onCreateFakerFullName(){
     document.getElementById('res').value = randomFullName;
 }
 
+function onCreateFakerCreditCardNumber(){
+    const {faker} = require('@faker-js/faker');
+
+    let creditNumber = faker.finance.creditCardNumber();
+    document.getElementById('res').value = creditNumber;
+}
+
 function onResetForm(){
     document.getElementById('fakerForm').reset();
 }
