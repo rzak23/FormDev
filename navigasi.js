@@ -315,6 +315,38 @@ function faker_fullname(){
 	document.body.appendChild(script);
 }
 
+function faker_credit_card(){
+	fetch('./page/generator/faker/credit_card.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/faker.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
+function faker_crypto_address(){
+	fetch('./page/generator/faker/crypto_address.html')
+	.then(response=> response.text())
+	.then(text=> document.getElementById('page').innerHTML = text);
+
+	remove_script_modular();
+
+	// Create new script element
+	const script = document.createElement('script');
+	script.src = 'mod/generator/faker.js';
+	script.id = 'sc';
+
+	// Append to the `head` element
+	document.body.appendChild(script);
+}
+
 function rsa_pem_generator(){
 	fetch('./page/generator/rsa_pem.html')
 	.then(response=> response.text())
