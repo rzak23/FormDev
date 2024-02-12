@@ -1,3 +1,7 @@
+## [2.1.15] - 11 Februari 2024
+* Add modul faker credit card number
+* Add modul faker crypto address
+
 ## [2.1.14] - 26 November 2023
 * Add print option number of user agents
 * Update some dependecies
