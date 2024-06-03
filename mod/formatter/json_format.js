@@ -15,7 +15,8 @@ function convertToJson(){
 
     var myjson = jsonFormat.format(input);
 
-    document.getElementById('joutput').innerHTML = hl.highlightAuto(myjson).value;
+    // document.getElementById('joutput').innerHTML = hl.highlightAuto(myjson).value;
+    document.getElementById('joutput').innerHTML = myjson;
 }
 
 function resetForm(){
