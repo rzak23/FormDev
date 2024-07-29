@@ -64,14 +64,11 @@ function username_page(){
 function qr_code_page(){
 	let route = new Route();
 	route.loadPage('generator/qrcode.html', 'generator/qrcode.js');
+}
 
-	// // Create new script element
-	// const script = document.createElement('script');
-	// script.src = 'node_modules/qr-code-styling/lib/qr-code-styling.js';
-	// script.id = 'sc';
-
-	// // Append to the `head` element
-	// document.head.appendChild(script);
+function qr_wifi_page(){
+	let route = new Route();
+	route.loadPage('generator/qrwifi.html', 'generator/qrwifi.js');
 }
 
 function lorem_page(){

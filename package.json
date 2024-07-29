@@ -99,6 +99,7 @@
     "unique-username-generator": "^1.2.0",
     "user-agents": "^1.1.50",
     "uuid": "^9.0.0",
+    "wifi-qr-code-generator": "^1.1.1",
     "xml-formatter": "^3.4.1"
   }
 }
