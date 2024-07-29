@@ -1,666 +1,212 @@
-const { default: Swal } = require("sweetalert2");
-
+const Route = require('./routes/route');
 index_page();
 
 function index_page(){
-	fetch('./page/index.html')
-  	.then(response=> response.text())
-  	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-}
-
-function remove_script_modular(){
-	const element = document.getElementById('sc');
-	const element2 = document.getElementById('sc2');
-	if(element){
-		element.remove();
-	}
-
-	if(element2){
-		element2.remove();
-	}
+	let route = new Route();
+	route.loadPage('index.html');
 }
 
 function base64_page(){
-	fetch('./page/encoder/base64.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-	
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/encoder/base64.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('encoder/base64.html', 'encoder/base64.js');
 }
 
 function url_page(){
-	fetch('./page/encoder/url-ende.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/encoder/url-ende.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('encoder/url-ende.html', 'encoder/url-ende.js');
 }
 
 function jwt_decoder(){
-	fetch('./page/encoder/jwt.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/encoder/jwt.js';
-	script.id = 'sc';
-
-	// Append to the `body` element
-	document.body.appendChild(script);
-}
-
-function jwt_page(){
-	fetch('./page/encoder/jwt.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/encoder/jwt.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('encoder/jwt.html', 'encoder/jwt.js');
 }
 
 function cryptografi_page(){
-	fetch('./page/cryptografi/cryptografi.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/cryptografi/cryptografi.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('cryptografi/cryptografi.html', 'cryptografi/cryptografi.js');
 }
 
 function checksum_page(){
-	fetch('./page/cryptografi/checksum.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/cryptografi/checksum.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('cryptografi/checksum.html', 'cryptografi/checksum.js');
 }
 
 function bcrypt_page(){
-	fetch('./page/generator/bcrypt.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/bcrypt.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/bcrypt.html', 'generator/bcrypt.js');
 }
 
 function uuid_page(){
-	fetch('./page/generator/uuid.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/uuid.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/uuid.html', 'generator/uuid.js');
 }
 
 function nanoid_page(){
-	fetch('./page/generator/nanoid.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.type = 'module';
-	script.src = 'mod/generator/nanoid.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/nanoid.html', 'generator/nanoid.js');
 }
 
 function hash_page(){
-	fetch('./page/generator/hash.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/hash.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/hash.html', 'generator/hash.js');
 }
 
 function string_page(){
-	fetch('./page/generator/string.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/stringgen.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/string.html', 'generator/stringgen.js');
 }
 
 function username_page(){
-	fetch('./page/generator/name.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/namgen.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/name.html', 'generator/namgen.js');
 }
 
 function qr_code_page(){
-	fetch('./page/generator/qrcode.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
+	let route = new Route();
+	route.loadPage('generator/qrcode.html', 'generator/qrcode.js');
 
-	remove_script_modular();
+	// // Create new script element
+	// const script = document.createElement('script');
+	// script.src = 'node_modules/qr-code-styling/lib/qr-code-styling.js';
+	// script.id = 'sc';
 
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'node_modules/qr-code-styling/lib/qr-code-styling.js';
-	script.id = 'sc';
-	const script2 = document.createElement('script');
-	script2.src = 'mod/generator/qrcode.js';
-	script2.id = 'sc2';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
-	document.head.appendChild(script2);
+	// // Append to the `head` element
+	// document.head.appendChild(script);
 }
 
 function lorem_page(){
-	fetch('./page/generator/lorem.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/lorem.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/lorem.html', 'generator/lorem.js');
 }
 
 function user_agent_page(){
-	fetch('./page/generator/useragent.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/userAgent.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/useragent.html', 'generator/userAgent.js');
 }
 
 function jwt_generator(){
-	fetch('./page/generator/jwt.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/jwt.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/jwt.html', 'generator/jwt.js');
 }
 
 function faker_email(){
-	fetch('./page/generator/faker/email.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/faker.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/faker/email.html', 'generator/faker.js');
 }
 
 function faker_fullname(){
-	fetch('./page/generator/faker/full_name.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/faker.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/faker/full_name.html', 'generator/faker.js');
 }
 
 function faker_credit_card(){
-	fetch('./page/generator/faker/credit_card.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/faker.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/faker/credit_card.html', 'generator/faker.js');
 }
 
 function faker_crypto_address(){
-	fetch('./page/generator/faker/crypto_address.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/faker.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/faker/crypto_address.html', 'generator/faker.js');
 }
 
 function rsa_pem_generator(){
-	fetch('./page/generator/rsa_pem.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/generator/rsa_pem.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/rsa_pem.html', 'generator/rsa_pem.js');
 }
 
 function crc_generator(){
-	fetch('./page/generator/crc.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-	const script = document.createElement('script');
-	script.src = 'mod/generator/crc.js';
-	script.id = 'sc';
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('generator/crc.html', 'generator/crc.js');
 }
 
 function cal_biner_page(){
-	fetch('./page/konverter/cbiner.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/konverter/cbiner.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('konverter/cbiner.html', 'konverter/cbiner.js');
 }
 
 function ip_cal_page(){
-	fetch('./page/konverter/ipcal.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/konverter/ipcal.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('konverter/ipcal.html', 'konverter/ipcal.js');
 }
 
 function bytes_reader_page(){
-	fetch('./page/konverter/bytes_reader.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/konverter/bytes_reader.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('konverter/bytes_reader.html', 'konverter/bytes_reader.js');
 }
 
 function timestamp_page(){
-	fetch('./page/konverter/timestamp.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/konverter/timestamp.js';
-	script.id = 'sc';
-
-	// Append to the `body` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('konverter/timestamp.html', 'konverter/timestamp.js');
 }
 
 function ascii_page(){
-	fetch('./page/konverter/ascii.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/konverter/ascii.js';
-	script.id = 'sc';
-
-	// Append to the `body` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('konverter/ascii.html', 'konverter/ascii.js');
 }
 
 function crontab_reader(){
-	fetch('./page/konverter/crontab.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/konverter/crontab.js';
-	script.id = 'sc';
-
-	// Append to the `body` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('konverter/crontab.html', 'konverter/crontab.js');
 }
 
 function chmod_calculator(){
-	fetch('./page/konverter/chmod.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/konverter/chmod.js';
-	script.id = 'sc';
-
-	// Append to the `body` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('konverter/chmod.html', 'konverter/chmod.js');
 }
 
 function text_diff_page(){
-	fetch('./page/teks/banding.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/teks/banding.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('teks/banding.html', 'teks/banding.js');
 }
 
 function text_check_page(){
-	fetch('./page/teks/teks-checker.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/teks/checker.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('teks/teks-checjer.html', 'teks/checker.js');
 }
 
 function string_manipulation_page(){
-	fetch('./page/teks/string-manipulation.html')
-	.then(response=> response.text())
-	.then(text=> document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/teks/string_manipulation.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('teks/string-manipulation.html', 'teks/string_manipulation.js');
 }
 
 function json_format_page(){
-	fetch('./page/formatter/json-format.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/formatter/json_format.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('formatter/json-format.html', 'formatter/json_format.js');
 }
 
 function sql_format_page(){
-	fetch('./page/formatter/sql-format.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/formatter/sql_format.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('formatter/sql-format.html', 'formatter/sql_format.js');
 }
 
 function xml_format_page(){
-	fetch('./page/formatter/xml-format.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/formatter/xml_format.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('formatter/xml-format.html', 'formatter/xml_format.js');
 }
 
 function html_format_page(){
-	fetch('./page/formatter/html-format.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/formatter/html_format.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.head.appendChild(script);
+	let route = new Route();
+	route.loadPage('formatter/html-format.html', 'formatter/html_format.js');
 }
 
 function color_palette_page(){
-	fetch('./page/color_palette.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/color_palette.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('color_palette.html', 'color_palette.js');
 }
 
 function markdown_page(){
-	fetch('./page/markdown.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/markdown.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('markdown.html', 'markdown.js');
 }
 
 function jsonpath_page(){
-	fetch('./page/jsonpath.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/jsonpath.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('jsonpath.html', 'jsonpath.js');
 }
 
 function portdetect_page(){
-	fetch('./page/port.html')
-	.then(response => response.text())
-	.then(text => document.getElementById('page').innerHTML = text);
-
-	remove_script_modular();
-
-	// Create new script element
-	const script = document.createElement('script');
-	script.src = 'mod/port.js';
-	script.id = 'sc';
-
-	// Append to the `head` element
-	document.body.appendChild(script);
+	let route = new Route();
+	route.loadPage('port.html', 'port.js');
 }
 
 const {shell} = require('electron');

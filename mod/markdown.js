@@ -1,6 +1,6 @@
-const {marked} = require('marked');
 
 function previewMark(){
+    const {marked} = require('marked');
     var txt = document.getElementById('inputText').value;
     
     var res = marked.parse(txt);
