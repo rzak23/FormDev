@@ -19,12 +19,12 @@ class Route{
 
     addScript(dirmod){
         const script = document.createElement('script');
-        let esModule = this.isESModule(`mod/${dirmod}`);
+        let esModule = this.isESModule(`./mod/${dirmod}`);
         if(esModule){
             script.type = 'module';
         }
         
-        script.src = `mod/${dirmod}`;
+        script.src = `./mod/${dirmod}`;
         script.id = 'sc';
         document.body.appendChild(script);
     }
