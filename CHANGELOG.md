@@ -1,3 +1,7 @@
+## [2.1.17] - 10 Agustus 2024
+* Fix bug Route in version 2.1.16
+* Minor Update
+
 ## [2.1.15] - 11 Februari 2024
 * Add modul faker credit card number
 * Add modul faker crypto address
