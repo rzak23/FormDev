@@ -24,7 +24,7 @@ class Route{
             script.type = 'module';
         }
         
-        script.src = `./mod/${dirmod}`;
+        script.src = `mod/${dirmod}`;
         script.id = 'sc';
         document.body.appendChild(script);
     }

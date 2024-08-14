@@ -1,6 +1,6 @@
 {
   "name": "formdev",
-  "version": "2.1.17",
+  "version": "2.1.18",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,12 @@
     "build-linx": "electron-builder --linux --x64"
   },
   "build": {
+    "extraFiles": [
+      {
+        "from": "mod/",
+        "to": "mod/"
+      }
+    ],
     "directories": {
       "buildResources": "build"
     },
