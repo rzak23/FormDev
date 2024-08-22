@@ -1,5 +1,6 @@
 function port_checker(){
     const detect = require('detect-port');
+    const Swal = require('sweetalert2').default;
     var port = document.getElementById('port').value;
 
     if(isNullorEmpty(port)){

@@ -1,4 +1,7 @@
+
 function myQR(){
+    const QRCodeStyling = require("qr-code-styling");
+
     var text = document.getElementById('text').value;
     var color = document.getElementById('warnaq').value;
     var background = document.getElementById('warnab').value;
@@ -26,6 +29,8 @@ function myQR(){
 }
 
 function downloadQR(){
+    const QRCodeStyling = require("qr-code-styling");
+
     var text = document.getElementById('text').value;
     var color = document.getElementById('warnaq').value;
     var background = document.getElementById('warnab').value;

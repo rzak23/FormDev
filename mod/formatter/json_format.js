@@ -15,7 +15,14 @@ function convertToJson(){
 
     var myjson = jsonFormat.format(input);
 
-    document.getElementById('joutput').innerHTML = hl.highlightAuto(myjson).value;
+    // document.getElementById('joutput').innerHTML = hl.highlightAuto(myjson).value;
+    document.getElementById('joutput').innerHTML = myjson;
+}
+
+function show_notif(){
+    const Swal = require('sweetalert2').default;
+
+    Swal.fire('Copied', 'JSON has copied', 'success');
 }
 
 function resetForm(){
