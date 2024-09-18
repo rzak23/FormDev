@@ -681,12 +681,12 @@ function openDev(){
     shell.openExternal(url)
 }
 
-function openRepo(){
-    var url = "https://github.com/rzak23/FormDev";
-    shell.openExternal(url)
-}
+// function openRepo(){
+//     var url = "https://github.com/rzak23/FormDev";
+//     shell.openExternal(url)
+// }
 
 function openFeedback(){
-	var url = "https://github.com/rzak23/FormDev/issues";
+	var url = "https://formdev.my.id/feedback/add";
 	shell.openExternal(url);
 }
