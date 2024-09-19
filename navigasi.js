@@ -164,7 +164,7 @@ function nanoid_page(){
 	script.id = 'sc';
 
 	// Append to the `head` element
-	document.head.appendChild(script);
+	document.body.appendChild(script);
 }
 
 function hash_page(){
