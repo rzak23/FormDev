@@ -1,11 +1,10 @@
-const to = require('to-case');
+let to = require('to-case');
 var txt = "";
 var res = "";
 
 function upper(){
     txt = document.getElementById('text_type').value
     res = to.upper(txt);
-    console.log(res);
     document.getElementById('text_type').value = res;
 }
 

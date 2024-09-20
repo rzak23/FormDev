@@ -1,6 +1,6 @@
 {
   "name": "formdev",
-  "version": "2.1.18",
+  "version": "2.1.19",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
@@ -9,12 +9,6 @@
     "build-linx": "electron-builder --linux --x64"
   },
   "build": {
-    "extraFiles": [
-      {
-        "from": "mod/",
-        "to": "mod/"
-      }
-    ],
     "directories": {
       "buildResources": "build"
     },
@@ -64,8 +58,8 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^31.3.1",
-    "electron-builder": "^24.13.3"
+    "electron": "^32.1.1",
+    "electron-builder": "^25.0.5"
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
@@ -89,7 +83,7 @@
     "jsonpath-plus": "^7.2.0",
     "keypair": "^1.0.4",
     "lorem-ipsum": "^2.0.8",
-    "marked": "^12.0.0",
+    "marked": "^14.1.2",
     "nanoid": "^4.0.2",
     "netmask": "^2.0.2",
     "prismjs": "^1.29.0",
@@ -98,7 +92,7 @@
     "randomstring": "^1.3.0",
     "secure-random": "^1.1.2",
     "simple-text-diff": "^1.7.0",
-    "sql-formatter": "^15.2.0",
+    "sql-formatter": "^15.4.2",
     "sweetalert2": "^11.10.1",
     "timestamp-conv": "^3.0.0",
     "to-case": "^2.0.0",

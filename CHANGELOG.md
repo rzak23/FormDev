@@ -1,3 +1,7 @@
+## [2.1.19] - 20 September 2024
+* Fix all bug in previous version
+* Recently update monthly
+
 ## [2.1.17] - 10 Agustus 2024
 * Fix bug Route in version 2.1.16
 * Minor Update
