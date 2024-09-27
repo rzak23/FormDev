@@ -1,4 +1,23 @@
-<div class="content-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | RSA PEM Generator</title>
+
+  @@include('partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('partials/preloader.html')
+
+  @@include('partials/navbar.html')
+
+  @@include('partials/sidebar.html', {"page": "rsa", "group": "generator"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
     <div class="content-header"></div>
     <section class="content">
         <div class="container-fluid">
@@ -35,4 +54,14 @@
             </div>
         </div>
     </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('partials/footer.html')
 </div>
+<!-- ./wrapper -->
+<script src="../mod/generator/rsa_pem.js"></script>
+@@include('partials/vendor-script.html')
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev</title>
+
+  @@include('partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('partials/preloader.html')
+
+  @@include('partials/navbar.html')
+
+  @@include('partials/sidebar.html', {"page": "home"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="text-center mt-5">
+                    <h2>FormDev</h2>
+                    <div>
+                        <img src="../assets/icon.png" alt="" width="200">
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#about">
+                        <span>About</span>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- modal info -->
+	<div class="modal fade" role="dialog" id="about">
+		<div class="modal-dialog">
+			<div class="modal-content modal-background">
+				<div class="modal-header">
+					About
+				</div>
+				<div class="modal-body">
+					<p>
+						FormDev, is Free App with more tools can use to help dev work easly
+					</p>
+					<!-- <p>
+						Aplikasi ini terinspirasi dari proyek <button type="button" onclick="openDev()" class="btn btn-info">DevToys</button>
+					</p> -->
+					<p>
+						<strong>What's new :</strong>
+						<p>
+							<ul>
+								<li>Fix all module not work in previous version</li>
+								<li>Regular monthly updates</li>
+							</ul>
+						</p>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
+						<span>Close</span>
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal info -->
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('partials/footer.html')
+</div>
+<!-- ./wrapper -->
+
+@@include('partials/vendor-script.html')
+</body>
+</html>

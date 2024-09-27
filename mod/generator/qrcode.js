@@ -10,7 +10,7 @@ function myQR(){
         height: 300,
         type: "svg",
         data: text,
-        image: "./page/icon.png",
+        image: "../assets/icon.png",
         dotsOptions: {
             color: color,
             type: "rounded"
@@ -39,7 +39,7 @@ function downloadQR(){
         height: 300,
         type: "svg",
         data: text,
-        image: "./page/icon.png",
+        image: "../assets/icon.png",
         dotsOptions: {
             color: color,
             type: "rounded"

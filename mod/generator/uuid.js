@@ -6,7 +6,7 @@ $(function(){
 
 
 function generate(){
-    var version = document.getElementById('version').value;
+    var version = document.getElementById('version-uuid').value;
     var capt = document.getElementById('capital').checked;
     var jmlCetak = document.getElementById('jmlCetak').value;
 

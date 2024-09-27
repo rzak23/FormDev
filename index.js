@@ -27,7 +27,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('pages/index.html')
   if(!isDev){
     mainWindow.removeMenu();
   }
