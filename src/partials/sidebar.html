@@ -229,8 +229,8 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
+            <li class="nav-item @@if (context.group === 'text-inspect') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'text-inspect') {active}">
                     <i class="nav-icon fa-solid fa-spell-check"></i>
                     <p>
                         Text Inspection
@@ -239,19 +239,19 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="javascript:text_diff_page()" onclick="text_diff_page()" class="nav-link">
+                        <a href="diff-text.html" class="nav-link @@if (context.page === 'diff-text') {active}">
                             <i class="nav-icon fa-solid fa-code-compare"></i>
                             <p>Diff Text</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:text_check_page()" onclick="text_check_page()" class="nav-link">
+                        <a href="text-check.html" class="nav-link @@if (context.page === 'text-check') {active}">
                             <i class="nav-icon fa-solid fa-file-lines"></i>
                             <p>Text Checker</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:string_manipulation_page()" onclick="string_manipulation_page()" class="nav-link">
+                        <a href="string-manipulation.html" class="nav-link @@if (context.page === 'string-mal') {active}">
                             <i class="nav-icon fa-solid fa-i-cursor"></i>
                             <p>String Manipulation</p>
                         </a>
