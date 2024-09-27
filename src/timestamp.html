@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | Timestamp</title>
+
+  @@include('partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('partials/preloader.html')
+
+  @@include('partials/navbar.html')
+
+  @@include('partials/sidebar.html', {"page": "timestamp", "group": "converter"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content"></section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <form id="formTime">
+                        <div class="form-group">
+                            <label for="timestamp">Timestamp</label>
+                            <div class="input-group">
+                                <input type="text" name="timestamp" class="form-control" id="timestamp" autocomplete="off" required>
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-info" onclick="readTimeStamp()">
+                                        <span>Convert</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="resetForm()">
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label for="year">Year</label>
+                                    <input type="text" name="year" class="form-control" id="year" autocomplete="off" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label for="month">Month</label>
+                                    <input type="text" name="month" class="form-control" id="month" autocomplete="off" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label for="day">Day</label>
+                                    <input type="text" name="day" class="form-control" id="day" autocomplete="off" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label for="hour">Hour</label>
+                                    <input type="text" name="hour" class="form-control" id="hour" autocomplete="off" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label for="minute">Minutes</label>
+                                    <input type="text" name="minute" class="form-control" id="minute" autocomplete="off" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label for="second">Seconds</label>
+                                    <input type="second" name="second" class="form-control" id="second" autocomplete="off" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/konverter/timestamp.js"></script>
+@@include('partials/vendor-script.html')
+</body>
+</html>

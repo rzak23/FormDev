@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | Crontab Reader</title>
+
+  @@include('partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('partials/preloader.html')
+
+  @@include('partials/navbar.html')
+
+  @@include('partials/sidebar.html', {"page": "crontab-reader", "group": "converter"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            Cron Reader
+                        </div>
+                        <div class="card-body">
+                            <form id="formCron">
+                                <div class="form-group">
+                                    <label for="cron">Cron Expression</label>
+                                    <input type="text" name="cron" class="form-control" id="cron" autocomplete="off" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="result">Result</label>
+                                    <input type="text" name="result" class="form-control" id="result" autocomplete="off" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-success" onclick="onReadCron()">
+                                        <span>Convert</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="onResetForm()">
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/konverter/crontab.js"></script>
+@@include('partials/vendor-script.html')
+</body>
+</html>

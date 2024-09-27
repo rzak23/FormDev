@@ -176,8 +176,8 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
+            <li class="nav-item @@if (context.group === 'converter') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'converter') {active}">
                     <i class="nav-icon fa-solid fa-laptop-medical"></i>
                     <p>
                         Converter
@@ -186,43 +186,43 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="javascript:cal_biner_page()" onclick="cal_biner_page()" class="nav-link">
+                        <a href="calculator-biner.html" class="nav-link @@if (context.page === 'cal-biner') {active}">
                             <i class="nav-icon fa-solid fa-calculator"></i>
                             <p>Calculator Biner</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:ip_cal_page()" onclick="ip_cal_page()" class="nav-link">
+                        <a href="ip-calculator.html" class="nav-link @@if (context.page === 'ip-cal') {active}">
                             <i class="nav-icon fa-solid fa-network-wired"></i>
                             <p>Calculator IP</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:bytes_reader_page()" onclick="bytes_reader_page()" class="nav-link">
+                        <a href="bytes-reader.html" class="nav-link @@if (context.page === 'bytes-reader') {active}">
                             <i class="nav-icon fa-solid fa-barcode"></i>
                             <p>Bytes Reader</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:timestamp_page()" onclick="timestamp_page()" class="nav-link">
+                        <a href="timestamp.html" class="nav-link @@if (context.page === 'timestamp') {active}">
                             <i class="nav-icon fa-solid fa-clock"></i>
                             <p>Timestamp</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:ascii_page()" onclick="ascii_page()" class="nav-link">
+                        <a href="ascii-biner.html" class="nav-link @@if (context.page === 'ascii-biner') {active}">
                             <i class="nav-icon fa-solid fa-circle-nodes"></i>
                             <p>ASCII to Binary</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:crontab_reader()" onclick="crontab_reader()" class="nav-link">
+                        <a href="crontab-reader.html" class="nav-link @@if (context.page === 'crontab-reader') {active}">
                             <i class="nav-icon fa-solid fa-calendar-day"></i>
                             <p>Crontab Reader</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:chmod_calculator()" onclick="chmod_calculator()" class="nav-link">
+                        <a href="chmod-calculator.html" class="nav-link @@if (context.page === 'chmod-cal') {active}">
                             <i class="nav-icon fa-solid fa-universal-access"></i>
                             <p>Chmod Calculator</p>
                         </a>
