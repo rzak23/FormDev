@@ -258,8 +258,8 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
+            <li class="nav-item @@if (context.group === 'format') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'format') {active}">
                     <i class="nav-icon fa-solid fa-indent"></i>
                     <p>
                         Formatting
@@ -268,7 +268,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="javascript:json_format_page()" onclick="json_format_page()" class="nav-link">
+                        <a href="json-format.html" class="nav-link @@if (context.page === 'json') {active}">
                             <i class="nav-icon fa-solid fa-file-contract"></i>
                             <p>
                                 JSON Format
@@ -276,7 +276,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:sql_format_page()" onclick="sql_format_page()" class="nav-link">
+                        <a href="sql-format.html" class="nav-link @@if (context.page === 'sql') {active}">
                             <i class="nav-icon fa-solid fa-file-contract"></i>
                             <p>
                                 SQL Format
@@ -284,7 +284,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:xml_format_page()" onclick="xml_format_page()" class="nav-link">
+                        <a href="xml-format.html" class="nav-link @@if (context.page === 'xml') {active}">
                             <i class="nav-icon fa-solid fa-file-contract"></i>
                             <p>
                                 XML Format
@@ -292,7 +292,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:html_format_page()" onclick="html_format_page()" class="nav-link">
+                        <a href="html-format.html" class="nav-link @@if (context.page === 'html') {active}">
                             <i class="nav-icon fa-solid fa-file-contract"></i>
                             <p>
                                 HTML Format
