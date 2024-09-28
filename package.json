@@ -1,6 +1,6 @@
 {
   "name": "formdev-debug",
-  "version": "2.1.19",
+  "version": "2.1.20",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
