@@ -12,4 +12,11 @@
     $.getJSON("../package.json", function(json) {
         document.getElementById('version').innerHTML = json.version
     });
+
+    function openFeedback(){
+        let {shell} = require('electron');
+        
+        var url = "https://formdev.my.id/feedback/add";
+        shell.openExternal(url);
+    }
 </script>
