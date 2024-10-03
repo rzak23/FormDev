@@ -40,7 +40,8 @@
       "identityName": "35602Re.Studio.FormDev",
       "applicationId": "Re.Studio.FormDev",
       "backgroundColor": "#0915FF",
-      "arch": ["x64", "arm64"]
+      "arch": ["x64", "arm64"],
+      "icon": "build/FormDev.png"
     }
   },
   "repository": {
