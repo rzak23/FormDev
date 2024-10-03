@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build-win": "electron-builder --win --x64",
+    "build-win": "electron-builder --x64 --arm64 --appx",
     "build-linx": "electron-builder --linux --x64",
     "build-html": "gulp html",
     "gulp-watch": "gulp"
@@ -39,7 +39,8 @@
       "publisher": "CN=B5C0E522-DA44-46AB-AD7A-3861F629EE23",
       "identityName": "35602Re.Studio.FormDev",
       "applicationId": "Re.Studio.FormDev",
-      "backgroundColor": "#0915FF"
+      "backgroundColor": "#0915FF",
+      "arch": ["x64", "arm64"]
     }
   },
   "repository": {
