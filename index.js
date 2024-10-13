@@ -13,7 +13,7 @@ function createWindow () {
     width: 1300,
     height: 950,
     show: false,
-    icon: __dirname+'/build/FormDev.png',
+    icon: __dirname+'/assets/icon.png',
     // titleBarStyle: 'hidden',
     // titleBarOverlay: {
     //   color: '#454d55',
@@ -35,7 +35,7 @@ function createWindow () {
   var splash = new BrowserWindow({
     width: 500,
     height: 300,
-    icon: __dirname+'/page/icon.png',
+    icon: __dirname+'/assets/icon.png',
     transparent: true,
     frame: false,
     alwaysOnTop: true
