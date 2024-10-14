@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | QR Code Generator</title>
+
+  @@include('partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('partials/preloader.html')
+
+  @@include('partials/navbar.html')
+
+  @@include('partials/sidebar.html', {"page": "qrcode", "group": "generator", "subgroup": "qrcode"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            QR Code Generator
+                        </div>
+                        <div class="card-body">
+                            <form class="text-center">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Option
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="warnaq">QR Code Color</label>
+                                                    <input type="color" class="form-control" value="#000000" id="warnaq" autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="col0-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="warnab">Background Color</label>
+                                                    <input type="color" class="form-control" value="#000000" id="warnab" autocomplete="off">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Text</label>
+                                    <input type="text" class="form-control" id="text" autocomplete="off">
+                                </div>
+                                <div class="form-group mt-2">
+                                    <button type="button" class="btn btn-info" onclick="myQR()">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <span>Generate</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="mt-4 text-center" id="canvas"></div>
+                            <div class="text-center" id="bt-download">
+                                <button type="button" class="btn btn-primary" onclick="downloadQR()">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/generator/qrcode.js"></script>
+@@include('partials/vendor-script.html')
+</body>
+</html>

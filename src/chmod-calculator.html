@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | Chmod Calculator</title>
+
+  @@include('partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('partials/preloader.html')
+
+  @@include('partials/navbar.html')
+
+  @@include('partials/sidebar.html', {"page": "chmod-cal", "group": "converter"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        Chmod Calculator
+                    </div>
+                    <div class="card-body">
+                        <form id="chmodForm">
+                            <div class="form-group">
+                                <label for="num">Code Access</label>
+                                <input type="text" name="num" class="form-control" id="num" autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res">Result</label>
+                                <input type="text" name="res" class="form-control" id="res" autocomplete="off" readonly>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success" onclick="onChmodCalculated()">
+                                    <span>Generate</span>
+                                </button>
+                                <button type="button" class="btn btn-warning" onclick="onResetForm()">
+                                    <span>Reset</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/konverter/chmod.js"></script>
+@@include('partials/vendor-script.html')
+</body>
+</html>

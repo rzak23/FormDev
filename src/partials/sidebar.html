@@ -1,0 +1,339 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="../assets/icon.png" alt="FormDev Logo" class="brand-image" style="opacity: .8">
+      <span class="brand-text font-weight-light">FormDev</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+            <li class="nav-item">
+                <a href="index.html" class="nav-link @@if (context.page === 'home') {active}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            
+            <li class="nav-item @@if (context.group === 'encoder') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'encoder') {active}">
+                    <i class="nav-icon fa-solid fa-dice-d6"></i>
+                    <p>
+                        Encoder/Decoder
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="base64.html" class="nav-link @@if (context.page === 'base64') {active}">
+                            <i class="nav-icon fa-solid fa-file-code"></i>
+                            <p>Base 64</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="url-encoder.html" class="nav-link @@if (context.page === 'url-enc') {active}">
+                            <i class="nav-icon fa-solid fa-link"></i>
+                            <p>Url Encoder/Decoder</p>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="javascript:jwt_decoder()" onclick="jwt_decoder()" class="nav-link">
+                            <i class="nav-icon fa-solid fa-unlock-keyhole"></i>
+                            <p>JWT Decoder</p>
+                        </a>
+                    </li> -->
+                </ul>
+            </li>
+            <li class="nav-item @@if (context.group === 'cryptografi') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'cryptografi') {active}">
+                    <i class="nav-icon fa-solid fa-shield-halved"></i>
+                    <p>
+                        Cryptografi
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="cryptografi.html" class="nav-link @@if (context.page === 'crypton') {active}">
+                            <i class="nav-icon fa-solid fa-laptop-code"></i>
+                            <p>Encrypt/Decrypt</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="checksum.html" class="nav-link @@if (context.page === 'checksum') {active}">
+                            <i class="nav-icon fa-solid fa-search"></i>
+                            <p>Checksum</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bcrypt.html" class="nav-link @@if (context.page === 'bcrypt') {active}">
+                            <i class="nav-icon fa-solid fa-shield-halved"></i>
+                            <p>Bcrypt Generator</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @@if (context.group === 'generator') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'generator') {active}">
+                    <i class="nav-icon fa-solid fa-user-gear"></i>
+                    <p>
+                        Generator
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="uuid.html" class="nav-link @@if (context.page === 'uuid') {active}">
+                            <i class="nav-icon fa-solid fa-passport"></i>
+                            <p>UUID</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nanoid.html"class="nav-link @@if (context.page === 'nanoid') {active}">
+                            <i class="nav-icon fa-solid fa-id-badge"></i>
+                            <p>Nano ID</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hash.html" class="nav-link @@if (context.page === 'hash') {active}">
+                            <i class="nav-icon fa-solid fa-fingerprint"></i>
+                            <p>Hash</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="string.html" class="nav-link @@if (context.page === 'string') {active}">
+                            <i class="nav-icon fa-solid fa-font"></i>
+                            <p>String</p>
+                        </a>
+                    </li>
+                    <li class="nav-item @@if (context.subgroup === 'qrcode') {menu-open}">
+                        <a href="#" class="nav-link @@if (context.subgroup === 'qrcode') {active}">
+                            <i class="nav-icon fa-solid fa-qrcode"></i>
+                            <p>QR Code</p>
+                            <i class="right fa-solid fa-angle-left"></i>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="qrcode.html" class="nav-link @@if (context.page === 'qrcode') {active}">
+                                    <i class="nav-icon fa-regular fa-circle"></i>
+                                    <p>QR Code</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="qrwifi.html" class="nav-link @@if (context.page === 'qrwifi') {active}">
+                                    <i class="nav-icon fa-regular fa-circle"></i>
+                                    <p>WIFI QR Code</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lorem-ipsum.html" class="nav-link @@if (context.page === 'lorem') {active}">
+                            <i class="nav-icon fa-solid fa-align-left"></i>
+                            <p>Lorem Ipsum</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user-agent.html" class="nav-link @@if (context.page === 'user-agent') {active}">
+                            <i class="nav-icon fa-solid fa-user-gear"></i>
+                            <p>User Agent</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="jwt.html" class="nav-link @@if (context.page === 'jwt') {active}">
+                            <i class="nav-icon fa-solid fa-cogs"></i>
+                            <p>JWT</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rsa-pem.html" class="nav-link @@if (context.page === 'rsa') {active}">
+                            <i class="nav-icon fa-brands fa-keycdn"></i>
+                            <p>RSA PEM</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="crc.html" class="nav-link @@if (context.page === 'crc') {active}">
+                            <i class="nav-icon fa-solid fa-prescription"></i>
+                            <p>CRC</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @@if (context.group === 'converter') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'converter') {active}">
+                    <i class="nav-icon fa-solid fa-laptop-medical"></i>
+                    <p>
+                        Converter
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="calculator-biner.html" class="nav-link @@if (context.page === 'cal-biner') {active}">
+                            <i class="nav-icon fa-solid fa-calculator"></i>
+                            <p>Calculator Biner</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ip-calculator.html" class="nav-link @@if (context.page === 'ip-cal') {active}">
+                            <i class="nav-icon fa-solid fa-network-wired"></i>
+                            <p>Calculator IP</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bytes-reader.html" class="nav-link @@if (context.page === 'bytes-reader') {active}">
+                            <i class="nav-icon fa-solid fa-barcode"></i>
+                            <p>Bytes Reader</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="timestamp.html" class="nav-link @@if (context.page === 'timestamp') {active}">
+                            <i class="nav-icon fa-solid fa-clock"></i>
+                            <p>Timestamp</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ascii-biner.html" class="nav-link @@if (context.page === 'ascii-biner') {active}">
+                            <i class="nav-icon fa-solid fa-circle-nodes"></i>
+                            <p>ASCII to Binary</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="crontab-reader.html" class="nav-link @@if (context.page === 'crontab-reader') {active}">
+                            <i class="nav-icon fa-solid fa-calendar-day"></i>
+                            <p>Crontab Reader</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="chmod-calculator.html" class="nav-link @@if (context.page === 'chmod-cal') {active}">
+                            <i class="nav-icon fa-solid fa-universal-access"></i>
+                            <p>Chmod Calculator</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @@if (context.group === 'text-inspect') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'text-inspect') {active}">
+                    <i class="nav-icon fa-solid fa-spell-check"></i>
+                    <p>
+                        Text Inspection
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="diff-text.html" class="nav-link @@if (context.page === 'diff-text') {active}">
+                            <i class="nav-icon fa-solid fa-code-compare"></i>
+                            <p>Diff Text</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="text-check.html" class="nav-link @@if (context.page === 'text-check') {active}">
+                            <i class="nav-icon fa-solid fa-file-lines"></i>
+                            <p>Text Checker</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="string-manipulation.html" class="nav-link @@if (context.page === 'string-mal') {active}">
+                            <i class="nav-icon fa-solid fa-i-cursor"></i>
+                            <p>String Manipulation</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @@if (context.group === 'format') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'format') {active}">
+                    <i class="nav-icon fa-solid fa-indent"></i>
+                    <p>
+                        Formatting
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="json-format.html" class="nav-link @@if (context.page === 'json') {active}">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                JSON Format
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sql-format.html" class="nav-link @@if (context.page === 'sql') {active}">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                SQL Format
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="xml-format.html" class="nav-link @@if (context.page === 'xml') {active}">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                XML Format
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="html-format.html" class="nav-link @@if (context.page === 'html') {active}">
+                            <i class="nav-icon fa-solid fa-file-contract"></i>
+                            <p>
+                                HTML Format
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="color-pallate.html" class="nav-link @@if (context.page === 'color-pal') {active}">
+                    <i class="nav-icon fa-solid fa-palette"></i>
+                    <p>
+                        Color Palette
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="markdown-preview.html" class="nav-link @@if (context.page === 'markdown') {active}">
+                    <i class="nav-icon fa-brands fa-markdown"></i>
+                    <p>
+                        Markdown Preview
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="json-path.html" class="nav-link @@if (context.page === 'json-path') {active}">
+                    <i class="nav-icon fa-brands fa-codepen"></i>
+                    <p>
+                        JSON Path
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="port-detector.html" class="nav-link @@if (context.page === 'port-detector') {active}">
+                    <i class="nav-icon fa-solid fa-ethernet"></i>
+                    <p>Port Detector</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

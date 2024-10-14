@@ -1,12 +1,14 @@
 {
-  "name": "formdev",
-  "version": "2.1.19",
+  "name": "formdev-debug",
+  "version": "2.1.20",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "build-win": "electron-builder --win --x64",
-    "build-linx": "electron-builder --linux --x64"
+    "build-linx": "electron-builder --linux --x64",
+    "build-html": "gulp html",
+    "gulp-watch": "gulp"
   },
   "build": {
     "directories": {
@@ -15,10 +17,7 @@
     "appId": "my.id.restudio.formdev",
     "productName": "FormDev",
     "win": {
-      "target": [
-        "nsis",
-        "appx"
-      ],
+      "target": ["appx"],
       "icon": "build/favicon.ico"
     },
     "linux": {
@@ -58,11 +57,13 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^32.1.1",
-    "electron-builder": "^25.0.5"
+    "electron": "^32.2.0",
+    "electron-builder": "^25.1.8",
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-file-include": "^2.3.0"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.4.1",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "admin-lte": "^3.2.0",
     "bcrypt": "^5.1.1",
@@ -96,7 +97,6 @@
     "sweetalert2": "^11.10.1",
     "timestamp-conv": "^3.0.0",
     "to-case": "^2.0.0",
-    "unique-username-generator": "^1.2.0",
     "user-agents": "^1.1.50",
     "uuid": "^9.0.0",
     "wifi-qr-code-generator": "^1.1.1",

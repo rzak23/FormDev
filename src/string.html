@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | String Generator</title>
+
+  @@include('partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('partials/preloader.html')
+
+  @@include('partials/navbar.html')
+
+  @@include('partials/sidebar.html', {"page": "string", "group": "generator"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label for="jenis">Variation</label>
+                        <select name="option" id="option" class="form-control">
+                            <option value="alphabetic">Alphabetic</option>
+                            <option value="alphanumeric">AlphaNumeric</option>
+                            <option value="numeric">Numeric</option>
+                            <option value="hex">Hex</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label for="panjang">Character Length</label>
+                        <input type="number" name="panjang" class="form-control" id="panjang" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            String Generator
+                        </div>
+                        <div class="card-body">
+                            <form class="text-center">
+                                <div class="form-group">
+                                    <label for="string">String</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="string" autocomplete="off" readonly>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-success" data-clipboard-target='#string' onclick="notif()">
+                                                <i class="fa-solid fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <button type="button" class="btn btn-info" onclick="myRandomString()">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <span>Generate</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/generator/stringgen.js"></script>
+@@include('partials/vendor-script.html')
+</body>
+</html>
