@@ -25,7 +25,7 @@ function generate(){
         image.setAttribute('src', data);
         image.setAttribute('width', '300');
 
-        downloadLink.appendChild(image);
+        downloadLink.appendChild(image); // untuk keperluan download qr
         qrImageDiv.appendChild(downloadLink);
     });
 }
