@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | Url Encoder/Decoder</title>
+
+  @@include('../partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('../partials/preloader.html')
+
+  @@include('../partials/navbar.html')
+
+  @@include('../partials/sidebar.html', {"page": "url-enc", "group": "encoder"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="form-group">
+                        <input type="checkbox" name="page" id="page" value="true" data-on-text="Encoder" data-off-text="Decoder" onchange="changeBox()" checked data-bootstrap-switch>
+                    </div>
+                    <div id="encode-box">
+                        <div class="card">
+                            <div class="card-header">
+                                URL Encoder
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="url">Url</label>
+                                        <input type="text" name="url" class="form-control" id="urlenco" autocomplete="off">
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <button type="button" class="btn btn-info" onclick="encodeurl()">
+                                            <span>Encode</span>
+                                        </button>
+                                        <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                            <i class="fa-solid fa-rotate"></i>
+                                            <span>Reset</span>
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="output">Output</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="outputenco" autocomplete="off" readonly>
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-primary" data-clipboard-target="#outputenco" id="salin">
+                                                    <i class="fa-solid fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="decode-box">
+                        <div class="card">
+                            <div class="card-header">
+                                URL Decoder
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="url">Url</label>
+                                        <input type="text" name="url" class="form-control" id="urldenco" autocomplete="off">
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <button type="button" class="btn btn-info" onclick="decodeurl()">
+                                            <span>Decode</span>
+                                        </button>
+                                        <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                            <i class="fa-solid fa-rotate"></i>
+                                            <span>Reset</span>
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="output">Output</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="outputdenco" autocomplete="off" readonly>
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-primary" data-clipboard-target="#outputdenco" id="salin">
+                                                    <i class="fa-solid fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('../partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/encoder/url-ende.js"></script>
+@@include('../partials/vendor-script.html')
+</body>
+</html>

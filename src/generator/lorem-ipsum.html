@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | Lorem Ipsum Generator</title>
+
+  @@include('../partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('../partials/preloader.html')
+
+  @@include('../partials/navbar.html')
+
+  @@include('../partials/sidebar.html', {"page": "lorem", "group": "generator"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                             Lorem Ipsum Generator
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-info" onclick="myLorem()">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <span>Generate</span>
+                                    </button>
+                                    <button type="button" class="btn btn-success" data-clipboard-target="#output" onclick="notif()">
+                                        <i class="fa-solid fa-copy"></i>
+                                        <span>Copy</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="saveTxt()">
+                                        <i class="fa-solid fa-floppy-disk"></i>
+                                        <span>Save</span>
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                        <i class="fa-solid fa-rotate"></i>
+                                        <span>Reset</span>
+                                    </button>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <label for="paragraf">Number of Paragraphs</label>
+                                                        <select name="paragraf" class="form-control" id="paragraf">
+                                                            <option value="1">1 Paragraphs</option>
+                                                            <option value="2">2 Paragraphs</option>
+                                                            <option value="3">3 Paragraphs</option>
+                                                            <option value="4">4 Paragraphs</option>
+                                                            <option value="5">5 Paragraphs</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="kalimat">Number of Sentences</label>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mink">Minimal</label>
+                                                                <input type="number" class="form-control" name="mink" id="mink" autocomplete="off">
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mank">Maximal</label>
+                                                                <input type="number" class="form-control" name="mank" id="mank" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="kalimat">Word Count</label>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mint">Minimal</label>
+                                                                <input type="number" class="form-control" name="mint" id="mint" autocomplete="off">
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <label for="mant">Maximal</label>
+                                                                <input type="number" class="form-control" name="mant" id="mant" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="output">Output</label>
+                                                <textarea name="output" id="output" class="form-control" style="height: 250px;resize: none;" readonly></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('../partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/generator/lorem.js"></script>
+@@include('../partials/vendor-script.html')
+</body>
+</html>
