@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormDev | Bcrypt</title>
+
+  @@include('../partials/head-css.html')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  @@include('../partials/preloader.html')
+
+  @@include('../partials/navbar.html')
+
+  @@include('../partials/sidebar.html', {"page": "bcrypt", "group": "cryptografi"})
+
+  <!-- load view -->
+  <div class="content-wrapper">
+    <div class="content-header"></div>
+    <section class="content">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Bcrypt Generator
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-12">
+                                <div class="form-group">
+                                    <label for="salt">Salt Round</label>
+                                    <input type="number" class="form-control" id="salt" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-12">
+                                <div class="form-group">
+                                    <label for="plaintText">Your Text</label>
+                                    <input type="text" class="form-control" id="plaintText" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="result">Result</label>
+                            <input type="text" class="form-control" id="result" autocomplete="off" readonly>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success" onclick="generateHash()">
+                                <span>Create</span>
+                            </button>
+                            <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                <span>Reset</span>
+                                <i class="fa-solid fa-rotate"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- load view -->
+
+  <!-- Main Footer -->
+  @@include('../partials/footer.html')
+</div>
+<!-- ./wrapper -->
+<script src="../mod/cryptografi/bcrypt.js"></script>
+@@include('../partials/vendor-script.html')
+</body>
+</html>
