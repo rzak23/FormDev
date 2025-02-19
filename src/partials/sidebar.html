@@ -331,6 +331,23 @@
                     <p>Port Detector</p>
                 </a>
             </li>
+            <li class="nav-item @@if (context.group === 'faker') {menu-open}">
+                <a href="#" class="nav-link @@if (context.group === 'faker') {active}">
+                    <i class="nav-icon fa-solid fa-gears"></i>
+                    <p>
+                        Faker Data
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="faker-nama.html" class="nav-link @@if (context.page === 'faker-nama') {active}">
+                            <i class="nav-icon fa-solid fa-angle-right"></i>
+                            <p>Name</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
       <!-- /.sidebar-menu -->
