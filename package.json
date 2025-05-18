@@ -1,6 +1,6 @@
 {
   "name": "formdev-debug",
-  "version": "2.1.22",
+  "version": "2.2.23",
   "description": "Free Developer tools to create hash, uuid, password, random name and more tools",
   "main": "index.js",
   "scripts": {
@@ -59,14 +59,14 @@
   },
   "homepage": "https://github.com/rzak23/FormDev#readme",
   "devDependencies": {
-    "electron": "^34.0.1",
-    "electron-builder": "^25.1.8",
+    "electron": "^36.2.1",
+    "electron-builder": "^26.0.12",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
     "gulp-file-include": "^2.3.0",
     "gulp-flatten": "^0.4.0",
     "husky": "^9.1.6",
-    "node-abi": "^3.73.0"
+    "node-abi": "^4.8.0"
   },
   "dependencies": {
     "@faker-js/faker": "^9.5.0",
