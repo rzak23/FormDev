@@ -1,22 +1,40 @@
 
 var CryptoJS = require('crypto-js');
-function readHash(){
+function readHash() {
     var reader = new FileReader();
-    var option = document.getElementById('type').value;
+    var option = document.getElementById('type');
+    var loading = document.getElementById('loading');
+    var file = document.getElementById('file');
+    var btnReset = document.getElementById('btn-reset');
+    
 
-    reader.addEventListener('load',function () {
-        if(option == "md5"){
-            var output = CryptoJS.MD5(CryptoJS.enc.Latin1.parse(this.result));
-        }else if(option == "sha256"){
-            var output = CryptoJS.SHA256(CryptoJS.enc.Latin1.parse(this.result));
-        }else if(option == "sha3"){
-            var output = CryptoJS.SHA3(CryptoJS.enc.Latin1.parse(this.result));
-        }
-        // var sha1 = CryptoJS.SHA1(CryptoJS.enc.Latin1.parse(this.result));
-        
-        document.getElementById('output').value = output;
+    loading.style.display = 'block';
+    option.setAttribute('disabled', 'disabled');
+    file.setAttribute('disabled', 'disabled');
+    btnReset.setAttribute('disabled', 'disabled');
+
+    reader.addEventListener('load', function () {
+        setTimeout(function () {
+            var wordArray = CryptoJS.lib.WordArray.create(new Uint8Array(reader.result)); // Konversi ke WordArray
+            var output;
+
+            if (option.value == "md5") {
+                output = CryptoJS.MD5(wordArray);
+            } else if (option.value == "sha256") {
+                output = CryptoJS.SHA256(wordArray);
+            } else if (option.value == "sha3") {
+                output = CryptoJS.SHA3(wordArray);
+            }
+
+            document.getElementById('output').value = output;
+            loading.style.display = 'none';
+            option.removeAttribute('disabled');
+            file.removeAttribute('disabled');
+            btnReset.removeAttribute('disabled');
+        }, 500);
     });
-    reader.readAsBinaryString(document.getElementById('file').files[0]);
+
+    reader.readAsArrayBuffer(document.getElementById('file').files[0]); // Gunakan readAsArrayBuffer()
 }
 
 function notif(){

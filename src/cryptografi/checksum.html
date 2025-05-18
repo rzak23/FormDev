@@ -41,6 +41,11 @@
                                     <label for="file">File</label>
                                     <input type="file" class="form-control" id="file" onchange="readHash()">
                                 </div>
+                                <div class="text-center mb-3" id="loading" style="display: none;">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>  
+                                </div>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="output" readonly>
@@ -51,7 +56,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-warning" onclick="reset_form()">
+                                <button type="button" class="btn btn-warning" id="btn-reset" onclick="reset_form()">
                                     <i class="fa-solid fa-rotate"></i>
                                     <span>Reset</span>
                                 </button>
