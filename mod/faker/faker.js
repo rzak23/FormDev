@@ -12,6 +12,12 @@ function faker_email(){
     document.getElementById('result').value = email;
 }
 
+function faker_creditnumber(){
+    const {faker} = require('@faker-js/faker');
+
+    document.getElementById('result').value = faker.finance.creditCardNumber();
+}
+
 function reset_form(){
     document.getElementById('form-faker').reset();
 }
