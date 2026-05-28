@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:formdev/apps/controller/theme_controller.dart';
+import 'package:formdev/core/bindings/app_bindings.dart';
+import 'package:formdev/core/routes/app_routes.dart';
+import 'package:formdev/core/theme/app_colors.dart';
+import 'package:get/get.dart';
 import 'package:window_manager/window_manager.dart';
 
 void main() async {
@@ -18,6 +23,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Scaffold(body: Center(child: Text('Hello World!'))));
+    final themeController = ThemeController();
+    return Obx(
+      () => GetMaterialApp(
+        title: "FormDev",
+        theme: AppColors.lightTheme(),
+        darkTheme: AppColors.darkTheme(),
+        themeMode: themeController.themeMode,
+        initialRoute: AppRoutes.initial,
+        initialBinding: SplashscreenBinding(),
+        getPages: AppRoutes.pages,
+      ),
+    );
   }
 }

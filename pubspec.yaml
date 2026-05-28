@@ -11,7 +11,11 @@ dependencies:
     sdk: flutter
   
   # dependencies tambahan taruk disini
+  get: ^4.7.3
+  icons_launcher: ^3.1.0
+  loading_indicator: ^3.1.1
   msix: ^3.16.13
+  shared_preferences: ^2.5.5
   window_manager: ^0.5.1
 
 dev_dependencies:
@@ -21,3 +25,23 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icon/
+
+icons_launcher:
+  image_path: "assets/icon/formdev.png"
+  platforms:
+    windows:
+      enable: true
+      image_path: "assets/icon/formdev.png"
+
+msix_config:
+  display_name: FormDev
+  publisher_display_name: Re.Studio
+  identity_name: 35602Re.Studio.FormDev
+  msix_version: 3.0.0.0
+  logo_path: windows/runner/resources/app_icon.ico
+  capabilities: internetClient
+  languages: id-ID
+  store: true
+  publisher: CN=B5C0E522-DA44-46AB-AD7A-3861F629EE23

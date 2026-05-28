@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PINmu Desktop Debug",
+            "program": "${workspaceFolder}/lib/main.dart",
+            "request": "launch",
+            "flutterMode": "debug",
+            "type": "dart",
+            "args": [
+                "lib/main.dart"
+            ]
+        }
+    ]
+}
