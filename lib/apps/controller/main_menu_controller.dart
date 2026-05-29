@@ -5,4 +5,8 @@ class MainMenuController extends GetxController {
   onClickUuid() {
     Get.toNamed(RouteName.genUuid);
   }
+
+  onClickLorem() {
+    Get.toNamed(RouteName.genLoremIpsum);
+  }
 }

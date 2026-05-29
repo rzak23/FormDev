@@ -78,5 +78,11 @@ class MainMenu extends GetView<MainMenuController> {
       onTap: () => controller.onClickUuid(),
       icon: Icons.interests_outlined,
     ),
+    MenuModel(
+      label: "Lorem Ipsum",
+      deskripsi: "Pembuatan text Lorem Ipsum",
+      onTap: () => controller.onClickLorem(),
+      icon: Icons.text_fields,
+    ),
   ];
 }
