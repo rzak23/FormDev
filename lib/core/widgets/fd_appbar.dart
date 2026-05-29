@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:formdev/core/theme/app_colors.dart';
 
 class FdAppbar extends StatelessWidget implements PreferredSizeWidget {
   final Widget titleBar;
@@ -26,13 +25,7 @@ class FdAppTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(
-        color: AppColors.darkIcon,
-        fontFamily: 'monospace',
-        fontSize: 20,
-        fontWeight: FontWeight.w700,
-        letterSpacing: 1.2,
-      ),
+      style: TextStyle(fontFamily: 'monospace', fontSize: 20, fontWeight: FontWeight.w700, letterSpacing: 1.2),
     );
   }
 }
