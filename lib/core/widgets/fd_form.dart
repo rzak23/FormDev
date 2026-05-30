@@ -83,6 +83,7 @@ class FdTextForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ColorScheme theme = Theme.of(context).colorScheme;
     return TextField(
       controller: controller,
       keyboardType: keyboardType,
@@ -97,6 +98,7 @@ class FdTextForm extends StatelessWidget {
         hintText: hintText,
         prefixIcon: StringUtils.isNotNullOrEmpty(prefixIcon) ? Icon(prefixIcon) : null,
         filled: true,
+        fillColor: readOnly ? theme.onInverseSurface : theme.inversePrimary,
         enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
