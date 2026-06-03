@@ -21,4 +21,8 @@ class MainMenuController extends GetxController {
   onCliCkHashGenerator() {
     Get.toNamed(RouteName.hashGenerator);
   }
+
+  onClickChecksum() {
+    Get.toNamed(RouteName.checksum);
+  }
 }

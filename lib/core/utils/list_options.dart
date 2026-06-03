@@ -35,4 +35,15 @@ class ListOptions {
     opsi.add(DropdownModel(label: "Base64", value: Alphabet.base64));
     return opsi;
   }
+
+  static List<DropdownModel> opsiHash() {
+    List<DropdownModel> opsi;
+
+    opsi = <DropdownModel>[];
+    opsi.add(DropdownModel(label: "MD5", value: ModeHash.md5));
+    opsi.add(DropdownModel(label: "SHA1", value: ModeHash.sha1));
+    opsi.add(DropdownModel(label: "SHA256", value: ModeHash.sha256));
+    opsi.add(DropdownModel(label: "SHA512", value: ModeHash.sha512));
+    return opsi;
+  }
 }

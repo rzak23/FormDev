@@ -9,4 +9,5 @@ class RouteName {
   static String base64Text = "/encoder/base64_text";
 
   static String hashGenerator = "/cryptograf/hash_generator";
+  static String checksum = "/cryptograf/checksum";
 }

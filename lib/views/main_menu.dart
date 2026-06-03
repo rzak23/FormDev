@@ -101,5 +101,11 @@ class MainMenu extends GetView<MainMenuController> {
       onTap: () => controller.onCliCkHashGenerator(),
       icon: Icons.numbers,
     ),
+    MenuModel(
+      label: "Checksum",
+      deskripsi: "Cek checksum file",
+      onTap: () => controller.onClickChecksum(),
+      icon: Icons.search,
+    ),
   ];
 }
