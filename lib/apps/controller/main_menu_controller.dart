@@ -17,4 +17,8 @@ class MainMenuController extends GetxController {
   onClickBase64Text() {
     Get.toNamed(RouteName.base64Text);
   }
+
+  onCliCkHashGenerator() {
+    Get.toNamed(RouteName.hashGenerator);
+  }
 }

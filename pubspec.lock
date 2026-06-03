@@ -152,6 +152,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "9.2.1"
+  hashlib:
+    dependency: "direct main"
+    description:
+      name: hashlib
+      sha256: c05b8214e288e23995c389ad65032066f02ada9f692511d3e5e4bf0949e7ef20
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.4"
+  hashlib_codecs:
+    dependency: transitive
+    description:
+      name: hashlib_codecs
+      sha256: b4a8e11faaeb47cc8ec073571b479aed94deb97cc9464c2234b3d211c4ec9d57
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
   icons_launcher:
     dependency: "direct main"
     description:

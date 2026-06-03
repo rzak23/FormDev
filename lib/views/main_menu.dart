@@ -88,12 +88,18 @@ class MainMenu extends GetView<MainMenuController> {
       label: "Nano ID Generator",
       deskripsi: "Pembuatan Nano ID",
       onTap: () => controller.onClickNano(),
-      icon: Icons.numbers,
+      icon: Icons.interests_outlined,
     ),
     MenuModel(
       label: "Base64 Text",
       deskripsi: "Encoder/Decoder Base64 Text",
       onTap: () => controller.onClickBase64Text(),
+    ),
+    MenuModel(
+      label: "Hash Generator",
+      deskripsi: "Generator Text ke Hash",
+      onTap: () => controller.onCliCkHashGenerator(),
+      icon: Icons.numbers,
     ),
   ];
 }

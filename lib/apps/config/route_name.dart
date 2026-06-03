@@ -7,4 +7,6 @@ class RouteName {
   static String genNanoId = "/generator/nanoid_gen";
 
   static String base64Text = "/encoder/base64_text";
+
+  static String hashGenerator = "/cryptograf/hash_generator";
 }
