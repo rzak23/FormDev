@@ -9,4 +9,8 @@ class MainMenuController extends GetxController {
   onClickLorem() {
     Get.toNamed(RouteName.genLoremIpsum);
   }
+
+  onClickNano() {
+    Get.toNamed(RouteName.genNanoId);
+  }
 }

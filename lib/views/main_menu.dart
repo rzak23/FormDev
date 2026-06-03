@@ -84,5 +84,11 @@ class MainMenu extends GetView<MainMenuController> {
       onTap: () => controller.onClickLorem(),
       icon: Icons.text_fields,
     ),
+    MenuModel(
+      label: "Nano ID Generator",
+      deskripsi: "Pembuatan Nano ID",
+      onTap: () => controller.onClickNano(),
+      icon: Icons.numbers,
+    ),
   ];
 }
