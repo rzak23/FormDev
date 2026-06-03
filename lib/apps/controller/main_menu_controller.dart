@@ -13,4 +13,8 @@ class MainMenuController extends GetxController {
   onClickNano() {
     Get.toNamed(RouteName.genNanoId);
   }
+
+  onClickBase64Text() {
+    Get.toNamed(RouteName.base64Text);
+  }
 }

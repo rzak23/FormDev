@@ -90,5 +90,10 @@ class MainMenu extends GetView<MainMenuController> {
       onTap: () => controller.onClickNano(),
       icon: Icons.numbers,
     ),
+    MenuModel(
+      label: "Base64 Text",
+      deskripsi: "Encoder/Decoder Base64 Text",
+      onTap: () => controller.onClickBase64Text(),
+    ),
   ];
 }
