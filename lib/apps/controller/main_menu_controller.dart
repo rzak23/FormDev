@@ -25,4 +25,8 @@ class MainMenuController extends GetxController {
   onClickChecksum() {
     Get.toNamed(RouteName.checksum);
   }
+
+  onClickPasswordGenerator() {
+    Get.toNamed(RouteName.genPassword);
+  }
 }

@@ -107,5 +107,11 @@ class MainMenu extends GetView<MainMenuController> {
       onTap: () => controller.onClickChecksum(),
       icon: Icons.search,
     ),
+    MenuModel(
+      label: "Password Generator",
+      deskripsi: "Pembuatan randow password",
+      onTap: () => controller.onClickPasswordGenerator(),
+      icon: Icons.password,
+    ),
   ];
 }

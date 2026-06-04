@@ -5,6 +5,7 @@ class RouteName {
   static String genUuid = "/generator/uuid";
   static String genLoremIpsum = "/generator/lorem_ipsum";
   static String genNanoId = "/generator/nanoid_gen";
+  static String genPassword = "/generator/password_gen";
 
   static String base64Text = "/encoder/base64_text";
 
