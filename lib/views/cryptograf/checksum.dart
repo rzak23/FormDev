@@ -29,7 +29,7 @@ class Checksum extends GetView<ChecksumController> {
                     () => FdDropdown(
                       value: controller.selectedOpsi.value,
                       items: controller.opsiHash,
-                      onChange: (value) => controller.selectedOpsi.value = value,
+                      onChange: (value) => controller.onChangOpsi(value),
                     ),
                   ),
                   SizedBox(height: 20),

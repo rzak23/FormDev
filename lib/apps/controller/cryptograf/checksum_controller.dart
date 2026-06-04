@@ -11,6 +11,8 @@ class ChecksumController extends GetxController {
   TextEditingController txtHasil = TextEditingController();
   TextEditingController txtCompare = TextEditingController();
 
+  PlatformFile? _selectedFile;
+
   RxList<DropdownModel> opsiHash = <DropdownModel>[].obs;
   Rx<ModeHash> selectedOpsi = ModeHash.md5.obs;
 
@@ -24,8 +26,12 @@ class ChecksumController extends GetxController {
     opsiHash.value = ListOptions.opsiHash();
   }
 
-  onChangOpsi(ModeHash value) {
+  onChangOpsi(ModeHash value) async {
     selectedOpsi.value = value;
+    if (_selectedFile != null) {
+      HashDigest hash = await _checkFileSum(_selectedFile!.bytes!);
+      txtHasil.text = hash.toString();
+    }
   }
 
   onClickPilihFile() async {
@@ -38,23 +44,26 @@ class ChecksumController extends GetxController {
       return;
     }
 
-    PlatformFile file = resultPicker.files.first;
-    HashDigest hash = await _checkFileSum(file.bytes!);
+    _selectedFile = resultPicker.files.first;
+    HashDigest hash = await _checkFileSum(_selectedFile!.bytes!);
     txtHasil.text = hash.toString();
   }
 
   Future<HashDigest> _checkFileSum(Uint8List bytesFile) async {
     HashDigest hashValue;
-    if (selectedOpsi.value == ModeHash.md5) {
-      hashValue = md5.convert(bytesFile);
-    } else if (selectedOpsi.value == ModeHash.sha1) {
-      hashValue = sha1.convert(bytesFile);
-    } else if (selectedOpsi.value == ModeHash.sha256) {
-      hashValue = sha256.convert(bytesFile);
-    } else if (selectedOpsi.value == ModeHash.sha512) {
-      hashValue = sha512.convert(bytesFile);
-    } else {
-      hashValue = md5.convert(bytesFile);
+    switch (selectedOpsi.value) {
+      case ModeHash.md5:
+        hashValue = md5.convert(bytesFile);
+        break;
+      case ModeHash.sha1:
+        hashValue = sha1.convert(bytesFile);
+        break;
+      case ModeHash.sha256:
+        hashValue = sha256.convert(bytesFile);
+        break;
+      case ModeHash.sha512:
+        hashValue = sha512.convert(bytesFile);
+        break;
     }
 
     return hashValue;
