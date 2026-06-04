@@ -33,4 +33,8 @@ class MainMenuController extends GetxController {
   onClickQrGenerator() {
     Get.toNamed(RouteName.genQR);
   }
+
+  onClickBase64Image() {
+    Get.toNamed(RouteName.base64Image);
+  }
 }

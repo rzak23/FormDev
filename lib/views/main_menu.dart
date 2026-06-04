@@ -94,6 +94,7 @@ class MainMenu extends GetView<MainMenuController> {
       label: "Base64 Text",
       deskripsi: "Encoder/Decoder Base64 Text",
       onTap: () => controller.onClickBase64Text(),
+      icon: Icons.text_snippet,
     ),
     MenuModel(
       label: "Hash Generator",
@@ -118,6 +119,12 @@ class MainMenu extends GetView<MainMenuController> {
       deskripsi: "Pembuatan QR Code",
       onTap: () => controller.onClickQrGenerator(),
       icon: Icons.qr_code,
+    ),
+    MenuModel(
+      label: "Base64 Image",
+      deskripsi: "Encoder/Decoder Base64 Image",
+      onTap: () => controller.onClickBase64Image(),
+      icon: Icons.image,
     ),
   ];
 }
