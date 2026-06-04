@@ -1,6 +1,7 @@
 import 'package:formdev/apps/controller/generator/lorem_ipsum_controller.dart';
 import 'package:formdev/apps/controller/generator/nanoid_gen_controller.dart';
 import 'package:formdev/apps/controller/generator/password_gen_controller.dart';
+import 'package:formdev/apps/controller/generator/qr_gen_controller.dart';
 import 'package:formdev/apps/controller/generator/uuid_controller.dart';
 import 'package:get/get.dart';
 
@@ -29,5 +30,12 @@ class PasswordGenBinding implements Bindings {
   @override
   void dependencies() {
     Get.lazyPut<PasswordGenController>(() => PasswordGenController(), fenix: true);
+  }
+}
+
+class QrGenBinding implements Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<QrGenController>(() => QrGenController(), fenix: true);
   }
 }

@@ -19,6 +19,7 @@ dependencies:
   lorem_gen: ^2.0.1
   msix: ^3.16.13
   nanoid2: ^2.0.1
+  qr_flutter: ^4.1.0
   shared_preferences: ^2.5.5
   uuid: ^4.5.3
   window_manager: ^0.5.1

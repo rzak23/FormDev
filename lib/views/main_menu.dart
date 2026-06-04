@@ -113,5 +113,11 @@ class MainMenu extends GetView<MainMenuController> {
       onTap: () => controller.onClickPasswordGenerator(),
       icon: Icons.password,
     ),
+    MenuModel(
+      label: "QR Generator",
+      deskripsi: "Pembuatan QR Code",
+      onTap: () => controller.onClickQrGenerator(),
+      icon: Icons.qr_code,
+    ),
   ];
 }

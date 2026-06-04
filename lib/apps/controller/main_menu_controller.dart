@@ -29,4 +29,8 @@ class MainMenuController extends GetxController {
   onClickPasswordGenerator() {
     Get.toNamed(RouteName.genPassword);
   }
+
+  onClickQrGenerator() {
+    Get.toNamed(RouteName.genQR);
+  }
 }
