@@ -23,3 +23,18 @@ enum UkuranData {
   gigabytes,
   gibibytes,
 }
+
+enum UkuranPanjang {
+  angstrom,
+  nanometer,
+  mikrometer,
+  milimeter,
+  sentimeter,
+  meter,
+  kilometer,
+  inci,
+  kaki,
+  yard,
+  mil,
+  milLaut,
+}

@@ -44,3 +44,42 @@ class UkuranDataUtils {
     return hasilAkhir;
   }
 }
+
+class UkuranPanjangUtils {
+  static double _toMeter(UkuranPanjang satuan) {
+    switch (satuan) {
+      case UkuranPanjang.angstrom:
+        return 1e-10;
+      case UkuranPanjang.nanometer:
+        return 1e-9;
+      case UkuranPanjang.mikrometer:
+        return 1e-6;
+      case UkuranPanjang.milimeter:
+        return 1e-3;
+      case UkuranPanjang.sentimeter:
+        return 1e-2;
+      case UkuranPanjang.meter:
+        return 1;
+      case UkuranPanjang.kilometer:
+        return 1e3;
+      case UkuranPanjang.inci:
+        return 0.0254;
+      case UkuranPanjang.kaki:
+        return 0.3048;
+      case UkuranPanjang.yard:
+        return 0.9144;
+      case UkuranPanjang.mil:
+        return 1609.344;
+      case UkuranPanjang.milLaut:
+        return 1852;
+    }
+  }
+
+  static double convert(double nilai, UkuranPanjang from, UkuranPanjang to) {
+    if (from == to) return nilai;
+
+    double nilaiDalamMeter = nilai * _toMeter(from);
+    double hasilAkhir = nilaiDalamMeter / _toMeter(to);
+    return hasilAkhir;
+  }
+}

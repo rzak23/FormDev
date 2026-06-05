@@ -52,7 +52,7 @@ class ListOptions {
 
     opsi = <DropdownModel>[];
     opsi.add(DropdownModel(label: "Data", value: ModeConverter.data));
-    // opsi.add(DropdownModel(label: "Panjang", value: ModeConverter.panjang));
+    opsi.add(DropdownModel(label: "Panjang", value: ModeConverter.panjang));
     return opsi;
   }
 
@@ -75,6 +75,25 @@ class ListOptions {
     opsi.add(DropdownModel(label: "Gibibits", value: UkuranData.gibibits));
     opsi.add(DropdownModel(label: "Gigabytes", value: UkuranData.gigabytes));
     opsi.add(DropdownModel(label: "Gibibytes", value: UkuranData.gibibytes));
+    return opsi;
+  }
+
+  static List<DropdownModel> opsiPanjang() {
+    List<DropdownModel> opsi;
+
+    opsi = <DropdownModel>[];
+    opsi.add(DropdownModel(label: "Angstrom", value: UkuranPanjang.angstrom));
+    opsi.add(DropdownModel(label: "Nanometer", value: UkuranPanjang.nanometer));
+    opsi.add(DropdownModel(label: "Mikrometer", value: UkuranPanjang.mikrometer));
+    opsi.add(DropdownModel(label: "Milimeter", value: UkuranPanjang.milimeter));
+    opsi.add(DropdownModel(label: "Centimeter", value: UkuranPanjang.sentimeter));
+    opsi.add(DropdownModel(label: "Meter", value: UkuranPanjang.meter));
+    opsi.add(DropdownModel(label: "Kilometer", value: UkuranPanjang.kilometer));
+    opsi.add(DropdownModel(label: "Inci", value: UkuranPanjang.inci));
+    opsi.add(DropdownModel(label: "Kaki", value: UkuranPanjang.kaki));
+    opsi.add(DropdownModel(label: "Yard", value: UkuranPanjang.yard));
+    opsi.add(DropdownModel(label: "Mil", value: UkuranPanjang.mil));
+    opsi.add(DropdownModel(label: "Mil Laut", value: UkuranPanjang.milLaut));
     return opsi;
   }
 }

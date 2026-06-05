@@ -41,7 +41,7 @@ class Converter extends GetView<ConverterController> {
                           Obx(
                             () => FdDropdown(
                               value: controller.selectedUkuranFrom.value,
-                              items: controller.opsiUkuranDataFrom,
+                              items: controller.opsiUkuranFrom,
                               onChange: (value) => controller.onChangeSubOpsi("from", value),
                             ),
                           ),
@@ -63,7 +63,7 @@ class Converter extends GetView<ConverterController> {
                           Obx(
                             () => FdDropdown(
                               value: controller.selectedUkuranTo.value,
-                              items: controller.opsiUkuranDataTo,
+                              items: controller.opsiUkuranTo,
                               onChange: (value) => controller.onChangeSubOpsi("to", value),
                             ),
                           ),

@@ -7,12 +7,17 @@ import 'package:get/get.dart';
 
 class ConverterController extends GetxController {
   RxList<DropdownModel> opsiConverter = <DropdownModel>[].obs;
-  RxList<DropdownModel> opsiUkuranDataFrom = <DropdownModel>[].obs;
-  RxList<DropdownModel> opsiUkuranDataTo = <DropdownModel>[].obs;
+  RxList<DropdownModel> opsiUkuranFrom = <DropdownModel>[].obs;
+  RxList<DropdownModel> opsiUkuranTo = <DropdownModel>[].obs;
 
   Rx<ModeConverter> selectedConverter = ModeConverter.data.obs;
-  Rx<UkuranData> selectedUkuranFrom = UkuranData.bits.obs;
-  Rx<UkuranData> selectedUkuranTo = UkuranData.kilobits.obs;
+  Rx<dynamic> selectedUkuranFrom = Rx<dynamic>(null);
+  Rx<dynamic> selectedUkuranTo = Rx<dynamic>(null);
+
+  Rx<UkuranData> defaultDataFrom = UkuranData.bits.obs;
+  Rx<UkuranData> defaultDataTo = UkuranData.kilobits.obs;
+  Rx<UkuranPanjang> defaultPanjangFrom = UkuranPanjang.meter.obs;
+  Rx<UkuranPanjang> defaultPanjangTo = UkuranPanjang.kilometer.obs;
 
   TextEditingController txtFrom = TextEditingController();
   TextEditingController txtTo = TextEditingController();
@@ -25,14 +30,37 @@ class ConverterController extends GetxController {
 
   initData() {
     opsiConverter.value = ListOptions.opsiConverter();
-    opsiUkuranDataFrom.value = ListOptions.opsiData();
-    opsiUkuranDataTo.value = ListOptions.opsiData();
+    opsiUkuranFrom.value = ListOptions.opsiData();
+    opsiUkuranTo.value = ListOptions.opsiData();
+
+    selectedUkuranFrom.value = defaultDataFrom.value;
+    selectedUkuranTo.value = defaultDataTo.value;
 
     txtFrom.text = "0";
     txtTo.text = "0";
   }
 
-  onChangeOpsi(ModeConverter value) {}
+  onChangeOpsi(ModeConverter value) {
+    opsiUkuranFrom.clear();
+    opsiUkuranTo.clear();
+    if (value == ModeConverter.data) {
+      opsiUkuranFrom.value = ListOptions.opsiData();
+      opsiUkuranTo.value = ListOptions.opsiData();
+
+      selectedUkuranFrom.value = defaultDataFrom.value;
+      selectedUkuranTo.value = defaultDataTo.value;
+    } else if (value == ModeConverter.panjang) {
+      opsiUkuranFrom.value = ListOptions.opsiPanjang();
+      opsiUkuranTo.value = ListOptions.opsiPanjang();
+
+      selectedUkuranFrom.value = defaultPanjangFrom.value;
+      selectedUkuranTo.value = defaultPanjangTo.value;
+    }
+
+    opsiUkuranFrom.refresh();
+    opsiUkuranTo.refresh();
+    selectedConverter.value = value;
+  }
 
   onChangeSubOpsi(String tipe, dynamic value) {
     if (tipe == "from") {
@@ -51,6 +79,14 @@ class ConverterController extends GetxController {
         txtTo.text = hasil.toString();
       } else {
         hasil = UkuranDataUtils.convert(nilai, selectedUkuranTo.value, selectedUkuranFrom.value);
+        txtFrom.text = hasil.toString();
+      }
+    } else if (selectedConverter.value == ModeConverter.panjang) {
+      if (tipe == "from") {
+        hasil = UkuranPanjangUtils.convert(nilai, selectedUkuranFrom.value, selectedUkuranTo.value);
+        txtTo.text = hasil.toString();
+      } else {
+        hasil = UkuranPanjangUtils.convert(nilai, selectedUkuranTo.value, selectedUkuranFrom.value);
         txtFrom.text = hasil.toString();
       }
     }
