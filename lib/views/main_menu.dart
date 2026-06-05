@@ -126,5 +126,11 @@ class MainMenu extends GetView<MainMenuController> {
       onTap: () => controller.onClickBase64Image(),
       icon: Icons.image,
     ),
+    MenuModel(
+      label: "Converter",
+      deskripsi: "Konversi data, panjang",
+      onTap: () => controller.onClickConverter(),
+      icon: Icons.change_circle_outlined,
+    ),
   ];
 }

@@ -37,4 +37,8 @@ class MainMenuController extends GetxController {
   onClickBase64Image() {
     Get.toNamed(RouteName.base64Image);
   }
+
+  onClickConverter() {
+    Get.toNamed(RouteName.converter);
+  }
 }

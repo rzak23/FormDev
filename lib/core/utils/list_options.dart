@@ -46,4 +46,35 @@ class ListOptions {
     opsi.add(DropdownModel(label: "SHA512", value: ModeHash.sha512));
     return opsi;
   }
+
+  static List<DropdownModel> opsiConverter() {
+    List<DropdownModel> opsi;
+
+    opsi = <DropdownModel>[];
+    opsi.add(DropdownModel(label: "Data", value: ModeConverter.data));
+    // opsi.add(DropdownModel(label: "Panjang", value: ModeConverter.panjang));
+    return opsi;
+  }
+
+  static List<DropdownModel> opsiData() {
+    List<DropdownModel> opsi;
+
+    opsi = <DropdownModel>[];
+    opsi.add(DropdownModel(label: "Bits", value: UkuranData.bits));
+    opsi.add(DropdownModel(label: "Nibble", value: UkuranData.nibble));
+    opsi.add(DropdownModel(label: "Bytes", value: UkuranData.bytes));
+    opsi.add(DropdownModel(label: "Kilobits", value: UkuranData.kilobits));
+    opsi.add(DropdownModel(label: "Kibibits", value: UkuranData.kibibits));
+    opsi.add(DropdownModel(label: "Kilobytes", value: UkuranData.kilobytes));
+    opsi.add(DropdownModel(label: "Kibibytes", value: UkuranData.kibibytes));
+    opsi.add(DropdownModel(label: "Megabits", value: UkuranData.megabits));
+    opsi.add(DropdownModel(label: "Mebibits", value: UkuranData.mebibits));
+    opsi.add(DropdownModel(label: "Megabytes", value: UkuranData.megabytes));
+    opsi.add(DropdownModel(label: "Mebibytes", value: UkuranData.mebibytes));
+    opsi.add(DropdownModel(label: "Gigabits", value: UkuranData.gigabits));
+    opsi.add(DropdownModel(label: "Gibibits", value: UkuranData.gibibits));
+    opsi.add(DropdownModel(label: "Gigabytes", value: UkuranData.gigabytes));
+    opsi.add(DropdownModel(label: "Gibibytes", value: UkuranData.gibibytes));
+    return opsi;
+  }
 }
