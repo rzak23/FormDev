@@ -43,8 +43,13 @@ class Base64ImageController extends GetxController {
       baseImage = decodeText.split(';base64,').last;
     }
 
-    Uint8List imageBytes = Base64Decoder().convert(baseImage);
-    image.value = imageBytes;
+    try {
+      Uint8List imageBytes = Base64Decoder().convert(baseImage);
+      if (imageBytes.isEmpty) return;
+      image.value = imageBytes;
+    } catch (e) {
+      return;
+    }
   }
 
   onClickBack() {
