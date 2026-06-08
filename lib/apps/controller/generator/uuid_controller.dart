@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:formdev/apps/models/dropdown_model.dart';
 import 'package:formdev/core/utils/list_options.dart';
 import 'package:get/get.dart';
+import 'package:uuid/constants.dart';
 import 'package:uuid/uuid.dart';
 
 class UuidController extends GetxController {
   RxList<DropdownModel> opsiUuid = <DropdownModel>[].obs;
 
   RxString selectedDefaultOpsiUuid = "v1".obs;
+  RxBool showJml = true.obs;
+  RxBool showCustomName = false.obs;
 
   TextEditingController txtJumlah = TextEditingController();
   TextEditingController txtOutput = TextEditingController();
+  TextEditingController txtCustomName = TextEditingController();
 
   String versiUuid = "v1";
   int jumlah = 0;
+  String customName = "";
 
   @override
   onInit() async {
@@ -27,6 +32,13 @@ class UuidController extends GetxController {
 
   onChangeOpsi(String value) {
     versiUuid = value;
+    if (versiUuid != "v5") {
+      showJml.value = true;
+      showCustomName.value = false;
+    } else {
+      showJml.value = false;
+      showCustomName.value = true;
+    }
   }
 
   onClickGenerate() async {
@@ -50,6 +62,9 @@ class UuidController extends GetxController {
         for (var i = 0; i < jumlah; i++) {
           genId.add(id.v4());
         }
+        break;
+      case "v5":
+        genId.add(id.v5(InternalConstants.zURL, customName));
         break;
     }
 

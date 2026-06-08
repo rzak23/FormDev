@@ -9,6 +9,7 @@ class ListOptions {
     opsi = <DropdownModel>[];
     opsi.add(DropdownModel(label: "V1", value: "v1"));
     opsi.add(DropdownModel(label: "V4", value: "v4"));
+    opsi.add(DropdownModel(label: "V5", value: "v5"));
     return opsi;
   }
 

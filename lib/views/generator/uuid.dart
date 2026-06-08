@@ -42,15 +42,28 @@ class Uuid extends GetView<UuidController> {
                           ),
                         ),
                         SizedBox(width: 15),
-                        Expanded(
-                          flex: 1,
-                          child: FdTextForm(
-                            labelText: "Jumlah",
-                            controller: controller.txtJumlah,
-                            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                            onChange: (value) => controller.jumlah = StringUtils.readDataInt(value),
-                          ),
-                        ),
+                        Obx(() {
+                          if (controller.showJml.value) {
+                            return Expanded(
+                              flex: 1,
+                              child: FdTextForm(
+                                labelText: "Jumlah",
+                                controller: controller.txtJumlah,
+                                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                                onChange: (value) => controller.jumlah = StringUtils.readDataInt(value),
+                              ),
+                            );
+                          } else {
+                            return Expanded(
+                              flex: 1,
+                              child: FdTextForm(
+                                labelText: "Label",
+                                controller: controller.txtCustomName,
+                                onChange: (value) => controller.customName = value,
+                              ),
+                            );
+                          }
+                        }),
                       ],
                     ),
                     SizedBox(height: 25),
