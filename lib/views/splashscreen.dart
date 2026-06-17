@@ -3,7 +3,7 @@ import 'package:formdev/apps/controller/splashscreen_controller.dart';
 import 'package:get/get.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
-class Splashscreen extends GetView<SplashscreenController> {
+class Splashscreen extends StatelessWidget {
   Splashscreen({super.key});
   final SplashscreenController controller = Get.put(SplashscreenController());
 

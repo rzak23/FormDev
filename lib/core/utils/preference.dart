@@ -14,10 +14,16 @@ class Preference {
     if (StringUtils.isNullOrEmpty(tema)) {
       theme = ThemeMode.system;
     } else {
-      theme = (tema == "") ? ThemeMode.dark : ThemeMode.light;
+      theme = (tema == "dark") ? ThemeMode.dark : ThemeMode.light;
     }
 
     return theme;
+  }
+
+  Future<void> setThemeDefault(String mode) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    await prefs.setString(PrefKey.key(PreferenceName.tema), mode);
   }
 }
 

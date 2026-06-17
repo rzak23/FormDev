@@ -19,4 +19,23 @@ class ThemeController extends GetxController {
     ThemeMode tema = await preference.getThemeDefault();
     Get.changeThemeMode(tema);
   }
+
+  setThemeMode(ThemeMode mode) {
+    _themeMode.value = mode;
+    Get.changeThemeMode(mode);
+    _saveTheme(mode);
+  }
+
+  _saveTheme(ThemeMode mode) async {
+    Preference preference = Preference();
+
+    String tema;
+    if (mode.index == 1) {
+      tema = "light";
+    } else {
+      tema = "dark";
+    }
+
+    preference.setThemeDefault(tema);
+  }
 }

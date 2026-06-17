@@ -11,7 +11,23 @@ class MainMenu extends GetView<MainMenuController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: FdAppbar(titleBar: FdAppTitle(title: "Daftar Tools")),
+      appBar: FdAppbar(
+        titleBar: FdAppTitle(title: "Daftar Tools"),
+        moreActions: [
+          Obx(
+            () => Switch(
+              value: controller.isDarkTheme.value,
+              onChanged: (value) => controller.onClickChangeTheme(value),
+              thumbIcon: WidgetStateProperty.resolveWith<Icon?>((states) {
+                if (controller.isDarkTheme.value) {
+                  return const Icon(Icons.dark_mode, size: 16);
+                }
+                return const Icon(Icons.light_mode, size: 16);
+              }),
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
