@@ -27,6 +27,7 @@ class MainApp extends StatelessWidget {
     return Obx(
       () => GetMaterialApp(
         title: "FormDev",
+        debugShowCheckedModeBanner: true,
         theme: AppColors.lightTheme(),
         darkTheme: AppColors.darkTheme(),
         themeMode: themeController.themeMode,
