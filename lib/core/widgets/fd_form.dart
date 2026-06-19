@@ -30,8 +30,6 @@ class FdDropdown<T> extends StatelessWidget {
     return DropdownButtonFormField<T>(
       initialValue: isValid ? value : null,
       icon: Icon(icon),
-      // dropdownColor:
-      style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         labelText: labelText,
         prefixIcon: StringUtils.isNotNullOrEmpty(prefixIcon) ? Icon(prefixIcon) : null,
