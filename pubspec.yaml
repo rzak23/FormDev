@@ -46,8 +46,9 @@ msix_config:
   publisher_display_name: Re.Studio
   identity_name: 35602Re.Studio.FormDev
   msix_version: 3.0.0.0
-  logo_path: windows/runner/resources/app_icon.ico
-  capabilities: internetClient
+  logo_path: assets/icon/formdev.png
+  trim_logo: false
   languages: id-ID
   store: true
   publisher: CN=B5C0E522-DA44-46AB-AD7A-3861F629EE23
+  windows_build_args: --obfuscate --split-debug-info=build/debug-info
