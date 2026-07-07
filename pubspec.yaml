@@ -1,0 +1,54 @@
+name: formdev
+description: "A new Flutter project."
+publish_to: 'none'
+version: 3.0.0
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # dependencies tambahan taruk disini
+  file_picker: ^11.0.2
+  get: ^4.7.3
+  hashlib: ^2.3.4
+  icons_launcher: ^3.1.0
+  loading_indicator: ^3.1.1
+  lorem_gen: ^2.0.1
+  msix: ^3.16.13
+  nanoid2: ^2.0.1
+  qr_flutter: ^4.1.0
+  shared_preferences: ^2.5.5
+  uuid: ^4.5.3
+  window_manager: ^0.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/
+
+icons_launcher:
+  image_path: "assets/icon/formdev.png"
+  platforms:
+    windows:
+      enable: true
+      image_path: "assets/icon/formdev.png"
+
+msix_config:
+  display_name: FormDev
+  publisher_display_name: Re.Studio
+  identity_name: 35602Re.Studio.FormDev
+  msix_version: 3.0.0.0
+  logo_path: assets/icon/formdev.png
+  trim_logo: false
+  languages: id-ID
+  store: true
+  publisher: CN=B5C0E522-DA44-46AB-AD7A-3861F629EE23
+  windows_build_args: --obfuscate --split-debug-info=build/debug-info
