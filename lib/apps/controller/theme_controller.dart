@@ -8,16 +8,17 @@ class ThemeController extends GetxController {
   ThemeMode get themeMode => _themeMode.value;
 
   @override
-  onInit() async {
-    await _loadTheme();
+  void onInit() {
     super.onInit();
+    _loadTheme();
   }
 
-  _loadTheme() async {
+  Future<void> _loadTheme() async {
     Preference preference = Preference();
-
     ThemeMode tema = await preference.getThemeDefault();
-    Get.changeThemeMode(tema);
+
+    _themeMode.value = tema; // ini yang bikin Obx rebuild
+    Get.changeThemeMode(tema); // opsional, biar tetap sinkron dgn Get.theme
   }
 
   setThemeMode(ThemeMode mode) {

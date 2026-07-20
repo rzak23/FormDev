@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final themeController = ThemeController();
+    final themeController = Get.put(ThemeController());
     return Obx(
       () => GetMaterialApp(
         title: "FormDev",

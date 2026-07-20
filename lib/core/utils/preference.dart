@@ -10,7 +10,6 @@ class Preference {
 
     String? tema = prefs.getString(PrefKey.key(PreferenceName.tema));
     ThemeMode theme;
-
     if (StringUtils.isNullOrEmpty(tema)) {
       theme = ThemeMode.system;
     } else {
